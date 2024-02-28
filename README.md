@@ -34,7 +34,7 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 ### 1. Clone repository:
 Https:
 ```
-git clone https://github.com/Abellio-R/Rijschool.git
+git clone https://github.com/horizoncollege/Rijschool-Tjeerd-Abel-Sem.git
 ```
 
 ### 2. Build Docker containers:
