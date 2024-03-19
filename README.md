@@ -1,35 +1,19 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Rijschool Tjeerd & Abel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+- Design: https://www.figma.com/file/61asBSZ5ILAsr04OLWSiN4/homepage?type=design&node-id=0%3A1&mode=design&t=k0Dj3ZeH4ULLMLYX-1
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Github project: https://github.com/orgs/horizoncollege/projects/104
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Requirements
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Docker desktop: https://www.docker.com/products/docker-desktop
+### (Let op niet nodig maar wel beter!)
+- Hyper-v (Windows 10/11 Pro) voor betere performance dan WSL2 of WSL1
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Installation Guide
+## Installation steps
 
 ### 1. Clone repository:
 Https:
@@ -39,11 +23,13 @@ git clone https://github.com/horizoncollege/Rijschool-Tjeerd-Abel-Sem.git
 
 ### 2. Build Docker containers:
 
-Run deze command in een terminal 
+Run deze commands in een terminal 
 
 ```
 Docker-compose up --build -d
 ```
+
+## Build packages
 
 ### 3. Composer install:
 
@@ -56,6 +42,8 @@ Docker-compose run --rm composer install
 ```
 Docker-compose run --rm npm install
 ```
+
+## Setup environment
 
 ### 5. Setup .env file (example):
 
@@ -125,9 +113,15 @@ VITE_PORT="5173"
 VITE_API_KEY="key"
 ```
 
-### 6. Run Docker containers:
+### 6. Add artisan key
 
-Run deze command in de terminal wanneer je klaar ben met je .env file
+```
+Docker-compose run --rm php php artisan key:generate
+``` 
+
+### 7. Run Docker containers:
+
+Run deze command in de terminal wanneer je klaar ben met de setup
 
 ```
 Docker-compose up -d
