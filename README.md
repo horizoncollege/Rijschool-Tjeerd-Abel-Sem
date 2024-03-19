@@ -1,51 +1,72 @@
-## Rijschool Tjeerd & Abel
+# Rijschool Tjeerd & Abel
 
-- Design: https://www.figma.com/file/61asBSZ5ILAsr04OLWSiN4/homepage?type=design&node-id=0%3A1&mode=design&t=k0Dj3ZeH4ULLMLYX-1
+Welkom bij het Rijschool Tjeerd & Abel project! In dit repository vindt u de broncode voor de website van de rijschool. Hieronder vindt u informatie over hoe u het project lokaal kunt instellen, alsmede details over het ontwerp, vereisten en installatiestappen.
 
+## Ontwerp
 
-- Github project: https://github.com/orgs/horizoncollege/projects/104
+Het ontwerp voor de Rijschool Tjeerd & Abel website kunt u vinden in het volgende Figma-bestand:
 
-## Requirements
+- [Homepage Ontwerp](https://www.figma.com/file/61asBSZ5ILAsr04OLWSiN4/homepage?type=design&node-id=0%3A1&mode=design&t=k0Dj3ZeH4ULLMLYX-1)
 
-- Docker desktop: https://www.docker.com/products/docker-desktop
-### (Let op niet nodig maar wel beter!)
-- Hyper-v (Windows 10/11 Pro) voor betere performance dan WSL2 of WSL1
+## Github Project
 
+U kunt het projectbord en issues vinden op de Github projectpagina:
 
+- [Github Project](https://github.com/orgs/horizoncollege/projects/104)
 
-## Installation steps
+## Vereisten
 
-### 1. Clone repository:
-Https:
+Om het project lokaal te draaien, hebt u de volgende software nodig:
+
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)
+
+Voor betere prestaties op Windows 10/11 Pro wordt aanbevolen (maar niet vereist) om te gebruiken:
+
+- Hyper-V
+
+## Installatiestappen
+
+Volg deze stappen om het project lokaal in te stellen:
+
+1. ### Kloon Repository
+
+Kloon de repository met het volgende commando:
+
 ```
 git clone https://github.com/horizoncollege/Rijschool-Tjeerd-Abel-Sem.git
 ```
 
-### 2. Build Docker containers:
+2. ### Bouw Docker Containers
 
-Run deze commands in een terminal 
-
-```
-Docker-compose up --build -d
-```
-
-## Build packages
-
-### 3. Composer install:
+Voer het volgende commando uit in een terminal:
 
 ```
-Docker-compose run --rm composer install
+docker-compose up --build -d
 ```
 
-### 4. Npm install:
+## Bouw Pakketten
+
+3. ### Composer Installeren
+
+Voer het volgende commando uit om Composer-afhankelijkheden te installeren:
 
 ```
-Docker-compose run --rm npm install
+docker-compose run --rm composer install
 ```
 
-## Setup environment
+4. ### Npm Installeren
 
-### 5. Setup .env file (example):
+Voer het volgende commando uit om NPM-afhankelijkheden te installeren:
+
+```
+docker-compose run --rm npm install
+```
+
+## Stel Omgeving In
+
+5. ### Stel .env-bestand in
+
+Maak een `.env`-bestand op basis van het voorbeeld:
 
 ```
 APP_NAME=Laravel
@@ -113,20 +134,28 @@ VITE_PORT="5173"
 VITE_API_KEY="key"
 ```
 
-### 6. Add artisan key
+6. ### Voeg Artisan-sleutel toe
+
+Genereer een Artisan-sleutel met het volgende commando:
 
 ```
-Docker-compose run --rm php php artisan key:generate
-``` 
-
-### 7. Run Docker containers:
-
-Run deze command in de terminal wanneer je klaar ben met de setup
-
-```
-Docker-compose up -d
+docker-compose run --rm php php artisan key:generate
 ```
 
-## License
+7. ### Draai Docker Containers
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Nadat u de installatie hebt voltooid, voert u het volgende commando uit in de terminal:
+
+```
+docker-compose up -d
+```
+
+## Scrum Team
+
+- [Abel Riezebos](https://github.com/Abellio-R)
+- [Tjeerd Wokkema](https://github.com/Tjeerd-171419)
+- [Sem Vriesma](https://github.com/dockerchompz)
+
+## Licentie
+
+De Laravel-framework is open-source-software gelicentieerd onder de [MIT-licentie](https://opensource.org/licenses/MIT).
