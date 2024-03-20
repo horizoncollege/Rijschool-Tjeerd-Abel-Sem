@@ -19,11 +19,9 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+    return $request->user()->permissions()->get();
 });
-
 Route::prefix('user')->group(function () {
     Route::post('/register', [RegisteredUserController::class, 'store'])
         ->middleware('guest')

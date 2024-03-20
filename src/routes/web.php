@@ -14,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('{any?}', [SpaController::class, 'index'])->where('any', '.*')->name('home');
+Route::get('{any?}', function () {
+    return view('spa');
+})->where('any', '.*');
