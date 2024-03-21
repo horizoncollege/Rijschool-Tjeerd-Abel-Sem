@@ -6,14 +6,14 @@ export default {
         recaptchaScript.setAttribute('src', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js')
         document.head.appendChild(recaptchaScript)
 
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
+        // var swiper = new Swiper(".mySwiper", {
+        //     slidesPerView: 3,
+        //     spaceBetween: 30,
+        //     pagination: {
+        //         el: ".swiper-pagination",
+        //         clickable: true,
+        //     },
+        // });
     }
 }
 </script>

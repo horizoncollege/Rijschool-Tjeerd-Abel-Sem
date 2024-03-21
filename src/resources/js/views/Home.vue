@@ -4,35 +4,36 @@ import headermobile from "./components/header-mobile.vue";
 import banner from "./components/banner.vue";
 import paragraaf from "./components/paragraaf.vue";
 import review from "./components/review.vue";
-import footer from "./components/review.vue";
+import footerdesktop from "./components/footer.vue";
+import pakketen from "./components/pakketen.vue";
 
 export default {
-    components: {
-        headerdesktop,
-        headermobile,
-        banner,
-        paragraaf,
-        review,
-        footer
-      
-    }
+  components: {
+    headerdesktop,
+    headermobile,
+    banner,
+    pakketen,
+    paragraaf,
+    review,
+    footerdesktop
+  }
 }
 </script>
 <template>
-    <headerdesktop></headerdesktop>
-    <headermobile></headermobile>
-    <banner></banner>
-    <paragraaf></paragraaf>
-    <pakketen></pakketen>
-    <review></review>
-    <h1>womp womp <font-awesome-icon :icon="['fas', 'code']" /></h1>
-<footer></footer>
+  <headerdesktop></headerdesktop>
+  <headermobile></headermobile>
+  <banner></banner>
+  <pakketen></pakketen>
+  <paragraaf></paragraaf>
+  <review></review>
+  <!-- <h1>womp womp <font-awesome-icon :icon="['fas', 'code']" /></h1> -->
+  <footerdesktop></footerdesktop>
 
 </template>
 
 <style>
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 
 .content-row {
@@ -45,5 +46,4 @@ body{
   max-width: 1400px;
   margin: auto;
 }
-
 </style>

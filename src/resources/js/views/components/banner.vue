@@ -257,7 +257,7 @@ swiper-slide img {
 /* default knop */
 
 .knop-default {
-    background-color: var(--blauw-licht);
+    background-color: var(--rood-licht);
     transition: 0.2s;
     border: 1px var(--background-black) solid;
 }
@@ -267,7 +267,7 @@ swiper-slide img {
 }
 
 .knop-default:hover {
-    background-color: var(--blauw-donker);
+    background-color: var(--rood-donker);
     transition: 0.2s;
 }
 </style>

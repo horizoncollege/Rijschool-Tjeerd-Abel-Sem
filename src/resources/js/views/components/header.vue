@@ -70,7 +70,7 @@ export default{
 }
 
 .header {
-    background-color: red;
+    background-color: var(--rood-licht);
     position: sticky;
     top: 0;
     z-index: 2;
@@ -139,7 +139,7 @@ export default{
 }
 
 .proefles{
-    background: black;
+    background: var(--background-black);
   border-radius: 10px;
 }
 
