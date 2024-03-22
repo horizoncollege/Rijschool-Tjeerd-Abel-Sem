@@ -1,8 +1,7 @@
 <script>
-export default{
-    
-}
+export default {
 
+}
 </script>
 
 <template>
@@ -23,11 +22,9 @@ export default{
                     <a href="#" class="menu-item no-mega">
                         <p>Rijschool</p>
                     </a>
-                    
                     <a href="#" class="menu-item no-mega">
                         <p>Pakketen</p>
                     </a>
-               
                     <a href="#" class="menu-item no-mega">
                         <p>Rijbewijs</p>
                     </a>
@@ -47,7 +44,6 @@ export default{
     </div>
 </template>
 
-
 <style>
 :root {
     --blauw-licht: #0077c0;
@@ -60,7 +56,6 @@ export default{
     --background-black: #060606;
     --background-grey: #f0f0f0;
 }
-
 
 * {
     border: 0;
@@ -138,9 +133,9 @@ export default{
     margin: 0 auto 0 0;
 }
 
-.proefles{
+.proefles {
     background: var(--background-black);
-  border-radius: 10px;
+    border-radius: 10px;
 }
 
 .header a {
@@ -150,14 +145,13 @@ export default{
 
 /* login img */
 
-.login{
+.login {
     margin: auto;
-  object-fit: contain;
-  width: 30px;
+    object-fit: contain;
+    width: 30px;
 }
 
 /* dropdown menu */
-
 /* The dropdown container */
 .dropdown {
     float: left;
@@ -243,11 +237,9 @@ export default{
     display: block !important;
 }
 
-
-@media (max-width: 992px){
-.headerdesktop{
-    display: none;
+@media (max-width: 992px) {
+    .headerdesktop {
+        display: none;
+    }
 }
-}
-
 </style>

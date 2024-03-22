@@ -81,6 +81,10 @@ export default {
     max-height: 200px;
 }
 
+.footer-disclaimer {
+    height: fit-content;
+    margin: auto 0 auto 0;
+}
 
 @media (max-width: 992px) {
     .footer-blok {
@@ -105,7 +109,7 @@ export default {
     }
 
     .footer-tekst::before {
-        height: 20%;
+        height: unset;
     }
 
     .footer-contact {
@@ -119,12 +123,14 @@ export default {
         width: fit-content;
         margin: auto;
     }
+
+    .footer-logo img {
+        max-height: 125px;
+    }
+
+    .footer-row {
+        background-color: var(--background-grey);
+        padding-bottom: 1.2rem;
+    }
 }
-
-@media (max-width: 540px) {
-    .footer-tekst::before {
-        height: 27%;    }
-}
-
-
 </style>

@@ -93,7 +93,7 @@ export default {
 }
 
 .paragraaf-subheader {
-    color: var(--blauw-licht);
+    color: var(--rood-licht);
 }
 
 .paragraaf-header {
@@ -120,7 +120,7 @@ swiper-container {
 swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: var(--background-white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,6 +150,7 @@ swiper-slide img {
     height: 100%;
     margin-bottom: auto;
     background: rgba(0, 0, 0, 0.25);
+
     color: var(--text-color-white);
 }
 
@@ -242,15 +243,14 @@ swiper-slide img {
 
 .banner-knop {
     margin-top: 50%;
-  width: fit-content;
-  margin-right: auto;
-  margin-left: auto;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-@media (max-width: 680px) and
-(min-width: 576px) {
-   .banner-knop .knop{
-        padding: 0.75rem 0rem 0.75rem 0.75rem;    
+@media (max-width: 680px) and (min-width: 576px) {
+    .banner-knop .knop {
+        padding: 0.75rem 0rem 0.75rem 0.75rem;
     }
 }
 

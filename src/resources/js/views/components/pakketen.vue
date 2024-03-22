@@ -58,7 +58,7 @@ export default {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: var(--background-white);
     display: flex;
     justify-content: center;
     align-items: center;

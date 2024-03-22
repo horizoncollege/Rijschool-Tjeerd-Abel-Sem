@@ -25,7 +25,7 @@ export default{
                 </div>
                 <!-- multicolumn tekst -->
                 <div class="multicolumn-tekst">
-                    <h2>Top tekst</h2>
+                    <h2>Saul Goodman</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora impedit
                         voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur, fugiat temporibus
                         quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
@@ -37,7 +37,6 @@ export default{
                     </a>
                 </div>
             </div>
-
             <div class="multicolumn-rij">
                 <!-- multicolumn afbeelding -->
                 <div class="multicolumn-afbeelding">
@@ -45,7 +44,7 @@ export default{
                 </div>
                 <!-- multicolumn tekst -->
                 <div class="multicolumn-tekst">
-                    <h2>Top tekst</h2>
+                    <h2>Gus Fring</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora impedit
                         voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur, fugiat temporibus
                         quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
@@ -57,7 +56,6 @@ export default{
                     </a>
                 </div>
             </div>
- 
             <div class="multicolumn-rij">
                 <!-- multicolumn afbeelding -->
                 <div class="multicolumn-afbeelding">
@@ -65,7 +63,7 @@ export default{
                 </div>
                 <!-- multicolumn tekst -->
                 <div class="multicolumn-tekst">
-                    <h2>Top tekst</h2>
+                    <h2>Walter White</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora impedit
                         voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur, fugiat temporibus
                         quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
@@ -77,7 +75,6 @@ export default{
                     </a>
                 </div>
             </div>
-
             <!-- eind multicolumn content -->
         </div>
     </div>

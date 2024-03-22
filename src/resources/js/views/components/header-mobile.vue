@@ -1,6 +1,7 @@
 <script>
+export default {
 
-
+}
 </script>
 
 <template>
@@ -10,15 +11,9 @@
                 <div class="logo-container">
                     <div class="logo">
                         <a href="#">
-                            <h1>Template</h1>
+                            <img src="../../../../storage/img/logo.png" alt="">
                         </a>
                     </div>
-                </div>
-                <!-- slide menu knop -->
-                <div class="slide-menu">
-                    <a class="slide-menu-button" v-on:click="openMenu">
-                        <i class="fas fa-bars"></i>
-                    </a>
                 </div>
                 <!-- navigatie -->
                 <div class="menu nav-bar">
@@ -33,11 +28,15 @@
                         <p>pagina-3</p>
                     </a>
                 </div>
+                <!-- slide menu knop -->
+                <div class="slide-menu">
+                    <a class="slide-menu-button" v-on:click="openMenu">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
             </div>
-
         </header>
-       
-        </div> 
+    </div>
 </template>
 
 <style scoped>
@@ -62,13 +61,10 @@
     display: none;
 }
 
-
-
-
 @media (max-width:992px) {
 
     .header-container {
-        flex-direction: column;
+        flex-direction: row;
         height: unset;
     }
 
@@ -84,7 +80,6 @@
     .dropdown-row {
         width: 100%;
     }
-
 }
 
 @media (max-width: 992px) {
@@ -94,14 +89,13 @@
 
     .header-mobile {
         display: block;
-        background-color: var(--background-black);
+        background-color: var(--rood-licht);
     }
 
     .header-container {
         flex-direction: unset;
         flex-wrap: wrap;
     }
-
 
     /* slider menu */
     .slide-menu i {
@@ -120,9 +114,7 @@
 
     .dropdown:hover {
         cursor: pointer;
-
     }
-
 
     .mobiele-slider {
         position: fixed;
@@ -156,22 +148,15 @@
         transition: 0.3s;
     }
 
-    .mobiele-slider a:hover,
-    .mobiele-slider a:focus {
-        color: var(--blauw-licht);
-    }
-
     .sluit-knop {
         position: absolute;
         top: 3rem;
         right: 45px;
         font-size: 5rem;
         cursor: pointer;
-        color: #f1f1f1;
+        color: var(--background-white);
     }
-
 }
-
 
 @media (max-width:576px) {
     .mobiele-slider {
