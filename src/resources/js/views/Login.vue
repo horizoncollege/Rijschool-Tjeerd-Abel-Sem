@@ -1,5 +1,21 @@
 <script>
+import axios from 'axios'
 
+export default {
+  data() {
+    return {
+      posts: {
+        email: "",
+        password: ""
+      }
+    }
+  },
+  methods: {
+    async post_data() {
+      this.posts = await axios.post('/api/user/login', this.posts)
+    }
+  }
+}
 </script>
 
 <template>
@@ -8,9 +24,11 @@
             <div class="main_inner">
                 <div class="modal">
                     <div class="form">
-                        <h1 style="color: black;">why not show dolboeb</h1>
-                        <input><br>
-                        <input>
+                        <form @submit.prevent="post_data()">
+                            <input type="text" v-model="posts.email"><br>
+                            <input type="text" v-model="posts.password"><br><br>
+                            <button type="submit">login</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -18,7 +36,7 @@
     </div>
 </template>
 
-<style scoped>
+<style>
 .center-div {
     display: flex;
     justify-content: center;
