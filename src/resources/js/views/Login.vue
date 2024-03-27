@@ -4,18 +4,19 @@
 
   <div class="login-container">
     <div class="login-form">
-      <h2>Login</h2>
+      <h1>Login</h1><br>
       <form @submit.prevent="post_data()">
         <div class="form-group">
-          <label for="email">Email:</label>
+          <label for="email">Email</label><br>
           <input type="text" id="email" v-model="posts.email" required>
         </div>
         <div class="form-group">
-          <label for="password">Password:</label>
+          <label for="password">Password</label><br>
           <input type="password" id="password" v-model="posts.password" required>
         </div>
         <button type="submit">Login</button><br><br>
-        <p style='color: red;' id="error-msg-login"></p>
+        <p style='color: red;' id="error-msg-login"></p><br>
+        <a style="font-size: smaller" href="#" v-on:click="on_forgot_password()">wachtwoord vergeten?</a>
       </form>
     </div>
   </div>
@@ -38,6 +39,9 @@ export default {
   },
   data() {
     return {
+      forgot_password_post: {
+        email: ""
+      },
       posts: {
         email: "",
         password: ""
@@ -51,12 +55,30 @@ export default {
         console.log(response.data);
       } catch (error) {
         console.error(error);
+        document.getElementById("error-msg-login").style.color = "red";
         var label = document.getElementById("error-msg-login");
         label.textContent = "Error performing action `login`: '" + error + "'\n";
+      }
+    },
+
+    async on_forgot_password() {
+      let mailaddr = prompt("Voer hier uw email adres in");
+
+      this.forgot_password_post.email = mailaddr;
+
+      try {
+        const response = await axios.post('/api/user/forgot-password', this.forgot_password_post);
+        document.getElementById("error-msg-login").style.color = "green";
+        document.getElementById("error-msg-login").textContent = "Wachtwoord reset verzonden!";
+      } catch(error) {
+        console.error(error);
+        document.getElementById("error-msg-login").style.color = "red";
+        document.getElementById("error-msg-login").textContent = "Fout bij het verzenden van de wachtwoord reset, probeer het opnieuw.\n\n" + error;
       }
     }
   }
 }
+
 </script>
 
 <style>
@@ -90,7 +112,7 @@ label {
 
 input[type="text"],
 input[type="password"] {
-  width: 100%;
+  width: 95%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
