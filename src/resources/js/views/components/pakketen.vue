@@ -159,7 +159,7 @@ export default {
     </div>
 </template>
 
-<style>
+<style scoped>
 .swiper {
     width: 100%;
     height: 100%;
@@ -191,5 +191,10 @@ export default {
 .pakketen-slider img {
     border-radius: 10px;
 
+}
+.multicolumn-rij {
+    min-width: unset;
+    max-width: unset;
+    width: unset;
 }
 </style>
