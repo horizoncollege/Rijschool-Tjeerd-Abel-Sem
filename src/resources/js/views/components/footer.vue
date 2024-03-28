@@ -15,7 +15,14 @@ export default {
                     <div class="footer-socials">
                         <h2>Rijschool vierkante wielen</h2>
                         <p>Volg ons</p>
+                        <div class="footer-icons">
+                            <img src="../../../../storage/img/twitter.png" alt="twitter">
+                            <img src="../../../../storage/img/instagram.png" alt="instagram">
+                            <img src="../../../../storage/img/facebook.png" alt="facebook">
+                            <img src="../../../../storage/img/linkedin.png" alt="linkedin">
+                        </div>
                     </div>
+
                     <div class="footer-contact">
                         <h2>vragen?</h2>
                         <h2> neem contact op!</h2>
@@ -84,6 +91,20 @@ export default {
 .footer-disclaimer {
     height: fit-content;
     margin: auto 0 auto 0;
+}
+
+.footer-icons {
+    justify-content: space-around;
+  display: flex;
+}
+
+.footer-icons img{
+ width: 25px;
+}   
+
+.footer-contact .knop-container{
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 992px) {
