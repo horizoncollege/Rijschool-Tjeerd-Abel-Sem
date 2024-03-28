@@ -6,6 +6,7 @@ import paragraaf from "./components/paragraaf.vue";
 import review from "./components/review.vue";
 import footerdesktop from "./components/footer.vue";
 import pakketen from "./components/pakketen.vue";
+import team from "./components/team.vue"
 
 export default {
   components: {
@@ -15,6 +16,7 @@ export default {
     pakketen,
     paragraaf,
     review,
+    team,
     footerdesktop
   }
 }
@@ -26,7 +28,8 @@ export default {
   <pakketen></pakketen>
   <paragraaf></paragraaf>
   <review></review>
-  <!-- <h1>womp womp <font-awesome-icon :icon="['fas', 'code']" /></h1> -->
+  <team></team>
+  <paragraaf></paragraaf>
   <footerdesktop></footerdesktop>
 
 </template>

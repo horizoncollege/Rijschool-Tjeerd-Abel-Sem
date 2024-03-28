@@ -39,14 +39,17 @@ export default {
             </div>
             <div class="banner-blok">
                 <div class=" banner-content banner-content-links">
-                    <div class="banner-headers">
-                        <h2 class="banner-subheader">subheader</h2>
-                        <h2 class="banner-header">header</h2>
-                    </div>
-                    <div class="banner-tekst-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aut sequi similique quo nulla
-                            earum autem quibusdam voluptatem.</p>
-                    </div>
+                        <div class="banner-headers">
+                            <h2 class="banner-subheader">subheader</h2>
+                            <h2 class="banner-header">header</h2>
+                        </div>
+                        <div class="banner-tekst-content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aut sequi similique quo
+                                nulla
+                                earum autem quibusdam voluptatem.</p>
+                        </div>
+
+
                 </div>
             </div>
 
@@ -171,7 +174,7 @@ swiper-slide img {
 }
 
 .banner-headers {
-    margin-top: 20%;
+    margin-top: 50%;
 }
 
 .banner-header {
@@ -214,7 +217,9 @@ swiper-slide img {
         margin: auto;
         max-width: 95%;
     }
-
+    .banner-headers {
+  margin-top: unset;
+}
 }
 
 /* base knop styling */
@@ -238,11 +243,9 @@ swiper-slide img {
     transition: 0.2s;
 }
 
-
 /* banner knop */
 
 .banner-knop {
-    margin-top: 50%;
     width: fit-content;
     margin-right: auto;
     margin-left: auto;

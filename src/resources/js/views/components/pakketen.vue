@@ -6,21 +6,20 @@ export default {
         recaptchaScript.setAttribute('src', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js')
         document.head.appendChild(recaptchaScript)
 
-        // var swiper = new Swiper(".mySwiper", {
-        //     slidesPerView: 3,
-        //     spaceBetween: 30,
-        //     pagination: {
-        //         el: ".swiper-pagination",
-        //         clickable: true,
-        //     },
-        // });
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
     }
 }
 </script>
 
 <template>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
     <div class="content-row">
         <div class="content-blok">
             <div class="multicolumn-heading">
@@ -31,25 +30,136 @@ export default {
                     <h2>header</h2>
                 </div>
             </div>
-            <swiper class="mySwiper" loop="true" space-between="0" centered-slides="true"
-                autoplay-delay="5000" autoplay-disable-on-interaction="false">
-                <swiper-slide>Slide 1</swiper-slide>
-                <swiper-slide>Slide 1</swiper-slide>
-                <swiper-slide>Slide 1</swiper-slide>
-                <swiper-slide>Slide 1</swiper-slide>
-                <swiper-slide>Slide 1</swiper-slide>
-                <swiper-slide>Slide 1</swiper-slide>
-                <swiper-slide>Slide 1</swiper-slide>
-                <swiper-slide>Slide 1</swiper-slide>
+            <swiper-container class="mySwiper pakketen-slider" slides-per-view="3" loop="false" space-between="100"
+                centered-slides="false" autoplay-delay="5000000" autoplay-disable-on-interaction="false">
 
+                <swiper-slide>
+                    <div class="multicolumn-rij">
+                        <!-- multicolumn afbeelding -->
+                        <div class="multicolumn-afbeelding">
+                            <img src="../../../../storage/img/placeholder.png" alt="placeholder">
+                        </div>
+                        <!-- multicolumn tekst -->
+                        <div class="multicolumn-tekst">
+                            <h2>Pakket 1</h2>
+                            <li>Voordeel 1</li>
+                            <li>Voordeel 2</li>
+                            <li>Voordeel 3</li>
+                            <li>Voordeel 4</li>
+                            <li>Voordeel 5</li>
+                        </div>
+                        <!-- multicolumn knop -->
+                        <div class="multicolumn-knop knop-container">
+                            <a class="knop knop-default" href="#">
+                                <span class="knop-tekst"> Klik op mij!</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </swiper-slide>
+                <swiper-slide>
+                    <div class="multicolumn-rij">
+                        <!-- multicolumn afbeelding -->
+                        <div class="multicolumn-afbeelding">
+                            <img src="../../../../storage/img/placeholder.png" alt="placeholder">
+                        </div>
+                        <!-- multicolumn tekst -->
+                        <div class="multicolumn-tekst">
+                            <h2>Pakket 1</h2>
+                            <li>Voordeel 1</li>
+                            <li>Voordeel 2</li>
+                            <li>Voordeel 3</li>
+                            <li>Voordeel 4</li>
+                            <li>Voordeel 5</li>
+                        </div>
+                        <!-- multicolumn knop -->
+                        <div class="multicolumn-knop knop-container">
+                            <a class="knop knop-default" href="#">
+                                <span class="knop-tekst"> Klik op mij!</span>
+                            </a>
+                        </div>
+                    </div>
+                </swiper-slide>
+
+                <swiper-slide>
+                    <div class="multicolumn-rij">
+                        <!-- multicolumn afbeelding -->
+                        <div class="multicolumn-afbeelding">
+                            <img src="../../../../storage/img/placeholder.png" alt="placeholder">
+                        </div>
+                        <!-- multicolumn tekst -->
+                        <div class="multicolumn-tekst">
+                            <h2>Pakket 1</h2>
+                            <li>Voordeel 1</li>
+                            <li>Voordeel 2</li>
+                            <li>Voordeel 3</li>
+                            <li>Voordeel 4</li>
+                            <li>Voordeel 5</li>
+                        </div>
+                        <!-- multicolumn knop -->
+                        <div class="multicolumn-knop knop-container">
+                            <a class="knop knop-default" href="#">
+                                <span class="knop-tekst"> Klik op mij!</span>
+                            </a>
+                        </div>
+                    </div>
+                </swiper-slide>
+
+                <swiper-slide>
+                    <div class="multicolumn-rij">
+                        <!-- multicolumn afbeelding -->
+                        <div class="multicolumn-afbeelding">
+                            <img src="../../../../storage/img/placeholder.png" alt="placeholder">
+                        </div>
+                        <!-- multicolumn tekst -->
+                        <div class="multicolumn-tekst">
+                            <h2>Pakket 1</h2>
+                            <li>Voordeel 1</li>
+                            <li>Voordeel 2</li>
+                            <li>Voordeel 3</li>
+                            <li>Voordeel 4</li>
+                            <li>Voordeel 5</li>
+                        </div>
+                        <!-- multicolumn knop -->
+                        <div class="multicolumn-knop knop-container">
+                            <a class="knop knop-default" href="#">
+                                <span class="knop-tekst"> Klik op mij!</span>
+                            </a>
+                        </div>
+                    </div>
+                </swiper-slide>
+
+                <swiper-slide>
+                    <div class="multicolumn-rij">
+                        <!-- multicolumn afbeelding -->
+                        <div class="multicolumn-afbeelding">
+                            <img src="../../../../storage/img/placeholder.png" alt="placeholder">
+                        </div>
+                        <!-- multicolumn tekst -->
+                        <div class="multicolumn-tekst">
+                            <h2>Pakket 1</h2>
+                            <li>Voordeel 1</li>
+                            <li>Voordeel 2</li>
+                            <li>Voordeel 3</li>
+                            <li>Voordeel 4</li>
+                            <li>Voordeel 5</li>
+                        </div>
+                        <!-- multicolumn knop -->
+                        <div class="multicolumn-knop knop-container">
+                            <a class="knop knop-default" href="#">
+                                <span class="knop-tekst"> Klik op mij!</span>
+                            </a>
+                        </div>
+                    </div>
+                </swiper-slide>
                 <div class="swiper-pagination"></div>
-            </swiper>
+            </swiper-container>
 
         </div>
     </div>
 </template>
 
-<style>
+<style scoped>
 .swiper {
     width: 100%;
     height: 100%;
@@ -69,5 +179,22 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.pakketen-slider swiper-slide {
+    background: var(--background-grey);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+
+.pakketen-slider img {
+    border-radius: 10px;
+
+}
+.multicolumn-rij {
+    min-width: unset;
+    max-width: unset;
+    width: unset;
 }
 </style>
