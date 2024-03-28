@@ -65,11 +65,14 @@ export default {
 }
 
 .header {
-    background-color: var(--rood-licht);
     position: sticky;
     top: 0;
     z-index: 2;
     user-select: none;
+    display: block;
+    background-image: linear-gradient(var(--rood-licht), transparent);
+    position: absolute;
+    width: 100%;
 }
 
 .header-container {
@@ -86,7 +89,7 @@ export default {
     justify-content: space-between;
     text-decoration: none;
     font-size: 1.5rem;
-    width: 85%;
+    width: 100%;
 }
 
 .logo-container {
@@ -96,7 +99,7 @@ export default {
 
 .logo img {
     object-fit: contain;
-    width: 130px;
+    width: 100px;
 }
 
 .logo a h1 {
@@ -110,14 +113,15 @@ export default {
 }
 
 .menu-item {
-    width: 166px;
+    width: auto;
     transition: 0.2s ease-in-out;
     margin: auto;
     font-weight: 800;
 }
 
 .menu-item p {
-    margin: 0 auto;
+    margin: auto;
+    text-wrap: nowrap;
 }
 
 .menu-item.no-mega:hover {
@@ -136,6 +140,8 @@ export default {
 .proefles {
     background: var(--background-black);
     border-radius: 10px;
+    width: auto;
+    padding: 0 5px 0 5px;
 }
 
 .header a {

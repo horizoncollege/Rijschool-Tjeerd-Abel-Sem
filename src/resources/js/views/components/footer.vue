@@ -70,7 +70,7 @@ export default {
     content: "";
     background-color: var(--background-grey);
     position: absolute;
-    height: 20%;
+    height: 25%;
     width: 200vw;
     z-index: -1;
     left: -100vw;

@@ -8,7 +8,7 @@ export default {
     <div class="headermobile">
         <header class="header header-mobile">
             <div class="header-container">
-                <div class="logo-container">
+                <div class="    -container">
                     <div class="logo">
                         <a href="#">
                             <img src="../../../../storage/img/logo.png" alt="">
@@ -19,19 +19,16 @@ export default {
                 <div class="menu nav-bar">
                     <!-- Normale link -->
                     <a href="#" class="menu-item no-mega">
-                        <p>pagina-1</p>
+                        <p>Rijschool</p>
                     </a>
                     <a href="#" class="menu-item no-mega">
-                        <p>pagina-2</p>
+                        <p>Pakketen</p>
+                    </a>
+                    <a href="#" class="menu-item no-mega proefles">
+                        <p>Gratis proefles</p>
                     </a>
                     <a href="#" class="menu-item no-mega">
-                        <p>pagina-3</p>
-                    </a>
-                </div>
-                <!-- slide menu knop -->
-                <div class="slide-menu">
-                    <a class="slide-menu-button" v-on:click="openMenu">
-                        <i class="fas fa-bars"></i>
+                        <img src="../../../../storage/img/hamburger_icon.png" alt="=">
                     </a>
                 </div>
             </div>
@@ -69,7 +66,7 @@ export default {
     }
 
     .nav-bar {
-        width: 100%;
+        width: 100%;    
     }
 
     /* megamenu on mobile */
@@ -80,21 +77,24 @@ export default {
     .dropdown-row {
         width: 100%;
     }
-}
+    .menu-item img{
+        width: 33px;
+    }
 
-@media (max-width: 992px) {
     .header-desktop {
         display: none;
     }
 
     .header-mobile {
         display: block;
-        background-color: var(--rood-licht);
+        background-image: linear-gradient(var(--rood-licht), transparent);
+        position: absolute;
+        width: 100%;
     }
 
     .header-container {
         flex-direction: unset;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     /* slider menu */
@@ -156,11 +156,40 @@ export default {
         cursor: pointer;
         color: var(--background-white);
     }
+
+    .nav-bar {
+        font-size: 1rem;
+    }
+
+    .menu-item.no-mega:hover {
+        font-size: 1.1rem;
+        transition: 0.2s ease-in-out;
+    }
+
+    .logo img {
+        object-fit: contain;
+        width: 100px;
+    }
 }
 
 @media (max-width:576px) {
     .mobiele-slider {
         width: 80%;
     }
+
+    .logo img {
+        object-fit: contain;
+        width: 75px;
+    }
+
+    .nav-bar {
+        font-size: 0.9rem;
+    }
+
+    .menu-item.no-mega:hover {
+        font-size: 1rem;
+        transition: 0.2s ease-in-out;
+    }
+
 }
 </style>
