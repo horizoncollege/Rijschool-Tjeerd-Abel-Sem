@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-    <swiper-container class="mySwiper" loop="true" space-between="0" centered-slides="true" autoplay-delay="5000000"
+    <swiper-container class="mySwiper" loop="true" space-between="0" centered-slides="true" autoplay-delay="5000"
         autoplay-disable-on-interaction="false">
         <swiper-slide>
             <div class="banner-slide slide-1">
