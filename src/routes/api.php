@@ -28,7 +28,7 @@ Route::prefix('user')->group(function () {
         ->name('register');
 
     Route::post('/login', [AuthenticatedSessionController::class, 'store'])
-        ->middleware('guest')
+        ->middleware('web')
         ->name('login');
 
     Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])

@@ -59,11 +59,12 @@
         try {
           const response = await axios.post('/api/user/register', this.posts);
           console.log(response.data);
+          document.getElementById("error-msg-login").textContent = "";          
         } catch (error) {
           console.error(error);
           document.getElementById("error-msg-login").style.color = "red";
           var label = document.getElementById("error-msg-login");
-          label.textContent = "Error performing action `register`: '" + error + "'\n";
+          label.textContent = "Error performing action `register`: '" + error.response.data.message + "'\n";
         }
       },
     }
