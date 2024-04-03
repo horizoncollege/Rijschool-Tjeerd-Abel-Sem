@@ -50,7 +50,7 @@ class RolePermissionSeeder extends Seeder
                 $permission = Permission::where('permissions', $permissionName)->first();
 
                 if ($role && $permission) {
-                    $role->permission()->attach($permission);
+                    $role->permission()->attach($permission->id);
                 }
             }
         }
