@@ -28,7 +28,7 @@ export default {
                             <h2>Eigenaar</h2>
                         </div>
                         <div class="paragraaf-header multicolumn">
-                            <h2>Mischa Joostenheimer</h2>
+                            <h2>Mischa Joosten</h2>
                         </div>
                     </div>
                 </div>

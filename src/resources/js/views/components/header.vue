@@ -1,4 +1,5 @@
 <script>
+
 export default {
 
 }
@@ -19,12 +20,17 @@ export default {
                 <!-- navigatie -->
                 <div class="menu nav-bar">
                     <!-- Normale link -->
-                    <a href="#" class="menu-item no-mega">
-                        <p>Rijschool</p>
-                    </a>
+                    <router-link to="/rijschool" class="menu-item no-mega">
+                        Rijschool
+                    </router-link>
+                    <!-- <a to="/rijschool" class="menu-item no-mega"> -->
+                       
+                    <!-- </a> -->
+
                     <a href="#" class="menu-item no-mega">
                         <p>Pakketen</p>
                     </a>
+
                     <a href="#" class="menu-item no-mega">
                         <p>Rijbewijs</p>
                     </a>

@@ -15,7 +15,7 @@ export default {
                     <h2>header</h2>
                 </div>
             </div>
-            <swiper-container class="mySwiper pakketen-slider" slides-per-view="3" loop="false" space-between="100"
+            <swiper-container class="mySwiper pakketen-slider" loop="false" space-between="100"
                 centered-slides="false" autoplay-delay="5000000" autoplay-disable-on-interaction="false">
 
                 <swiper-slide>
@@ -170,13 +170,13 @@ export default {
     background: var(--background-grey);
     padding: 2rem;
     border-radius: 10px;
+    width: unset !important;
 }
-
 
 .pakketen-slider img {
     border-radius: 10px;
-
 }
+
 .multicolumn-rij {
     min-width: unset;
     max-width: unset;
