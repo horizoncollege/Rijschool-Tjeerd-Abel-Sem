@@ -1,11 +1,6 @@
 <script>
 export default {
 
-    mounted() {
-        let recaptchaScript = document.createElement('script')
-        recaptchaScript.setAttribute('src', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js')
-        document.head.appendChild(recaptchaScript)
-    }
 }
 </script>
 

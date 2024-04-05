@@ -1,25 +1,10 @@
 <script>
 export default {
 
-    mounted() {
-        let recaptchaScript = document.createElement('script')
-        recaptchaScript.setAttribute('src', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js')
-        document.head.appendChild(recaptchaScript)
-
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-    }
 }
 </script>
 
 <template>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <div class="content-row">
         <div class="content-blok">
             <div class="multicolumn-heading">
