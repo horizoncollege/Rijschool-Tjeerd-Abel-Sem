@@ -54,7 +54,7 @@ export default {
                     <a href="#" class="menu-item no-mega proefles">
                         <p>Gratis proefles</p>
                     </a>
-                    <button v-on:dblclick="OpenNavFunction" href="#" class="menu-item no-mega">
+                    <button v-on:onclick="OpenNavFunction" href="#" class="menu-item no-mega">
                         <img src="../../../../storage/img/hamburger_icon.png" alt="=">
                     </button>
                 </div>
