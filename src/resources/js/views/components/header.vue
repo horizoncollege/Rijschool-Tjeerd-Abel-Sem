@@ -1,6 +1,30 @@
 <script>
-export default {
+import axios from 'axios';
 
+export default {
+    data() {
+        return {
+            logged_in: false,
+            user: [],
+        }
+    },
+    mounted() {
+    axios.get("/api/user")
+      .then(response => {
+        response.json().then(data => {
+            this.user = data.data
+            this.logged_in = true;
+            console.log(this.data);
+        })
+        
+      })
+      .catch(error => {
+        this.logged_in = false;
+    });
+  },
+  async on_logout() {
+    const response = await axios.get('/api/user/logout');
+  }
 }
 </script>
 
@@ -11,7 +35,7 @@ export default {
             <div class="header-container">
                 <div class="logo-container">
                     <div class="logo">
-                        <a href="#">
+                        <a href="/">
                             <img src="../../../../storage/img/logo.png" alt="">
                         </a>
                     </div>
@@ -32,12 +56,20 @@ export default {
                     <a href="#" class="menu-item no-mega">
                         <p>Contact</p>
                     </a>
-                    <a href="#" class="menu-item no-mega proefles">
+
+                    <!-- Conditional rendering based on logged_in -->
+                    <a v-if="!this.logged_in" href="#" class="menu-item no-mega proefles">
                         <p>Gratis proefles</p>
                     </a>
-                    <a href="#" class="menu-item no-mega">
+                    <!-- Conditionally show or hide login.png -->
+                    <a v-if="!this.logged_in" href="/login" class="menu-item no-mega">
                         <img src="../../../../storage/img/login.png" class="login" alt="">
                     </a>
+
+                    <a v-if="this.logged_in" href="#" v-on:click="on_logout()" class="menu-item no-mega">
+                        <img src="../../../../storage/img/logout.png" class="login" alt="">
+                    </a>
+                    
                 </div>
             </div>
         </header>

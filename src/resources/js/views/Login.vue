@@ -1,3 +1,4 @@
+
 <template>
   <headerdesktop></headerdesktop>
   <headermobile></headermobile>
@@ -18,6 +19,8 @@
         <button type="submit">Login</button><br><br>
         <p style='color: red;' id="error-msg-login"></p><br>
         <a style="font-size: smaller" href="#" v-on:click="on_forgot_password()">wachtwoord vergeten?</a>
+        <br><br>
+        <a href="/register">Nog geen account? Maak een account aan.</a>
       </form>
     </div>
   </div>
@@ -40,6 +43,8 @@ export default {
   },
   data() {
     return {
+      logged_in: false,
+            user: [],
       forgot_password_post: {
         email: ""
       },
@@ -48,6 +53,21 @@ export default {
         password: ""
       }
     };
+  },
+  mounted() {
+    axios.get("/api/user")
+      .then(response => {
+        response.json().then(data => {
+            this.user = data.data
+            this.logged_in = true;
+            this.$router.push('/');
+            console.log(this.data);
+        })
+        
+      })
+      .catch(error => {
+        this.logged_in = false;
+    });
   },
   methods: {
     async post_data() {
