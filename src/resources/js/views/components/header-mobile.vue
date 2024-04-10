@@ -7,54 +7,51 @@ export default {
     },
     methods: {
         OpenNavFunction: function () {
-            if (this.OpenNav == false) {
-                this.OpenNav = true
-            } else {
-                this.OpenNav = false
-            }
+            this.OpenNav = !this.OpenNav;
+        },
+        CloseNavFunction: function () {
+            this.OpenNav = false;
         }
-    },
+    }
 }
 
-
 </script>
-
 <template>
 
-    <div v-show="this.OpenNav" id="myNav" class="overlay">
-        <a class="closebtn" onclick="closeNav()"></a>
-        <div class="overlay-content">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+    <transition name="slide" mode="out-in">
+        <div v-show="OpenNav" id="myNav" class="overlay" :class="{ active: OpenNav }">
+            <button class="closebtn" v-on:click="CloseNavFunction">X</button>
+            <div class="overlay-content">
+                <router-link to="/rijbewijs">Rijbewijs</router-link>
+                <router-link to="/contact">Contact</router-link>
+                <router-link to="/Login">Login</router-link>
+            </div>
         </div>
-    </div>
-
+    </transition>
 
     <div class="headermobile">
         <header class="header header-mobile">
             <div class="header-container">
                 <div class="logo-container">
                     <div class="logo">
-                        <a href="#">
+                        <router-link to="/">
                             <img src="../../../../storage/img/logo.png" alt="">
-                        </a>
+                        </router-link>
                     </div>
                 </div>
                 <!-- navigatie -->
                 <div class="menu nav-bar">
                     <!-- Normale link -->
-                    <a href="#" class="menu-item no-mega">
+                    <router-link to="/Rijschool" class="menu-item no-mega">
                         <p>Rijschool</p>
-                    </a>
-                    <a href="#" class="menu-item no-mega">
+                    </router-link>
+                    <router-link to="/pakketen" class="menu-item no-mega">
                         <p>Pakketen</p>
-                    </a>
-                    <a href="#" class="menu-item no-mega proefles">
+                    </router-link>
+                    <router-link to="/proefles" class="menu-item no-mega proefles">
                         <p>Gratis proefles</p>
-                    </a>
-                    <button v-on:onclick="OpenNavFunction" href="#" class="menu-item no-mega">
+                    </router-link>
+                    <button v-on:click="OpenNavFunction" class="menu-item no-mega hamburger-img">
                         <img src="../../../../storage/img/hamburger_icon.png" alt="=">
                     </button>
                 </div>
@@ -79,10 +76,10 @@ export default {
 /* Mobile header styling */
 /* 768px  576px*/
 
-/* slider menu styling */
-.header-mobile,
-.mobiele-slider {
-    display: none;
+@media (min-width:992px) {
+    .header-mobile {
+        display: none;
+    }
 }
 
 @media (max-width:992px) {
@@ -114,7 +111,7 @@ export default {
     }
 
     .header-mobile {
-        display: block;
+        display: block !important;
         background-image: linear-gradient(var(--rood-licht), transparent);
         position: absolute;
         width: 100%;
@@ -124,66 +121,6 @@ export default {
         flex-direction: unset;
         flex-wrap: nowrap;
     }
-
-    /* slider menu
-    .slide-menu i {
-        font-size: 2.5rem;
-    }
-
-    .slide-menu {
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-
-    .slide-menu-button {
-        background-color: transparent;
-        color: var(--blauw-licht);
-    }
-
-    .dropdown:hover {
-        cursor: pointer;
-    }
-
-    .mobiele-slider {
-        position: fixed;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100vh;
-        display: block;
-        background: rgba(0, 0, 0, 0.5);
-        transition: 0.3s;
-        overflow-x: hidden;
-        width: 60%;
-        max-width: 450px;
-    }
-
-    .slider-content {
-        z-index: 4;
-        position: relative;
-        top: 15%;
-        width: v-bind(sliderWidth);
-        text-align: center;
-    }
-
-    .slider-content a {
-        padding: 8px;
-        text-decoration: none;
-        font-size: 3rem;
-        color: #f1f1f1;
-        display: block;
-        transition: 0.3s;
-    }
-
-    .sluit-knop {
-        position: absolute;
-        top: 3rem;
-        right: 45px;
-        font-size: 5rem;
-        cursor: pointer;
-        color: var(--background-white);
-    } */
 
     .nav-bar {
         font-size: 1rem;
@@ -221,25 +158,45 @@ export default {
 
 }
 
-
 /* slider styling */
+
+.slide-enter {
+    transform: translateX(-300px);
+    transition: all .3s ease-out;
+
+}
+
+.slide-enter-active {
+    transition: all .3s ease-out;
+}
+
+.slide-leave-active {
+    transition: all .3s ease-out;
+}
+
+.slide-leave-to {
+    transform: translateX(-300px);
+}
+
+.overlay {
+    display: block;
+}
 
 .overlay {
     height: 100%;
-    width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     top: 0;
     left: 0;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
-    transition: 0.5s;
+    width: 60%;
 }
 
 .overlay-content {
     position: relative;
-    top: 25%;
+    top: 10%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
@@ -255,7 +212,8 @@ export default {
 }
 
 .overlay a:hover,
-.overlay a:focus {
+.overlay a:focus,
+.overlay .closebtn:hover {
     color: #f1f1f1;
 }
 
@@ -264,9 +222,16 @@ export default {
     top: 20px;
     right: 45px;
     font-size: 60px;
+    background: transparent;
+    color: #818181;
 }
 
-@media screen and (max-height: 450px) {
+
+.hamburger-img {
+    background: transparent;
+}
+
+@media (max-width: 450px) {
     .overlay a {
         font-size: 20px
     }
@@ -276,5 +241,14 @@ export default {
         top: 15px;
         right: 35px;
     }
+
+    .overlay {
+        width: 100%;
+    }
+.logo img{
+    object-fit: contain;
+    width: 50px;
+}
+
 }
 </style>

@@ -15,8 +15,8 @@ export default {
                     <h2>header</h2>
                 </div>
             </div>
-            <swiper-container class="mySwiper pakketen-slider" loop="false" space-between="100"
-                centered-slides="false" autoplay-delay="5000000" autoplay-disable-on-interaction="false">
+            <swiper-container class="mySwiper pakketen-slider" loop="false" space-between="100" centered-slides="false"
+                autoplay-delay="5000000" autoplay-disable-on-interaction="false">
 
                 <swiper-slide>
                     <div class="multicolumn-rij">
@@ -32,6 +32,9 @@ export default {
                             <li>Voordeel 3</li>
                             <li>Voordeel 4</li>
                             <li>Voordeel 5</li>
+                            <p><span class="oudeprijs">oude prijs</span> <span class="nieuweprijs">nieuwe prijs</span>
+                            </p>
+
                         </div>
                         <!-- multicolumn knop -->
                         <div class="multicolumn-knop knop-container">
@@ -56,6 +59,35 @@ export default {
                             <li>Voordeel 3</li>
                             <li>Voordeel 4</li>
                             <li>Voordeel 5</li>
+                            <p><span class="oudeprijs">oude prijs</span> <span class="nieuweprijs">nieuwe prijs</span>
+                            </p>
+                        </div>
+                        <!-- multicolumn knop -->
+                        <div class="multicolumn-knop knop-container">
+                            <a class="knop knop-default" href="#">
+                                <span class="knop-tekst">Meer informatie</span>
+                            </a>
+                        </div>
+                    </div>
+                </swiper-slide>
+
+                <swiper-slide>
+                    <div class="multicolumn-rij">
+                        <!-- multicolumn afbeelding -->
+                        <div class="multicolumn-afbeelding">
+                            <img src="../../../../storage/img/placeholder.png" alt="placeholder">
+                        </div>
+                        <!-- multicolumn tekst -->
+                        <div class="multicolumn-tekst">
+                            <h2>Pakket 1</h2>
+                            <li>Voordeel 1</li>
+                            <li>Voordeel 2</li>
+                            <li>Voordeel 3</li>
+                            <li>Voordeel 4</li>
+                            <li>Voordeel 5</li>
+                            <p><span class="oudeprijs">oude prijs</span> <span class="nieuweprijs">nieuwe prijs</span>
+                            </p>
+
                         </div>
                         <!-- multicolumn knop -->
                         <div class="multicolumn-knop knop-container">
@@ -80,6 +112,9 @@ export default {
                             <li>Voordeel 3</li>
                             <li>Voordeel 4</li>
                             <li>Voordeel 5</li>
+                            <p><span class="oudeprijs">oude prijs</span> <span class="nieuweprijs">nieuwe prijs</span>
+                            </p>
+
                         </div>
                         <!-- multicolumn knop -->
                         <div class="multicolumn-knop knop-container">
@@ -104,30 +139,9 @@ export default {
                             <li>Voordeel 3</li>
                             <li>Voordeel 4</li>
                             <li>Voordeel 5</li>
-                        </div>
-                        <!-- multicolumn knop -->
-                        <div class="multicolumn-knop knop-container">
-                            <a class="knop knop-default" href="#">
-                                <span class="knop-tekst"> Klik op mij!</span>
-                            </a>
-                        </div>
-                    </div>
-                </swiper-slide>
+                            <p><span class="oudeprijs">oude prijs</span> <span class="nieuweprijs">nieuwe prijs</span>
+                            </p>
 
-                <swiper-slide>
-                    <div class="multicolumn-rij">
-                        <!-- multicolumn afbeelding -->
-                        <div class="multicolumn-afbeelding">
-                            <img src="../../../../storage/img/placeholder.png" alt="placeholder">
-                        </div>
-                        <!-- multicolumn tekst -->
-                        <div class="multicolumn-tekst">
-                            <h2>Pakket 1</h2>
-                            <li>Voordeel 1</li>
-                            <li>Voordeel 2</li>
-                            <li>Voordeel 3</li>
-                            <li>Voordeel 4</li>
-                            <li>Voordeel 5</li>
                         </div>
                         <!-- multicolumn knop -->
                         <div class="multicolumn-knop knop-container">
@@ -181,5 +195,16 @@ export default {
     min-width: unset;
     max-width: unset;
     width: unset;
+}
+
+.oudeprijs {
+  text-decoration: line-through;
+  color: red
+}
+
+.nieuweprijs{
+    text-decoration: underline;
+    font-weight: bold;
+    color: green;
 }
 </style>

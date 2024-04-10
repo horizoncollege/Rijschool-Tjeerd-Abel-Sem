@@ -12,9 +12,9 @@ export default {
             <div class="header-container">
                 <div class="logo-container">
                     <div class="logo">
-                        <a href="#">
+                        <router-link to="/">
                             <img src="../../../../storage/img/logo.png" alt="">
-                        </a>
+                        </router-link>
                     </div>
                 </div>
                 <!-- navigatie -->
@@ -23,27 +23,22 @@ export default {
                     <router-link to="/rijschool" class="menu-item no-mega">
                         Rijschool
                     </router-link>
-                    <!-- <a to="/rijschool" class="menu-item no-mega"> -->
-                       
-                    <!-- </a> -->
-
-                    <a href="#" class="menu-item no-mega">
+                    <router-link to="/pakketen" class="menu-item no-mega">
                         <p>Pakketen</p>
-                    </a>
-
-                    <a href="#" class="menu-item no-mega">
+                    </router-link>
+                    <router-link to="/rijbewijs" class="menu-item no-mega">
                         <p>Rijbewijs</p>
-                    </a>
+                    </router-link>
                     <!-- na 3 op mobile in hamburger menu -->
-                    <a href="#" class="menu-item no-mega">
+                    <router-link to="/contact" class="menu-item no-mega">
                         <p>Contact</p>
-                    </a>
-                    <a href="#" class="menu-item no-mega proefles">
+                    </router-link>
+                    <router-link to="/proefles" class="menu-item no-mega proefles">
                         <p>Gratis proefles</p>
-                    </a>
-                    <a href="#" class="menu-item no-mega">
+                    </router-link>
+                    <router-link to="/login" class="menu-item no-mega">
                         <img src="../../../../storage/img/login.png" class="login" alt="">
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </header>

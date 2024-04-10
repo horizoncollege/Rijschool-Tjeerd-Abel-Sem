@@ -77,20 +77,21 @@ export default {
                         </div>
                     </div>
                 </div>
+
+            </div>
+            <div class="paragraaf-knop knop-container">
+                <router-link to="/personeel" class="knop knop-default" href="#">
+                    <span class="knop-tekst"> Ontmoet iedereen </span>
+                </router-link>
             </div>
         </div>
     </div>
 </template>
 
 <style>
-.team-multicolumn .multicolumn-rij{
-  background: var(--background-grey);
-  padding: 2rem;
-  border-radius: 10px;
+.team-multicolumn .multicolumn-rij {
+    background: var(--background-grey);
+    padding: 2rem;
+    border-radius: 10px;
 }
-
-
-
-
-
 </style>
