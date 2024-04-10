@@ -1,13 +1,15 @@
-
 <template>
   <headerdesktop></headerdesktop>
   <headermobile></headermobile>
 
-  
   <div class="login-container">
     <div class="login-form">
-      <h1>Login</h1><br>
+      <h1>Registreer</h1><br>
       <form @submit.prevent="post_data()">
+        <div class="form-group">
+          <label for="name">Name</label><br>
+          <input type="text" id="name" v-model="posts.name" required>
+        </div>
         <div class="form-group">
           <label for="email">Email</label><br>
           <input type="text" id="email" v-model="posts.email" required>
@@ -16,11 +18,12 @@
           <label for="password">Password</label><br>
           <input type="password" id="password" v-model="posts.password" required>
         </div>
-        <button type="submit">Login</button><br><br>
+        <div class="form-group">
+          <label for="password">Confirm password</label><br>
+          <input type="password" id="password" v-model="posts.password_confirmation" required>
+        </div>
+        <button type="submit">Registreer</button><br><br>
         <p style='color: red;' id="error-msg-login"></p><br>
-        <a style="font-size: smaller" href="#" v-on:click="on_forgot_password()">wachtwoord vergeten?</a>
-        <br><br>
-        <a href="/register">Nog geen account? Maak een account aan.</a>
       </form>
     </div>
   </div>
@@ -35,6 +38,10 @@ import footerdesktop from "./components/footer.vue";
 
 import axios from 'axios';
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 export default {
   components: {
     headerdesktop,
@@ -43,60 +50,44 @@ export default {
   },
   data() {
     return {
-      logged_in: false,
-            user: [],
-      forgot_password_post: {
-        email: ""
-      },
       posts: {
+        email: "",
+        password: "",
+        name: "",
+        password_confirmation: ""
+      },
+      login_redirect: {
         email: "",
         password: ""
       }
     };
   },
-  mounted() {
-    axios.get("/api/user")
-      .then(response => {
-        response.json().then(data => {
-            this.user = data.data
-            this.logged_in = true;
-            this.$router.push('/');
-            console.log(this.data);
-        })
-        
-      })
-      .catch(error => {
-        this.logged_in = false;
-    });
-  },
   methods: {
     async post_data() {
       try {
-        const response = await axios.post('/api/user/login', this.posts);
+        const response = await axios.post('/api/user/register', this.posts);
         console.log(response.data);
+        document.getElementById("error-msg-login").textContent = "";
+        document.getElementById("error-msg-login").style.color = "green";
+        var label = document.getElementById("error-msg-login");
+        label.textContent = "Action `register` has been performed successfully: '" + this.posts.email + "'\n";
+
+        this.login_redirect.email = this.posts.email;
+        this.login_redirect.password = this.posts.password;
+
+        label.textContent = "Logging you in...\n";
+        axios.post('/api/user/login', this.login_redirect).then(response => {
+          setTimeout(() => {
+            this.$router.push('/');
+          }, 2000);
+        })
       } catch (error) {
         console.error(error);
         document.getElementById("error-msg-login").style.color = "red";
         var label = document.getElementById("error-msg-login");
-        label.textContent = "Error performing action `login`: '" + error + "'\n";
+        label.textContent = "Error performing action `register`: '" + error.response.data.message + "'\n";
       }
     },
-
-    async on_forgot_password() {
-      let mailaddr = prompt("Voer hier uw email adres in");
-
-      this.forgot_password_post.email = mailaddr;
-
-      try {
-        const response = await axios.post('/api/user/forgot-password', this.forgot_password_post);
-        document.getElementById("error-msg-login").style.color = "green";
-        document.getElementById("error-msg-login").textContent = "Wachtwoord reset verzonden!";
-      } catch(error) {
-        console.error(error);
-        document.getElementById("error-msg-login").style.color = "red";
-        document.getElementById("error-msg-login").textContent = "Fout bij het verzenden van de wachtwoord reset, probeer het opnieuw.\n\n" + error;
-      }
-    }
   }
 }
 
