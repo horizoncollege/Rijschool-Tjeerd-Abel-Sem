@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_permissions', function (Blueprint $table) {
-            $table->foreignId('user_id');
+        Schema::create('roles_permission', function (Blueprint $table) {
+            $table->foreignId('role_id');
             $table->foreignId('permission_id');
         });
     }
@@ -22,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('roles_permission');
     }
 };
