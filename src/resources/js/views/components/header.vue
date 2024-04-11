@@ -9,22 +9,26 @@ export default {
         }
     },
     mounted() {
-    axios.get("/api/user")
-      .then(response => {
-        response.json().then(data => {
-            this.user = data.data
-            this.logged_in = true;
-            console.log(this.data);
-        })
-        
-      })
-      .catch(error => {
-        this.logged_in = false;
-    });
-  },
-  async on_logout() {
-    const response = await axios.get('/api/user/logout');
-  }
+        axios.get("/api/user")
+            .then(response => {
+                response.json().then(data => {
+                    this.user = data.data
+                    this.logged_in = true;
+                    console.log(this.data);
+                })
+
+            })
+            .catch(error => {
+                this.logged_in = false;
+            });
+    },
+    methods: {
+        async on_logout() {
+            const response = await axios.post('/api/user/logout').then(
+                await window.location.reload()
+            )
+        }
+    }
 }
 </script>
 
@@ -58,18 +62,18 @@ export default {
                     </a>
 
                     <!-- Conditional rendering based on logged_in -->
-                    <a v-if="!this.logged_in" href="#" class="menu-item no-mega proefles">
+                    <a v-if="!this.user" href="#" class="menu-item no-mega proefles">
                         <p>Gratis proefles</p>
                     </a>
                     <!-- Conditionally show or hide login.png -->
-                    <a v-if="!this.logged_in" href="/login" class="menu-item no-mega">
+                    <a v-if="!this.user" href="/login" class="menu-item no-mega">
                         <img src="../../../../storage/img/login.png" class="login" alt="">
                     </a>
 
-                    <a v-if="this.logged_in" href="#" v-on:click="on_logout()" class="menu-item no-mega">
+                    <a v-if="this.user" href="#" v-on:click="on_logout()" class="menu-item no-mega">
                         <img src="../../../../storage/img/logout.png" class="login" alt="">
                     </a>
-                    
+
                 </div>
             </div>
         </header>
