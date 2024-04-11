@@ -44,13 +44,13 @@ class RolePermissionSeeder extends Seeder
 
         // Assign permissions to each role
         foreach ($rolePermissions as $roleName => $permissions) {
-            $role = Role::where('roles', $roleName)->first();
+            $role = Role::where('role', $roleName)->first();
 
             foreach ($permissions as $permissionName) {
                 $permission = Permission::where('permissions', $permissionName)->first();
 
                 if ($role && $permission) {
-                    $role->permission()->attach($permission->id);
+                    $role->permissions()->attach($permission->id);
                 }
             }
         }

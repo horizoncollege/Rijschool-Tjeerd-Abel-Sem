@@ -11,6 +11,25 @@ use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
+
+    public function show(Request $request)
+    {
+        $user = $request->user();
+
+        // Load the user's roles and permissions
+        $user->load('roles.permissions');
+
+        // Format the user's data
+        $userData = [
+            'name' => $user->name,
+            'email' => $user->email,
+            'permissions' => $user->roles->map(function ($role) {
+                return $role->permissions->pluck('permissions');
+            })->collapse()->unique(),
+        ];
+
+        return response()->json($userData);
+    }
     /**
      * Display the user's profile form.
      */
