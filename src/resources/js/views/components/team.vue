@@ -43,7 +43,7 @@ export default {
                             <h2>Instructeur</h2>
                         </div>
                         <div class="paragraaf-header multicolumn">
-                            <h2>Incineroar</h2>
+                            <h2>Cheyenne</h2>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ export default {
                             <h2>Instructeur</h2>
                         </div>
                         <div class="paragraaf-header multicolumn">
-                            <h2>Ash Ketsjup</h2>
+                            <h2>Jennefir</h2>
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@ export default {
                             <h2>Instructeur</h2>
                         </div>
                         <div class="paragraaf-header multicolumn">
-                            <h2>Barbie</h2>
+                            <h2>Stijn</h2>
                         </div>
                     </div>
                 </div>  -->
@@ -88,10 +88,14 @@ export default {
     </div>
 </template>
 
-<style>
+<style scoped>
 .team-multicolumn .multicolumn-rij {
     background: var(--background-grey);
     padding: 2rem;
     border-radius: 10px;
+}
+
+.paragraaf-knop.knop-container{
+    margin: 1rem auto 1rem 5rem;
 }
 </style>

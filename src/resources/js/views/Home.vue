@@ -7,6 +7,7 @@ import review from "./components/review.vue";
 import footerdesktop from "./components/footer.vue";
 import pakketen from "./components/pakketen.vue";
 import team from "./components/team.vue"
+import paragraaf2 from "./components/paragraaf-2.vue";
 
 export default {
   components: {
@@ -17,7 +18,8 @@ export default {
     paragraaf,
     review,
     team,
-    footerdesktop
+    footerdesktop,
+    paragraaf2
   }
 }
 </script>
@@ -29,7 +31,7 @@ export default {
   <paragraaf></paragraaf>
   <review></review>
   <team></team>
-  <paragraaf></paragraaf>
+  <paragraaf2></paragraaf2>
   <footerdesktop></footerdesktop>
 
 </template>

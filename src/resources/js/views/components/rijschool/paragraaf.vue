@@ -16,24 +16,17 @@ export default {
             <h2 class="paragraaf-header">header</h2>
           </div>
           <div class="paragraaf-tekst-content">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto veniam incidunt modi sit a alias minima.
-              Ut expedita sint consectetur corrupti totam, eos fuga reiciendis earum dolore, impedit nihil ab quod illo
-              distinctio commodi asperiores. Quidem at aliquid, temporibus sunt explicabo pariatur iure obcaecati,
-              dolorem quas incidunt illum, asperiores deserunt. Exercitationem ipsam iure saepe, sunt asperiores ipsum
-              provident cum enim, necessitatibus esse maiores excepturi natus pariatur corrupti ex voluptatum.
-              Reprehenderit sequi sapiente quia delectus! Aliquid eveniet, numquam quia fuga quasi voluptatum magni
-              nostrum vitae impedit cumque tempora qui laboriosam illum iste delectus temporibus? Quos repudiandae
-              reiciendis nesciunt obcaecati molestias. Inventore quae error enim quia velit? Fuga asperiores nisi a
-              ipsam magni doloribus dolore praesentium, eos nobis quod est, possimus illo facilis aliquam harum
-              doloremque architecto at ab rem earum. Atque, eum ex adipisci ea animi recusandae quae iusto dolor
-              deserunt, nemo ducimus eos cum! Officiis repellat eum ipsam, facere possimus totam amet quisquam assumenda
-              ab harum blanditiis in reprehenderit optio eveniet expedita tempore neque minus eius aut similique
-              architecto distinctio iste nam? A cum error alias sint, aperiam reiciendis at nemo est quod corporis ex
-              illum. Odit rem voluptas, alias corporis facere facilis impedit saepe. Repellat, odit esse! Neque quod,
-              quo fugit animi ipsum quas fuga molestias autem ipsa numquam minima cum illum in eligendi eum voluptatem
-              quasi veritatis vero pariatur debitis quis consequuntur dolor? Illo, vel est! Saepe exercitationem
-              voluptates amet totam illum dolore a voluptas consequatur, nostrum nesciunt eum delectus, quis vero
-              dolorem sint tempore iusto consequuntur velit.</p>
+            <h2 class="content-subheader">Maatwerk Lessen</h2>
+            <p>Bij ons draait alles om maatwerk. We geloven dat iedereen het recht heeft om de vrijheid van rijden te
+              ervaren, ongeacht de obstakels die ze tegenkomen. Onze lessen worden volledig aangepast aan jouw tempo,
+              behoeften en comfortniveau. Of je nu meer tijd nodig hebt om bepaalde manoeuvres onder de knie te krijgen
+              of specifieke aanpassingen aan het voertuig nodig hebt, we staan klaar om je te ondersteunen op jouw reis
+              naar het behalen van je rijbewijs.</p>
+            <h2 class="content-subheader">Empathische Instructeurs</h2>
+            <p>Onze instructeurs bij Rijschool Vierkante Wielen zijn niet alleen gekwalificeerde professionals, maar ze
+              hebben ook een diepgaand begrip en empathie voor de uitdagingen waarmee je te maken hebt. Ze zullen niet
+              alleen je rijvaardigheden ontwikkelen, maar ook een ondersteunende en stimulerende omgeving creëren waarin
+              je kunt gedijen.</p>
           </div>
           <!-- knop voor paragraaf -->
           <div class="paragraaf-knop knop-container">

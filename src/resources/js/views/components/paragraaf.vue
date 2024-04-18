@@ -12,34 +12,28 @@ export default {
       <div class="paragraaf afbeelding-ja afbeelding-rechts">
         <div class="paragraaf-tekst">
           <div class="paragraaf-headers">
-            <h2 class="paragraaf-subheader">subheader</h2>
-            <h2 class="paragraaf-header">header</h2>
+            <h2 class="paragraaf-subheader">Ontdek de Vrijheid van Rijden</h2>
+            <h2 class="paragraaf-header"></h2>
           </div>
           <div class="paragraaf-tekst-content">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto veniam incidunt modi sit a alias minima.
-              Ut expedita sint consectetur corrupti totam, eos fuga reiciendis earum dolore, impedit nihil ab quod illo
-              distinctio commodi asperiores. Quidem at aliquid, temporibus sunt explicabo pariatur iure obcaecati,
-              dolorem quas incidunt illum, asperiores deserunt. Exercitationem ipsam iure saepe, sunt asperiores ipsum
-              provident cum enim, necessitatibus esse maiores excepturi natus pariatur corrupti ex voluptatum.
-              Reprehenderit sequi sapiente quia delectus! Aliquid eveniet, numquam quia fuga quasi voluptatum magni
-              nostrum vitae impedit cumque tempora qui laboriosam illum iste delectus temporibus? Quos repudiandae
-              reiciendis nesciunt obcaecati molestias. Inventore quae error enim quia velit? Fuga asperiores nisi a
-              ipsam magni doloribus dolore praesentium, eos nobis quod est, possimus illo facilis aliquam harum
-              doloremque architecto at ab rem earum. Atque, eum ex adipisci ea animi recusandae quae iusto dolor
-              deserunt, nemo ducimus eos cum! Officiis repellat eum ipsam, facere possimus totam amet quisquam assumenda
-              ab harum blanditiis in reprehenderit optio eveniet expedita tempore neque minus eius aut similique
-              architecto distinctio iste nam? A cum error alias sint, aperiam reiciendis at nemo est quod corporis ex
-              illum. Odit rem voluptas, alias corporis facere facilis impedit saepe. Repellat, odit esse! Neque quod,
-              quo fugit animi ipsum quas fuga molestias autem ipsa numquam minima cum illum in eligendi eum voluptatem
-              quasi veritatis vero pariatur debitis quis consequuntur dolor? Illo, vel est! Saepe exercitationem
-              voluptates amet totam illum dolore a voluptas consequatur, nostrum nesciunt eum delectus, quis vero
-              dolorem sint tempore iusto consequuntur velit.</p>
+            <p>
+              Bij Rijschool Vierkante Wielen begrijpen we dat de weg naar het behalen van je rijbewijs niet altijd
+              rechtlijnig is, vooral niet als je te maken hebt met fysieke beperkingen of andere uitdagingen die rijden
+              moeilijk maken. Daarom bieden we een unieke benadering van rijlessen die volledig is aangepast aan jouw
+              behoeften en mogelijkheden.</p>
+            <h2 class="content-subheader">Voor Iedereen, Ongeacht de Uitdaging</h2>
+            <p>Of je nu worstelt met mobiliteitsproblemen, fysieke beperkingen, of gewoon wat extra ondersteuning nodig
+              hebt, bij Rijschool Vierkante Wielen verwelkomen we iedereen. Onze instructeurs zijn speciaal getraind om
+              te werken met diverse uitdagingen, van rolstoelgebruikers tot mensen met autisme of andere cognitieve
+              verschillen.</p>
+
+
           </div>
           <!-- knop voor paragraaf -->
           <div class="paragraaf-knop knop-container">
-            <a class="knop knop-default" href="#">
-              <span class="knop-tekst"> Klik op mij!</span>
-            </a>
+            <router-link to="/rijschool" class="knop knop-default" href="#">
+              <span class="knop-tekst"> Meer over de rijschool</span>
+            </router-link>
           </div>
         </div>
         <div class="paragraaf-afbeelding">
@@ -63,6 +57,12 @@ export default {
 
 .paragraaf-subheader {
   font-size: 1.5rem;
+  line-height: 1rem;
+  font-weight: 600;
+}
+
+.content-subheader {
+  font-size: 1.25rem;
   line-height: 1rem;
   font-weight: 600;
 }

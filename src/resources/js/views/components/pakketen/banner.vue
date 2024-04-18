@@ -14,16 +14,10 @@ export default {
                 <div class="banner-content banner-content-links">
                     <div class="banner-headers">
                         <h2 class="banner-subheader"></h2>
-                        <h2 class="banner-header">Ontmoet het hele team</h2>
+                        <h2 class="banner-header">Pakketen</h2>
                     </div>
                     <div class="banner-tekst-content">
-                        <p>Ontmoet hieronder het hele vierkante wielen team!</p>
-                    </div>
-                    <!-- knop op banner -->
-                    <div class="banner-knop knop-container">
-                        <a class="knop knop-default" href="#">
-                            <span class="knop-tekst"> Klik op mij!</span>
-                        </a>
+                        <p>Bekijk alle pakketen hieronder</p>
                     </div>
                 </div>
             </div>

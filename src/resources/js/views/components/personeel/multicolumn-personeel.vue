@@ -26,13 +26,12 @@ export default {
                     </div>
                     <!-- multicolumn tekst -->
                     <div class="multicolumn-tekst">
-                        <h2>Top tekst</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora
-                            impedit
-                            voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur,
-                            fugiat
-                            temporibus
-                            quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
+                        <h2>Cheyenne</h2>
+                        <p>Als instructeur bij Rijschool Vierkante Wielen ben ik gemotiveerd door de vreugde die
+                            voortkomt uit het empoweren van anderen. Als iemand met een fysieke beperking begrijp ik de
+                            uitdagingen van het leren rijden met beperkingen maar al te goed. Door mijn ervaring te
+                            delen en anderen te begeleiden, hoop ik hen te helpen hun eigen vrijheid en
+                            onafhankelijkheid op de weg te vinden.</p>
                     </div>
 
                 </div>
@@ -44,13 +43,12 @@ export default {
                     </div>
                     <!-- multicolumn tekst -->
                     <div class="multicolumn-tekst">
-                        <h2>Top tekst</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora
-                            impedit
-                            voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur,
-                            fugiat
-                            temporibus
-                            quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
+                        <h2>Jennefir</h2>
+                        <p>Het is mijn passie om anderen te helpen hun potentieel te bereiken, ongeacht de obstakels die
+                            ze tegenkomen. Als instructeur bij Rijschool Vierkante Wielen kan ik mijn liefde voor
+                            autorijden combineren met mijn verlangen om een verschil te maken in het leven van mensen.
+                            Elke dag zie ik mijn studenten groeien en zelfverzekerder worden achter het stuur, en dat
+                            geeft me een enorme voldoening.</p>
                     </div>
 
                 </div>
@@ -62,13 +60,12 @@ export default {
                     </div>
                     <!-- multicolumn tekst -->
                     <div class="multicolumn-tekst">
-                        <h2>Top tekst</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora
-                            impedit
-                            voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur,
-                            fugiat
-                            temporibus
-                            quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
+                        <h2>Stijn</h2>
+                        <p>Voor mij draait het allemaal om het creëren van een inclusieve en ondersteunende omgeving
+                            waarin iedereen de kans krijgt om te leren en te groeien. Als instructeur bij Rijschool
+                            Vierkante Wielen kan ik mijn vaardigheden en expertise inzetten om mensen met verschillende
+                            achtergronden en uitdagingen te helpen slagen. Het is een voorrecht om deel uit te maken van
+                            hun reis naar rijbewijsvrijheid en zelfstandigheid.</p>
                     </div>
                 </div>
                 <!-- eind -->

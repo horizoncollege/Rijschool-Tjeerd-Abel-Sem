@@ -72,7 +72,8 @@ export default {
     user-select: none;
     display: block;
     /* background-image: linear-gradient(var(--rood-licht), transparent); */
-    position: absolute;
+    background-color: var(--rood-licht);
+    /* position: absolute; */
     width: 100%;
 }
 

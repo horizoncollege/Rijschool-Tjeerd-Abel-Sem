@@ -16,13 +16,11 @@ export default {
             <h2 class="paragraaf-header">Mischa</h2>
           </div>
           <div class="paragraaf-tekst-content">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto veniam incidunt modi sit a alias minima.
-              Ut expedita sint consectetur corrupti totam, eos fuga reiciendis earum dolore, impedit nihil ab quod illo
-              distinctio commodi asperiores. Quidem at aliquid, temporibus sunt explicabo pariatur iure obcaecati,
-              dolorem quas incidunt illum, asperiores deserunt. Exercitationem ipsam iure saepe, sunt asperiores ipsum
-              provident cum enim, necessitatibus esse maiores excepturi natus pariatur corrupti ex voluptatum.
-              Reprehenderit sequi sapiente quia delectus! Aliquid eveniet, numquam quia fuga quasi voluptatum magni
-              nostrum vitae impedit cumque tempora qui</p>
+            <p>Als de drijvende kracht achter Rijschool Vierkante Wielen, is Mischa een gepassioneerde
+              voorvechter van inclusiviteit en toegankelijkheid op de weg. Met een achtergrond in rijonderwijs en een
+              diepgaand begrip van de uitdagingen waarmee mensen met fysieke beperkingen worden geconfronteerd, heeft
+              Mischa zijn missie gemaakt om een rijopleiding aan te bieden die voor iedereen
+              toegankelijk is.</p>
           </div>
           <!-- knop voor paragraaf -->
           <div class="paragraaf-knop knop-container">

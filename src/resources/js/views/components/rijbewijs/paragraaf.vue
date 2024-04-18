@@ -5,41 +5,25 @@ export default {
 </script>
 
 <template>
-
   <div class="content-row">
     <div class="content-blok">
       <!-- paragraaf met afbeelding -->
       <div class="paragraaf afbeelding-ja afbeelding-rechts">
         <div class="paragraaf-tekst">
           <div class="paragraaf-headers">
-            <h2 class="paragraaf-subheader">subheader</h2>
-            <h2 class="paragraaf-header">header</h2>
+            <h2 class="paragraaf-subheader">Waarom eigenlijk?</h2>
+            <h2 class="paragraaf-header">Rijbewijs halen</h2>
           </div>
           <div class="paragraaf-tekst-content">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto veniam incidunt modi sit a alias minima.
-              Ut expedita sint consectetur corrupti totam, eos fuga reiciendis earum dolore, impedit nihil ab quod illo
-              distinctio commodi asperiores. Quidem at aliquid, temporibus sunt explicabo pariatur iure obcaecati,
-              dolorem quas incidunt illum, asperiores deserunt. Exercitationem ipsam iure saepe, sunt asperiores ipsum
-              provident cum enim, necessitatibus esse maiores excepturi natus pariatur corrupti ex voluptatum.
-              Reprehenderit sequi sapiente quia delectus! Aliquid eveniet, numquam quia fuga quasi voluptatum magni
-              nostrum vitae impedit cumque tempora qui laboriosam illum iste delectus temporibus? Quos repudiandae
-              reiciendis nesciunt obcaecati molestias. Inventore quae error enim quia velit? Fuga asperiores nisi a
-              ipsam magni doloribus dolore praesentium, eos nobis quod est, possimus illo facilis aliquam harum
-              doloremque architecto at ab rem earum. Atque, eum ex adipisci ea animi recusandae quae iusto dolor
-              deserunt, nemo ducimus eos cum! Officiis repellat eum ipsam, facere possimus totam amet quisquam assumenda
-              ab harum blanditiis in reprehenderit optio eveniet expedita tempore neque minus eius aut similique
-              architecto distinctio iste nam? A cum error alias sint, aperiam reiciendis at nemo est quod corporis ex
-              illum. Odit rem voluptas, alias corporis facere facilis impedit saepe. Repellat, odit esse! Neque quod,
-              quo fugit animi ipsum quas fuga molestias autem ipsa numquam minima cum illum in eligendi eum voluptatem
-              quasi veritatis vero pariatur debitis quis consequuntur dolor? Illo, vel est! Saepe exercitationem
-              voluptates amet totam illum dolore a voluptas consequatur, nostrum nesciunt eum delectus, quis vero
-              dolorem sint tempore iusto consequuntur velit.</p>
-          </div>
-          <!-- knop voor paragraaf -->
-          <div class="paragraaf-knop knop-container">
-            <a class="knop knop-default" href="#">
-              <span class="knop-tekst"> Klik op mij!</span>
-            </a>
+            <h2 class="content-subheader">Ontdek De Vrijheid van Rijden</h2>
+            <p>Het behalen van je rijbewijs is meer dan alleen een juridische vereiste of een symbolische mijlpaal. Het
+              is een stap naar onafhankelijkheid, zelfredzaamheid en vrijheid op de weg, ongeacht je persoonlijke
+              omstandigheden. Zelfs als je te maken hebt met een handicap, is het halen van je rijbewijs een krachtig
+              statement van empowerment en mogelijkheden.</p>
+            <p>Voor mensen met een handicap opent het behalen van een rijbewijs een wereld van mogelijkheden. Het stelt
+              je in staat om zelfstandig naar je werk te gaan, vrienden te bezoeken, boodschappen te doen, en deel te
+              nemen aan activiteiten die voor anderen vanzelfsprekend zijn. Het biedt een gevoel van autonomie en
+              controle over je eigen leven, waardoor je niet langer afhankelijk bent van anderen voor vervoer.</p>
           </div>
         </div>
         <div class="paragraaf-afbeelding">
