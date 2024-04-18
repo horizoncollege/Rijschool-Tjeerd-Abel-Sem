@@ -5,39 +5,29 @@ export default {
 </script>
 
 <template>
-
   <div class="content-row">
     <div class="content-blok">
       <!-- paragraaf met afbeelding -->
       <div class="paragraaf afbeelding-ja afbeelding-rechts">
         <div class="paragraaf-tekst">
           <div class="paragraaf-headers">
-            <h2 class="paragraaf-subheader">Ontdek de Vrijheid van Rijden</h2>
-            <h2 class="paragraaf-header"></h2>
+            <h2 class="paragraaf-subheader">Waarom eigenlijk?</h2>
+            <h2 class="paragraaf-header">Rijbewijs halen</h2>
           </div>
           <div class="paragraaf-tekst-content">
-            <p>
-              Bij Rijschool Vierkante Wielen begrijpen we dat de weg naar het behalen van je rijbewijs niet altijd
-              rechtlijnig is, vooral niet als je te maken hebt met fysieke beperkingen of andere uitdagingen die rijden
-              moeilijk maken. Daarom bieden we een unieke benadering van rijlessen die volledig is aangepast aan jouw
-              behoeften en mogelijkheden.</p>
-            <h2 class="content-subheader">Voor Iedereen, Ongeacht de Uitdaging</h2>
-            <p>Of je nu worstelt met mobiliteitsproblemen, fysieke beperkingen, of gewoon wat extra ondersteuning nodig
-              hebt, bij Rijschool Vierkante Wielen verwelkomen we iedereen. Onze instructeurs zijn speciaal getraind om
-              te werken met diverse uitdagingen, van rolstoelgebruikers tot mensen met autisme of andere cognitieve
-              verschillen.</p>
-
-
-          </div>
-          <!-- knop voor paragraaf -->
-          <div class="paragraaf-knop knop-container">
-            <router-link to="/rijschool" class="knop knop-default" href="#">
-              <span class="knop-tekst"> Meer over de rijschool</span>
-            </router-link>
+            <h2 class="content-subheader">Ontdek De Vrijheid van Rijden</h2>
+            <p>Het behalen van je rijbewijs is meer dan alleen een juridische vereiste of een symbolische mijlpaal. Het
+              is een stap naar onafhankelijkheid, zelfredzaamheid en vrijheid op de weg, ongeacht je persoonlijke
+              omstandigheden. Zelfs als je te maken hebt met een handicap, is het halen van je rijbewijs een krachtig
+              statement van empowerment en mogelijkheden.</p>
+            <p>Voor mensen met een handicap opent het behalen van een rijbewijs een wereld van mogelijkheden. Het stelt
+              je in staat om zelfstandig naar je werk te gaan, vrienden te bezoeken, boodschappen te doen, en deel te
+              nemen aan activiteiten die voor anderen vanzelfsprekend zijn. Het biedt een gevoel van autonomie en
+              controle over je eigen leven, waardoor je niet langer afhankelijk bent van anderen voor vervoer.</p>
           </div>
         </div>
         <div class="paragraaf-afbeelding">
-          <img src="../../../../storage/img/placeholder.png" alt="placeholder">
+          <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
         </div>
       </div>
     </div>
@@ -45,7 +35,7 @@ export default {
 
 </template>
 
-<style>
+<style scoped>
 /* paragraaf generic styling */
 
 .paragraaf-header {
@@ -57,12 +47,6 @@ export default {
 
 .paragraaf-subheader {
   font-size: 1.5rem;
-  line-height: 1rem;
-  font-weight: 600;
-}
-
-.content-subheader {
-  font-size: 1.25rem;
   line-height: 1rem;
   font-weight: 600;
 }

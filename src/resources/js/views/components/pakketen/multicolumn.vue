@@ -21,10 +21,11 @@ export default {
                 <div class="multicolumn-blok">
                     <!-- begin multicolumn content -->
                     <swiper-slide>
+
                         <div class="multicolumn-rij">
                             <!-- multicolumn afbeelding/video -->
                             <div class="multicolumn-afbeelding">
-                                <img src="../../../../storage/img/placeholder.png" alt="placeholder">
+                                <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
                             </div>
                             <!-- multicolumn tekst -->
                             <div class="multicolumn-tekst">
@@ -49,7 +50,7 @@ export default {
                         <div class="multicolumn-rij">
                             <!-- multicolumn afbeelding -->
                             <div class="multicolumn-afbeelding">
-                                <img src="../../../../storage/img/placeholder.png" alt="placeholder">
+                                <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
                             </div>
                             <!-- multicolumn tekst -->
                             <div class="multicolumn-tekst">
@@ -74,7 +75,7 @@ export default {
                         <div class="multicolumn-rij">
                             <!-- multicolumn afbeelding -->
                             <div class="multicolumn-afbeelding">
-                                <img src="../../../../storage/img/placeholder.png" alt="placeholder">
+                                <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
                             </div>
                             <!-- multicolumn tekst -->
                             <div class="multicolumn-tekst">
@@ -99,7 +100,7 @@ export default {
                         <div class="multicolumn-rij">
                             <!-- multicolumn afbeelding -->
                             <div class="multicolumn-afbeelding">
-                                <img src="../../../../storage/img/placeholder.png" alt="placeholder">
+                                <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
                             </div>
                             <!-- multicolumn tekst -->
                             <div class="multicolumn-tekst">
@@ -126,7 +127,7 @@ export default {
     </div>
 </template>
 
-<style>
+<style scoped>
 /* multicolumn styling */
 .multicolumn-rij {
     min-width: 320px;
@@ -159,41 +160,5 @@ export default {
     flex-direction: column;
     text-align: center;
     padding-bottom: 0.5rem;
-}
-
-/* base knop styling */
-
-.knop {
-    cursor: pointer;
-    text-decoration: none;
-    padding: 0.75rem 1.6rem 0.75rem 1.6rem;
-    width: fit-content;
-    display: flex;
-    min-width: 10rem;
-}
-
-.knop-tekst {
-    transition: 0.2s;
-    user-select: none;
-}
-
-.knop:hover .knop-tekst {
-    margin-left: 4px;
-    transition: 0.2s;
-}
-
-.knop-default {
-    background-color: var(--rood-licht);
-    transition: 0.2s;
-    border: 1px var(--background-black) solid;
-}
-
-.knop-default .knop-tekst {
-    color: var(--text-color-white);
-}
-
-.knop-default:hover {
-    background-color: var(--rood-donker);
-    transition: 0.2s;
 }
 </style>

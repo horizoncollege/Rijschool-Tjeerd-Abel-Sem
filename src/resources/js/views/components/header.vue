@@ -39,28 +39,31 @@ export default {
             <div class="header-container">
                 <div class="logo-container">
                     <div class="logo">
-                        <a href="/">
-                            <img src="../../../../storage/img/logo.png" alt="">
-                        </a>
+                        <router-link to="/">
+            <img src="../../../../storage/img/logo.png" alt="">
+                        </router-link>
                     </div>
                 </div>
                 <!-- navigatie -->
                 <div class="menu nav-bar">
                     <!-- Normale link -->
-                    <a href="#" class="menu-item no-mega">
-                        <p>Rijschool</p>
-                    </a>
-                    <a href="#" class="menu-item no-mega">
+                    <router-link to="/rijschool" class="menu-item no-mega">
+                        Rijschool
+                    </router-link>
+                    <router-link to="/pakketen" class="menu-item no-mega">
                         <p>Pakketen</p>
-                    </a>
-                    <a href="#" class="menu-item no-mega">
+                    </router-link>
+                    <router-link to="/rijbewijs" class="menu-item no-mega">
                         <p>Rijbewijs</p>
-                    </a>
+                    </router-link>
                     <!-- na 3 op mobile in hamburger menu -->
-                    <a href="#" class="menu-item no-mega">
+                    <router-link to="/contact" class="menu-item no-mega">
                         <p>Contact</p>
-                    </a>
-
+                    </router-link>
+                    <router-link to="/proefles" class="menu-item no-mega proefles">
+                        <p>Gratis proefles</p>
+                    </router-link>
+                   
                     <!-- Conditional rendering based on logged_in -->
                     <a v-if="!this.user" href="#" class="menu-item no-mega proefles">
                         <p>Gratis proefles</p>
@@ -69,10 +72,10 @@ export default {
                     <a v-if="!this.user" href="/login" class="menu-item no-mega">
                         <img src="../../../../storage/img/login.png" class="login" alt="">
                     </a>
-
                     <a v-if="this.user" href="#" v-on:click="on_logout()" class="menu-item no-mega">
                         <img src="../../../../storage/img/logout.png" class="login" alt="">
                     </a>
+
 
                 </div>
             </div>
@@ -106,8 +109,9 @@ export default {
     z-index: 2;
     user-select: none;
     display: block;
-    background-image: linear-gradient(var(--rood-licht), transparent);
-    position: absolute;
+    /* background-image: linear-gradient(var(--rood-licht), transparent); */
+    background-color: var(--rood-licht);
+    /* position: absolute; */
     width: 100%;
 }
 
@@ -283,5 +287,60 @@ export default {
     .headerdesktop {
         display: none;
     }
+}
+
+
+
+
+/* base knop styling */
+
+.knop {
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.75rem 1.6rem 0.75rem 1.6rem;
+    width: fit-content;
+    display: flex;
+    min-width: 10rem;
+}
+
+.knop-tekst {
+    transition: 0.2s;
+    user-select: none;
+}
+
+.knop:hover .knop-tekst {
+    margin-left: 4px;
+    transition: 0.2s;
+}
+
+/* banner knop */
+
+.banner-knop {
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 680px) and (min-width: 576px) {
+    .banner-knop .knop {
+        padding: 0.75rem 0rem 0.75rem 0.75rem;
+    }
+}
+
+/* default knop */
+
+.knop-default {
+    background-color: var(--rood-licht);
+    transition: 0.2s;
+    border: 1px var(--background-black) solid;
+}
+
+.knop-default .knop-tekst {
+    color: var(--text-color-white);
+}
+
+.knop-default:hover {
+    background-color: var(--rood-donker);
+    transition: 0.2s;
 }
 </style>
