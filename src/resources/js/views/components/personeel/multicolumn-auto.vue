@@ -26,13 +26,11 @@ export default {
                         </div>
                         <!-- multicolumn tekst -->
                         <div class="multicolumn-tekst">
-                            <h2>Top tekst</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora
-                                impedit
-                                voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur,
-                                fugiat
-                                temporibus
-                                quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
+                            <h2>De Aangepaste Compacte Auto</h2>
+                            <p>Deze auto is speciaal ontworpen en aangepast voor mensen met mobiliteitsbeperkingen. Met
+                                extra ruimte voor rolstoeltoegankelijkheid en handbedieningen voor gas en remmen, biedt
+                                deze auto een comfortabele en veilige rijervaring voor mensen met verschillende fysieke
+                                uitdagingen.</p>
                         </div>
 
                     </div>
@@ -44,13 +42,11 @@ export default {
                         </div>
                         <!-- multicolumn tekst -->
                         <div class="multicolumn-tekst">
-                            <h2>Top tekst</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora
-                                impedit
-                                voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur,
-                                fugiat
-                                temporibus
-                                quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
+                            <h2>De Elektrische Lesauto</h2>
+                            <p>Deze milieuvriendelijke auto is voorzien van geavanceerde technologieën en biedt een
+                                stille en soepele rijervaring. Met zijn elektrische aandrijving en automatische
+                                transmissie is deze auto ideaal voor leerlingen die zich willen concentreren op het
+                                ontwikkelen van hun rijvaardigheden zonder afleiding van motorlawaai.</p>
                         </div>
 
                     </div>
@@ -64,13 +60,11 @@ export default {
                         </div>
                         <!-- multicolumn tekst -->
                         <div class="multicolumn-tekst">
-                            <h2>Top tekst</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora
-                                impedit
-                                voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur,
-                                fugiat
-                                temporibus
-                                quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
+                            <h2>De Hoogte Verstelbare Crossover</h2>
+                            <p>Deze auto is uitgerust met een hoogteverstelbare ophanging, waardoor het gemakkelijk is
+                                om de zithoogte aan te passen aan de behoeften van de bestuurder. Dit maakt het ideaal
+                                voor leerlingen met mobiliteitsproblemen of mensen die behoefte hebben aan een hogere
+                                zitpositie voor een beter zicht op de weg.</p>
                         </div>
 
                     </div>
@@ -82,13 +76,11 @@ export default {
                         </div>
                         <!-- multicolumn tekst -->
                         <div class="multicolumn-tekst">
-                            <h2>Top tekst</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora
-                                impedit
-                                voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur,
-                                fugiat
-                                temporibus
-                                quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
+                            <h2>De Adaptieve Technologie Sedan</h2>
+                            <p>Deze sedan is voorzien van geavanceerde adaptieve technologieën, zoals automatische
+                                noodremmen, dodehoekdetectie en parkeerassistentie. Deze functies bieden extra
+                                veiligheid en ondersteuning voor leerlingen tijdens het leerproces en helpen hen om
+                                zelfverzekerder en zelfstandiger achter het stuur te zitten.</p>
                         </div>
                     </div>
                     <!-- eind multicolumn content -->
@@ -142,16 +134,9 @@ export default {
     padding-bottom: 0.5rem;
 }
 
-.verdeling{
+.verdeling {}
 
-}
+.verdeling-1 {}
 
-.verdeling-1{
-
-}
-
-.verdeling-2{
-
-}
-
+.verdeling-2 {}
 </style>

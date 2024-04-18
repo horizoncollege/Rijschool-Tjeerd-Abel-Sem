@@ -12,28 +12,21 @@ export default {
       <div class="paragraaf afbeelding-ja afbeelding-rechts">
         <div class="paragraaf-tekst">
           <div class="paragraaf-headers">
-            <h2 class="paragraaf-subheader">subheader</h2>
-            <h2 class="paragraaf-header">header</h2>
+            <h2 class="paragraaf-subheader"></h2>
+            <h2 class="paragraaf-header">Ontdek Het Perfecte Pakket voor Jouw Rijbehoeften</h2>
           </div>
           <div class="paragraaf-tekst-content">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto veniam incidunt modi sit a alias minima.
-              Ut expedita sint consectetur corrupti totam, eos fuga reiciendis earum dolore, impedit nihil ab quod illo
-              distinctio commodi asperiores. Quidem at aliquid, temporibus sunt explicabo pariatur iure obcaecati,
-              dolorem quas incidunt illum, asperiores deserunt. Exercitationem ipsam iure saepe, sunt asperiores ipsum
-              provident cum enim, necessitatibus esse maiores excepturi natus pariatur corrupti ex voluptatum.
-              Reprehenderit sequi sapiente quia delectus! Aliquid eveniet, numquam quia fuga quasi voluptatum magni
-              nostrum vitae impedit cumque tempora qui laboriosam illum iste delectus temporibus? Quos repudiandae
-              reiciendis nesciunt obcaecati molestias. Inventore quae error enim quia velit? Fuga asperiores nisi a
-              ipsam magni doloribus dolore praesentium, eos nobis quod est, possimus illo facilis aliquam harum
-              doloremque architecto at ab rem earum. Atque, eum ex adipisci ea animi recusandae quae iusto dolor
-              deserunt, nemo ducimus eos cum! Officiis repellat eum ipsam, facere possimus totam amet quisquam assumenda
-              ab harum blanditiis in reprehenderit optio eveniet expedita tempore neque minus eius aut similique
-              architecto distinctio iste nam? A cum error alias sint, aperiam reiciendis at nemo est quod corporis ex
-              illum. Odit rem voluptas, alias corporis facere facilis impedit saepe. Repellat, odit esse! Neque quod,
-              quo fugit animi ipsum quas fuga molestias autem ipsa numquam minima cum illum in eligendi eum voluptatem
-              quasi veritatis vero pariatur debitis quis consequuntur dolor? Illo, vel est! Saepe exercitationem
-              voluptates amet totam illum dolore a voluptas consequatur, nostrum nesciunt eum delectus, quis vero
-              dolorem sint tempore iusto consequuntur velit.</p>
+            <p>Bij Rijschool Vierkante Wielen begrijpen we dat geen twee studenten hetzelfde zijn, en daarom bieden we
+              een scala aan pakketten die zijn ontworpen om te voldoen aan verschillende behoeften en budgetten. Of je
+              nu op zoek bent naar een uitgebreid lespakket met extra ondersteuning, of liever een meer flexibele optie
+              wilt, wij hebben iets voor jou.</p>
+            <p>Onze pakketten variëren in duur, intensiteit en inbegrepen diensten, zodat je kunt kiezen wat het beste
+              bij jou past. Of je nu op zoek bent naar een basispakket met een standaard aantal lessen, of liever een
+              uitgebreider pakket met extra training en begeleiding wilt, we hebben opties voor elk niveau van
+              rijervaring en comfort.</p>
+            <p>Bekijk onze pakketten op onze website of neem contact met ons op voor meer informatie. Onze vriendelijke
+              en deskundige medewerkers staan klaar om je te helpen het perfecte pakket te vinden dat past bij jouw
+              unieke behoeften en doelen.</p>
           </div>
           <!-- knop voor paragraaf -->
           <div class="paragraaf-knop knop-container">
