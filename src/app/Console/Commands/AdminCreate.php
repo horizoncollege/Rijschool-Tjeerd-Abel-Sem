@@ -2,9 +2,9 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -57,10 +57,18 @@ class AdminCreate extends Command
             'password' => Hash::make($password),
         ]);
 
-        $permissions = DB::table('permissions')->pluck('id');
-        $user->permissions()->attach($permissions);
+        // Get the admin role
+        $adminRole = Role::where('role', 'admin')->first();
 
-        $this->info('User created successfully with all permissions.');
+        if (!$adminRole) {
+            $this->error('Admin role does not exist. Please create it and assign all permissions to it.');
+            return 1;
+        }
+
+        // Attach the admin role to the user
+        $user->roles()->attach($adminRole);
+
+        $this->info('User created successfully with admin role.');
 
         return 0;
     }

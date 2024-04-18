@@ -33,7 +33,6 @@ export default {
   <team></team>
   <paragraaf2></paragraaf2>
   <footerdesktop></footerdesktop>
-
 </template>
 
 <style>

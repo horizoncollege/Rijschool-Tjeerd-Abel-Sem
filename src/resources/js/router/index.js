@@ -7,6 +7,7 @@ import Pakketen from "../views/Pakketen.vue";
 import Proefles from "../views/Proefles.vue";
 import Rijbewijs from "../views/Rijbewijs.vue";
 import Personeel from "../views/personeel.vue";
+import Register from "../views/Register.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -50,7 +51,13 @@ const router = createRouter({
             path: "/personeel",
             name: "personeel",
             component: Personeel 
-        }
+        },
+      {
+            path: `/register`,
+            name: 'register',
+            component: Register
+        },
+
     ],
 });
 

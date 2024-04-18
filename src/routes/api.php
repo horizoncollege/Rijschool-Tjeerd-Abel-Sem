@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
@@ -19,16 +20,14 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user()->permissions()->get();
-});
+Route::middleware('auth:sanctum')->get('/user', [ProfileController::class, 'show']);
 Route::prefix('user')->group(function () {
     Route::post('/register', [RegisteredUserController::class, 'store'])
         ->middleware('guest')
         ->name('register');
 
     Route::post('/login', [AuthenticatedSessionController::class, 'store'])
-        ->middleware('guest')
+        ->middleware('web')
         ->name('login');
 
     Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])

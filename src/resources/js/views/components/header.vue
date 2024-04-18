@@ -1,7 +1,34 @@
 <script>
+import axios from 'axios';
 
 export default {
+    data() {
+        return {
+            logged_in: false,
+            user: [],
+        }
+    },
+    mounted() {
+        axios.get("/api/user")
+            .then(response => {
+                response.json().then(data => {
+                    this.user = data.data
+                    this.logged_in = true;
+                    console.log(this.data);
+                })
 
+            })
+            .catch(error => {
+                this.logged_in = false;
+            });
+    },
+    methods: {
+        async on_logout() {
+            const response = await axios.post('/api/user/logout').then(
+                await window.location.reload()
+            )
+        }
+    }
 }
 </script>
 
@@ -13,7 +40,7 @@ export default {
                 <div class="logo-container">
                     <div class="logo">
                         <router-link to="/">
-                            <img src="../../../../storage/img/logo.png" alt="">
+            <img src="../../../../storage/img/logo.png" alt="">
                         </router-link>
                     </div>
                 </div>
@@ -36,9 +63,20 @@ export default {
                     <router-link to="/proefles" class="menu-item no-mega proefles">
                         <p>Gratis proefles</p>
                     </router-link>
-                    <router-link to="/login" class="menu-item no-mega">
+                   
+                    <!-- Conditional rendering based on logged_in -->
+                    <a v-if="!this.user" href="#" class="menu-item no-mega proefles">
+                        <p>Gratis proefles</p>
+                    </a>
+                    <!-- Conditionally show or hide login.png -->
+                    <a v-if="!this.user" href="/login" class="menu-item no-mega">
                         <img src="../../../../storage/img/login.png" class="login" alt="">
-                    </router-link>
+                    </a>
+                    <a v-if="this.user" href="#" v-on:click="on_logout()" class="menu-item no-mega">
+                        <img src="../../../../storage/img/logout.png" class="login" alt="">
+                    </a>
+
+
                 </div>
             </div>
         </header>
