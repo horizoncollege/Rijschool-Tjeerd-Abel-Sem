@@ -71,7 +71,7 @@ export default {
     z-index: 2;
     user-select: none;
     display: block;
-    background-image: linear-gradient(var(--rood-licht), transparent);
+    /* background-image: linear-gradient(var(--rood-licht), transparent); */
     position: absolute;
     width: 100%;
 }
@@ -248,5 +248,60 @@ export default {
     .headerdesktop {
         display: none;
     }
+}
+
+
+
+
+/* base knop styling */
+
+.knop {
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.75rem 1.6rem 0.75rem 1.6rem;
+    width: fit-content;
+    display: flex;
+    min-width: 10rem;
+}
+
+.knop-tekst {
+    transition: 0.2s;
+    user-select: none;
+}
+
+.knop:hover .knop-tekst {
+    margin-left: 4px;
+    transition: 0.2s;
+}
+
+/* banner knop */
+
+.banner-knop {
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 680px) and (min-width: 576px) {
+    .banner-knop .knop {
+        padding: 0.75rem 0rem 0.75rem 0.75rem;
+    }
+}
+
+/* default knop */
+
+.knop-default {
+    background-color: var(--rood-licht);
+    transition: 0.2s;
+    border: 1px var(--background-black) solid;
+}
+
+.knop-default .knop-tekst {
+    color: var(--text-color-white);
+}
+
+.knop-default:hover {
+    background-color: var(--rood-donker);
+    transition: 0.2s;
 }
 </style>

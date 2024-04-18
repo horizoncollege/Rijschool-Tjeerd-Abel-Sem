@@ -16,74 +16,77 @@ export default {
                 </div>
             </div>
 
-                <!-- multicolumn content -->
-                <div class="multicolumn-blok">
-                    <!-- begin multicolumn content -->
-                        <div class="multicolumn-rij">
-                            <!-- multicolumn afbeelding/video -->
-                            <div class="multicolumn-afbeelding">
-                                <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
-                            </div>
-                            <!-- multicolumn tekst -->
-                            <div class="multicolumn-tekst">
-                                <h2>Top tekst</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora
-                                    impedit
-                                    voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur,
-                                    fugiat
-                                    temporibus
-                                    quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
-                            </div>
-                           
-                        </div>
-                    <!-- eind -->
-                        <div class="multicolumn-rij">
-                            <!-- multicolumn afbeelding -->
-                            <div class="multicolumn-afbeelding">
-                                <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
-                            </div>
-                            <!-- multicolumn tekst -->
-                            <div class="multicolumn-tekst">
-                                <h2>Top tekst</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora
-                                    impedit
-                                    voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur,
-                                    fugiat
-                                    temporibus
-                                    quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
-                            </div>
-                           
-                        </div>
-                    <!-- eind -->
-                        <div class="multicolumn-rij">
-                            <!-- multicolumn afbeelding -->
-                            <div class="multicolumn-afbeelding">
-                                <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
-                            </div>
-                            <!-- multicolumn tekst -->
-                            <div class="multicolumn-tekst">
-                                <h2>Top tekst</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora
-                                    impedit
-                                    voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur,
-                                    fugiat
-                                    temporibus
-                                    quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
-                            </div>  
-                        </div>
-                    <!-- eind -->
-                    <!-- eind multicolumn content -->
+            <!-- multicolumn content -->
+            <div class="multicolumn-blok">
+                <!-- begin multicolumn content -->
+                <div class="multicolumn-rij">
+                    <!-- multicolumn afbeelding/video -->
+                    <div class="multicolumn-afbeelding">
+                        <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
+                    </div>
+                    <!-- multicolumn tekst -->
+                    <div class="multicolumn-tekst">
+                        <h2>Top tekst</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora
+                            impedit
+                            voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur,
+                            fugiat
+                            temporibus
+                            quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
+                    </div>
+
                 </div>
+                <!-- eind -->
+                <div class="multicolumn-rij">
+                    <!-- multicolumn afbeelding -->
+                    <div class="multicolumn-afbeelding">
+                        <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
+                    </div>
+                    <!-- multicolumn tekst -->
+                    <div class="multicolumn-tekst">
+                        <h2>Top tekst</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora
+                            impedit
+                            voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur,
+                            fugiat
+                            temporibus
+                            quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
+                    </div>
+
+                </div>
+                <!-- eind -->
+                <div class="multicolumn-rij">
+                    <!-- multicolumn afbeelding -->
+                    <div class="multicolumn-afbeelding">
+                        <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
+                    </div>
+                    <!-- multicolumn tekst -->
+                    <div class="multicolumn-tekst">
+                        <h2>Top tekst</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora
+                            impedit
+                            voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur,
+                            fugiat
+                            temporibus
+                            quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
+                    </div>
+                </div>
+                <!-- eind -->
+                <!-- eind multicolumn content -->
+            </div>
         </div>
     </div>
 </template>
 
-<style>
+<style scoped>
 /* multicolumn styling */
 .multicolumn-rij {
     min-width: 320px;
     max-width: 340px;
     width: 25%;
+    background: var(--background-grey);
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .multicolumn-blok {

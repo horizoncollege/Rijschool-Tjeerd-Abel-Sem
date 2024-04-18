@@ -62,13 +62,13 @@ export default {
                         </div>
                     </div>
                 </div>
-                <div class="multicolumn-rij">
-                    <!-- multicolumn afbeelding -->
-                    <div class="multicolumn-afbeelding">
+                 <!-- <div class="multicolumn-rij"> -->
+                     <!-- multicolumn afbeelding -->
+                    <!-- <div class="multicolumn-afbeelding">
                         <img src="../../../../storage/img/profiel.jpg" alt="placeholder">
-                    </div>
+                    </div> -->
                     <!-- multicolumn tekst -->
-                    <div class="multicolumn-tekst">
+                    <!-- <div class="multicolumn-tekst">
                         <div class="paragraaf-subheader multicolumn">
                             <h2>Instructeur</h2>
                         </div>
@@ -76,7 +76,7 @@ export default {
                             <h2>Barbie</h2>
                         </div>
                     </div>
-                </div>
+                </div>  -->
 
             </div>
             <div class="paragraaf-knop knop-container">

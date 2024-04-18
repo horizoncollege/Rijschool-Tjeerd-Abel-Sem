@@ -104,6 +104,10 @@ export default {
     min-width: 320px;
     max-width: 340px;
     width: 25%;
+    background: var(--background-grey);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px;
 }
 
 .multicolumn-blok {

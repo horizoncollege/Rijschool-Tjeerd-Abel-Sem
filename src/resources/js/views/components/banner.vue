@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <swiper-container class="mySwiper" loop="true" space-between="0" centered-slides="true" autoplay-delay="5000"
+    <swiper-container class="mySwiper" loop="true" space-between="0" centered-slides="true" autoplay-delay="50000"
         autoplay-disable-on-interaction="false">
         <swiper-slide>
             <div class="banner-slide slide-1">
@@ -13,18 +13,17 @@ export default {
             <div class="banner-blok">
                 <div class="banner-content banner-content-links">
                     <div class="banner-headers">
-                        <h2 class="banner-subheader">subheader</h2>
-                        <h2 class="banner-header">header</h2>
+                        <h2 class="banner-subheader"></h2>
+                        <h2 class="banner-header">Proefles aanvragen?</h2>
                     </div>
                     <div class="banner-tekst-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aut sequi similique quo nulla
-                            earum autem quibusdam voluptatem.</p>
+                        <p></p>
                     </div>
                     <!-- knop op banner -->
                     <div class="banner-knop knop-container">
-                        <a class="knop knop-default" href="#">
-                            <span class="knop-tekst"> Klik op mij!</span>
-                        </a>
+                        <router-link to="/proefles" class="knop knop-default" href="#">
+                            <span class="knop-tekst"> Vraag er een aan!</span>
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -34,20 +33,20 @@ export default {
             </div>
             <div class="banner-blok">
                 <div class=" banner-content banner-content-links">
-                        <div class="banner-headers">
-                            <h2 class="banner-subheader">subheader</h2>
-                            <h2 class="banner-header">header</h2>
-                        </div>
-                        <div class="banner-tekst-content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aut sequi similique quo
-                                nulla
-                                earum autem quibusdam voluptatem.</p>
-                        </div>
-
-
+                    <div class="banner-headers">
+                        <h2 class="banner-subheader">Bekijk de pakketen</h2>
+                        <h2 class="banner-header"></h2>
+                    </div>
+                    <div class="banner-tekst-content">
+                        <p></p>
+                    </div>
+                    <div class="banner-knop knop-container">
+                        <router-link to="/pakketen" class="knop knop-default" href="#">
+                            <span class="knop-tekst"> Bekijk ze!</span>
+                        </router-link>
+                    </div>
                 </div>
             </div>
-
         </swiper-slide>
         <swiper-slide>
             <div class="banner-slide slide-3">
@@ -55,32 +54,35 @@ export default {
             <div class="banner-blok">
                 <div class="banner-content banner-content-links">
                     <div class="banner-headers">
-                        <h2 class="banner-subheader">subheader</h2>
-                        <h2 class="banner-header">header</h2>
+                        <h2 class="banner-subheader"></h2>
+                        <h2 class="banner-header">Rijbewijs halen</h2>
                     </div>
                     <div class="banner-tekst-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aut sequi similique quo nulla
-                            earum autem quibusdam voluptatem.</p>
+                        <p></p>
+                    </div>
+                    <div class="banner-knop knop-container">
+                        <router-link to="/rijbewijs" class="knop knop-default" href="#">
+                            <span class="knop-tekst"> Kom meer te weten</span>
+                        </router-link>
                     </div>
                 </div>
             </div>
-
         </swiper-slide>
     </swiper-container>
 </template>
 
-<style>
+<style scoped>
 .slide-1 {
-    background-image: url("../../../../storage/img/banner-placeholder.png");
+    background-image: url("../../../../storage/img/rijschool-banner.png");
     background-position-y: 30%;
 }
 
 .slide-2 {
-    background-image: url("../../../../storage/img/banner-placeholder.png");
+    background-image: url("../../../../storage/img/rijschool-banner.png");
 }
 
 .slide-3 {
-    background-image: url("../../../../storage/img/banner-placeholder.png");
+    background-image: url("../../../../storage/img/rijschool-banner.png");
     background-position: 40%;
 }
 
@@ -212,60 +214,10 @@ swiper-slide img {
         margin: auto;
         max-width: 95%;
     }
+
     .banner-headers {
-  margin-top: unset;
-}
-}
-
-/* base knop styling */
-
-.knop {
-    cursor: pointer;
-    text-decoration: none;
-    padding: 0.75rem 1.6rem 0.75rem 1.6rem;
-    width: fit-content;
-    display: flex;
-    min-width: 10rem;
-}
-
-.knop-tekst {
-    transition: 0.2s;
-    user-select: none;
-}
-
-.knop:hover .knop-tekst {
-    margin-left: 4px;
-    transition: 0.2s;
-}
-
-/* banner knop */
-
-.banner-knop {
-    width: fit-content;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-@media (max-width: 680px) and (min-width: 576px) {
-    .banner-knop .knop {
-        padding: 0.75rem 0rem 0.75rem 0.75rem;
+        margin-top: unset;
     }
 }
 
-/* default knop */
-
-.knop-default {
-    background-color: var(--rood-licht);
-    transition: 0.2s;
-    border: 1px var(--background-black) solid;
-}
-
-.knop-default .knop-tekst {
-    color: var(--text-color-white);
-}
-
-.knop-default:hover {
-    background-color: var(--rood-donker);
-    transition: 0.2s;
-}
 </style>

@@ -17,70 +17,18 @@ export default {
                         <h2 class="banner-header">Ontmoet het hele team</h2>
                     </div>
                     <div class="banner-tekst-content">
-                        <p>Ontmoet hieronder het hele vierkante wielen team!</p>
-                    </div>
-                    <!-- knop op banner -->
-                    <div class="banner-knop knop-container">
-                        <a class="knop knop-default" href="#">
-                            <span class="knop-tekst"> Klik op mij!</span>
-                        </a>
+                        <p></p>
                     </div>
                 </div>
             </div>
-        </swiper-slide>
-        <swiper-slide>
-            <div class="banner-slide slide-2">
-            </div>
-            <div class="banner-blok">
-                <div class=" banner-content banner-content-links">
-                        <div class="banner-headers">
-                            <h2 class="banner-subheader">subheader</h2>
-                            <h2 class="banner-header">header</h2>
-                        </div>
-                        <div class="banner-tekst-content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aut sequi similique quo
-                                nulla
-                                earum autem quibusdam voluptatem.</p>
-                        </div>
-
-
-                </div>
-            </div>
-
-        </swiper-slide>
-        <swiper-slide>
-            <div class="banner-slide slide-3">
-            </div>
-            <div class="banner-blok">
-                <div class="banner-content banner-content-links">
-                    <div class="banner-headers">
-                        <h2 class="banner-subheader">subheader</h2>
-                        <h2 class="banner-header">header</h2>
-                    </div>
-                    <div class="banner-tekst-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aut sequi similique quo nulla
-                            earum autem quibusdam voluptatem.</p>
-                    </div>
-                </div>
-            </div>
-
         </swiper-slide>
     </swiper-container>
 </template>
 
-<style>
+<style scoped>
 .slide-1 {
     background-image: url("../../../../../storage/img/banner-placeholder.png");
     background-position-y: 30%;
-}
-
-.slide-2 {
-    background-image: url("../../../../../storage/img/banner-placeholder.png");
-}
-
-.slide-3 {
-    background-image: url("../../../../../storage/img/banner-placeholder.png");
-    background-position: 40%;
 }
 
 /* paragraaf styling */
@@ -96,8 +44,6 @@ export default {
 .paragraaf-header {
     color: var(--text-color-black);
 }
-
-
 
 .banner-slide {
     height: 500px;

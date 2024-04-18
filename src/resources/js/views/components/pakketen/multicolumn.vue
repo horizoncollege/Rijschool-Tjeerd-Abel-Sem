@@ -127,7 +127,7 @@ export default {
     </div>
 </template>
 
-<style>
+<style scoped>
 /* multicolumn styling */
 .multicolumn-rij {
     min-width: 320px;

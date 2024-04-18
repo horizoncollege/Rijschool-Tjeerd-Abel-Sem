@@ -2,7 +2,7 @@
 import headerdesktop from "./components/header.vue";
 import headermobile from "./components/header-mobile.vue";
 import footerdesktop from "./components/footer.vue";
-import banner from "./components/banner.vue";
+import banner from "./components/pakketen/banner.vue";
 
 
 export default {

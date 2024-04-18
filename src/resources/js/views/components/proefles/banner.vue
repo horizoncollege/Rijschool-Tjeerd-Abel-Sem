@@ -28,59 +28,13 @@ export default {
                 </div>
             </div>
         </swiper-slide>
-        <swiper-slide>
-            <div class="banner-slide slide-2">
-            </div>
-            <div class="banner-blok">
-                <div class=" banner-content banner-content-links">
-                        <div class="banner-headers">
-                            <h2 class="banner-subheader">subheader</h2>
-                            <h2 class="banner-header">header</h2>
-                        </div>
-                        <div class="banner-tekst-content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aut sequi similique quo
-                                nulla
-                                earum autem quibusdam voluptatem.</p>
-                        </div>
-
-
-                </div>
-            </div>
-
-        </swiper-slide>
-        <swiper-slide>
-            <div class="banner-slide slide-3">
-            </div>
-            <div class="banner-blok">
-                <div class="banner-content banner-content-links">
-                    <div class="banner-headers">
-                        <h2 class="banner-subheader">subheader</h2>
-                        <h2 class="banner-header">header</h2>
-                    </div>
-                    <div class="banner-tekst-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aut sequi similique quo nulla
-                            earum autem quibusdam voluptatem.</p>
-                    </div>
-                </div>
-            </div>
-
-        </swiper-slide>
     </swiper-container>
 </template>
 
-<style>
+<style scoped>
 .slide-1 {
     background-image: url("../../../../../storage/img/banner-placeholder.png");
     background-position-y: 30%;
-}
-
-.slide-2 {
-    background-image: url("../../../../../storage/img/banner-placeholder.png");
-}
-
-.slide-3 {
-    background-image: url("../../../../../storage/img/banner-placeholder.png");
-    background-position: 40%;
 }
 
 /* paragraaf styling */

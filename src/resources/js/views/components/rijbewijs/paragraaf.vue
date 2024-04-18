@@ -51,7 +51,7 @@ export default {
 
 </template>
 
-<style>
+<style scoped>
 /* paragraaf generic styling */
 
 .paragraaf-header {
