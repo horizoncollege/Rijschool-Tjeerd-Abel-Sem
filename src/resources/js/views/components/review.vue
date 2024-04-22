@@ -58,12 +58,6 @@ export default {
                             vanwege mijn fysieke beperking, maar ze hebben me echt geholpen om mijn angst te overwinnen.
                             Dankzij hen heb ik nu mijn rijbewijs en voel ik me vol vertrouwen op de weg!</p>
                     </div>
-                    <!-- multicolumn knop -->
-                    <!-- <div class="multicolumn-knop knop-container">
-                        <a class="knop knop-default" href="#">
-                            <span class="knop-tekst"> Klik op mij!</span>
-                        </a>
-                    </div> -->
                 </div>
                 <div class="multicolumn-rij">
                     <!-- multicolumn afbeelding -->
@@ -79,12 +73,6 @@ export default {
                             toewijding aan inclusiviteit is bewonderenswaardig en maakte mijn rijervaring echt geweldig.
                         </p>
                     </div>
-                    <!-- multicolumn knop -->
-                    <!-- <div class="multicolumn-knop knop-container">
-                        <a class="knop knop-default" href="#">
-                            <span class="knop-tekst"> Klik op mij!</span>
-                        </a>
-                    </div> -->
                 </div>
                 <div class="multicolumn-rij">
                     <!-- multicolumn afbeelding -->
@@ -100,12 +88,6 @@ export default {
                             Rijschool Vierkante Wielen ten zeerste aan aan iedereen die wat extra hulp en begrip nodig
                             heeft tijdens hun rijopleiding.</p>
                     </div>
-                    <!-- multicolumn knop -->
-                    <!-- <div class="multicolumn-knop knop-container">
-                        <a class="knop knop-default" href="#">
-                            <span class="knop-tekst"> Klik op mij!</span>
-                        </a>
-                    </div> -->
                 </div>
                 <!-- eind multicolumn content -->
             </div>

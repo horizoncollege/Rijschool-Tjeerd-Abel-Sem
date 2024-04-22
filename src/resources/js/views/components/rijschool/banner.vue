@@ -19,12 +19,6 @@ export default {
                     <div class="banner-tekst-content">
                         <p>Informatie over de rijschool</p>
                     </div>
-                    <!-- knop op banner -->
-                    <div class="banner-knop knop-container">
-                        <a class="knop knop-default" href="#">
-                            <span class="knop-tekst"> Klik op mij!</span>
-                        </a>
-                    </div>
                 </div>
             </div>
         </swiper-slide>

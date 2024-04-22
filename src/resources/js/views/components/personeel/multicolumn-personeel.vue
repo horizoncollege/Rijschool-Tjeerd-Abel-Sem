@@ -22,11 +22,11 @@ export default {
                 <div class="multicolumn-rij">
                     <!-- multicolumn afbeelding/video -->
                     <div class="multicolumn-afbeelding">
-                        <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
+                        <img src="../../../../../storage/img/instructeur1.jpg" alt="placeholder">
                     </div>
                     <!-- multicolumn tekst -->
                     <div class="multicolumn-tekst">
-                        <h2>Cheyenne</h2>
+                        <h2>Rina</h2>
                         <p>Als instructeur bij Rijschool Vierkante Wielen ben ik gemotiveerd door de vreugde die
                             voortkomt uit het empoweren van anderen. Als iemand met een fysieke beperking begrijp ik de
                             uitdagingen van het leren rijden met beperkingen maar al te goed. Door mijn ervaring te
@@ -39,11 +39,11 @@ export default {
                 <div class="multicolumn-rij">
                     <!-- multicolumn afbeelding -->
                     <div class="multicolumn-afbeelding">
-                        <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
+                        <img src="../../../../../storage/img/instructeur2.jpg" alt="placeholder">
                     </div>
                     <!-- multicolumn tekst -->
                     <div class="multicolumn-tekst">
-                        <h2>Jennefir</h2>
+                        <h2>Piet</h2>
                         <p>Het is mijn passie om anderen te helpen hun potentieel te bereiken, ongeacht de obstakels die
                             ze tegenkomen. Als instructeur bij Rijschool Vierkante Wielen kan ik mijn liefde voor
                             autorijden combineren met mijn verlangen om een verschil te maken in het leven van mensen.
@@ -56,11 +56,11 @@ export default {
                 <div class="multicolumn-rij">
                     <!-- multicolumn afbeelding -->
                     <div class="multicolumn-afbeelding">
-                        <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
+                        <img src="../../../../../storage/img/instructeur3.jpg" alt="placeholder">
                     </div>
                     <!-- multicolumn tekst -->
                     <div class="multicolumn-tekst">
-                        <h2>Stijn</h2>
+                        <h2>Fred</h2>
                         <p>Voor mij draait het allemaal om het creëren van een inclusieve en ondersteunende omgeving
                             waarin iedereen de kans krijgt om te leren en te groeien. Als instructeur bij Rijschool
                             Vierkante Wielen kan ik mijn vaardigheden en expertise inzetten om mensen met verschillende

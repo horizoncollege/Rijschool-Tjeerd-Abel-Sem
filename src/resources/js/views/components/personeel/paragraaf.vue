@@ -30,7 +30,7 @@ export default {
           </div>
         </div>
         <div class="paragraaf-afbeelding">
-          <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
+          <img src="../../../../../storage/img/eigenaar.jpg" alt="placeholder">
         </div>
       </div>
     </div>
@@ -75,6 +75,7 @@ export default {
   width: 50%;
   justify-content: center;
   display: flex;
+  max-height: 350px;
 }
 
 .paragraaf-afbeelding img {
@@ -102,7 +103,7 @@ export default {
 
   .afbeelding-ja {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
   }
 
   .afbeelding-ja .paragraaf-tekst {

@@ -20,7 +20,7 @@ export default {
                 <div class="multicolumn-rij">
                     <!-- multicolumn afbeelding -->
                     <div class="multicolumn-afbeelding">
-                        <img src="../../../../storage/img/profiel.jpg" alt="placeholder">
+                        <img src="../../../../storage/img/eigenaar.jpg" alt="placeholder">
                     </div>
                     <!-- multicolumn tekst -->
                     <div class="multicolumn-tekst">
@@ -28,14 +28,14 @@ export default {
                             <h2>Eigenaar</h2>
                         </div>
                         <div class="paragraaf-header multicolumn">
-                            <h2>Mischa Joosten</h2>
+                            <h2>Mischa</h2>
                         </div>
                     </div>
                 </div>
                 <div class="multicolumn-rij">
                     <!-- multicolumn afbeelding -->
                     <div class="multicolumn-afbeelding">
-                        <img src="../../../../storage/img/profiel.jpg" alt="placeholder">
+                        <img src="../../../../storage/img/instructeur1.jpg" alt="placeholder">
                     </div>
                     <!-- multicolumn tekst -->
                     <div class="multicolumn-tekst">
@@ -43,14 +43,14 @@ export default {
                             <h2>Instructeur</h2>
                         </div>
                         <div class="paragraaf-header multicolumn">
-                            <h2>Cheyenne</h2>
+                            <h2>Rina</h2>
                         </div>
                     </div>
                 </div>
                 <div class="multicolumn-rij">
                     <!-- multicolumn afbeelding -->
                     <div class="multicolumn-afbeelding">
-                        <img src="../../../../storage/img/profiel.jpg" alt="placeholder">
+                        <img src="../../../../storage/img/instructeur2.jpg" alt="placeholder">
                     </div>
                     <!-- multicolumn tekst -->
                     <div class="multicolumn-tekst">
@@ -58,14 +58,14 @@ export default {
                             <h2>Instructeur</h2>
                         </div>
                         <div class="paragraaf-header multicolumn">
-                            <h2>Jennefir</h2>
+                            <h2>Piet</h2>
                         </div>
                     </div>
                 </div>
                  <!-- <div class="multicolumn-rij"> -->
                      <!-- multicolumn afbeelding -->
                     <!-- <div class="multicolumn-afbeelding">
-                        <img src="../../../../storage/img/profiel.jpg" alt="placeholder">
+                        <img src="../../../../storage/img/instructeur3.jpg" alt="placeholder">
                     </div> -->
                     <!-- multicolumn tekst -->
                     <!-- <div class="multicolumn-tekst">
@@ -73,7 +73,7 @@ export default {
                             <h2>Instructeur</h2>
                         </div>
                         <div class="paragraaf-header multicolumn">
-                            <h2>Stijn</h2>
+                            <h2>Fred</h2>
                         </div>
                     </div>
                 </div>  -->
@@ -98,4 +98,19 @@ export default {
 .paragraaf-knop.knop-container{
     margin: 1rem auto 1rem 5rem;
 }
+
+.multicolumn-afbeelding img {
+    border-radius: 10px;
+}
+
+.paragraaf-subheader{
+color: var(--rood-licht);
+font-size: 1rem;
+}
+
+.paragraaf-header h2{
+font-weight: 800;
+}
+
+
 </style>

@@ -12,8 +12,8 @@ export default {
       <div class="paragraaf afbeelding-ja afbeelding-rechts">
         <div class="paragraaf-tekst">
           <div class="paragraaf-headers">
-            <h2 class="paragraaf-subheader">subheader</h2>
-            <h2 class="paragraaf-header">header</h2>
+            <h2 class="paragraaf-subheader"></h2>
+            <h2 class="paragraaf-header"></h2>
           </div>
           <div class="paragraaf-tekst-content">
             <h2 class="content-subheader">Maatwerk Lessen</h2>
@@ -27,12 +27,6 @@ export default {
               hebben ook een diepgaand begrip en empathie voor de uitdagingen waarmee je te maken hebt. Ze zullen niet
               alleen je rijvaardigheden ontwikkelen, maar ook een ondersteunende en stimulerende omgeving creëren waarin
               je kunt gedijen.</p>
-          </div>
-          <!-- knop voor paragraaf -->
-          <div class="paragraaf-knop knop-container">
-            <a class="knop knop-default" href="#">
-              <span class="knop-tekst"> Klik op mij!</span>
-            </a>
           </div>
         </div>
         <div class="paragraaf-afbeelding">

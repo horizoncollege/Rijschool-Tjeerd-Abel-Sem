@@ -34,8 +34,8 @@ export default {
             <div class="banner-blok">
                 <div class=" banner-content banner-content-links">
                     <div class="banner-headers">
-                        <h2 class="banner-subheader">Bekijk de pakketen</h2>
-                        <h2 class="banner-header"></h2>
+                        <h2 class="banner-subheader"></h2>
+                        <h2 class="banner-header">Bekijk de pakketen</h2>
                     </div>
                     <div class="banner-tekst-content">
                         <p></p>
@@ -79,11 +79,12 @@ export default {
 
 .slide-2 {
     background-image: url("../../../../storage/img/rijschool-banner.png");
+    background-position: 30%;
 }
 
 .slide-3 {
     background-image: url("../../../../storage/img/rijschool-banner.png");
-    background-position: 40%;
+    background-position: 30%;
 }
 
 /* paragraaf styling */
