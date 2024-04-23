@@ -26,8 +26,6 @@ export default {
               hebt, bij Rijschool Vierkante Wielen verwelkomen we iedereen. Onze instructeurs zijn speciaal getraind om
               te werken met diverse uitdagingen, van rolstoelgebruikers tot mensen met autisme of andere cognitieve
               verschillen.</p>
-
-
           </div>
           <!-- knop voor paragraaf -->
           <div class="paragraaf-knop knop-container">
@@ -37,7 +35,7 @@ export default {
           </div>
         </div>
         <div class="paragraaf-afbeelding">
-          <img src="../../../../storage/img/placeholder.png" alt="placeholder">
+          <img src="../../../../storage/img/afbeelding1.jpg" alt="placeholder">
         </div>
       </div>
     </div>
@@ -88,11 +86,15 @@ export default {
   width: 50%;
   justify-content: center;
   display: flex;
+  max-height: 350px;
 }
 
 .paragraaf-afbeelding img {
   object-fit: contain;
+  border-radius: 10px;
+
 }
+
 
 .paragraaf-tekst {
   width: 50%;

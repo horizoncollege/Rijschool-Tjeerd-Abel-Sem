@@ -28,7 +28,7 @@ export default {
 
 <style scoped>
 .slide-1 {
-    background-image: url("../../../../../storage/img/banner-placeholder.png");
+    background-image: url("../../../../../storage/img/proefles-banner.jpg");
     background-position-y: 30%;
 }
 
@@ -51,7 +51,6 @@ export default {
 .banner-slide {
     height: 500px;
     width: 100%;
-    background-position-y: center;
     background-position-x: center;
     background-repeat: no-repeat;
     background-size: cover;

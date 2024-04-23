@@ -1,54 +1,50 @@
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <template>
-
   <div class="content-row">
     <div class="content-blok">
       <!-- paragraaf met afbeelding -->
       <div class="paragraaf afbeelding-ja afbeelding-rechts">
         <div class="paragraaf-tekst">
           <div class="paragraaf-headers">
-            <h2 class="paragraaf-subheader">subheader</h2>
-            <h2 class="paragraaf-header">header</h2>
+            <h2 class="paragraaf-subheader"></h2>
+            <h2 class="paragraaf-header">Proefles</h2>
           </div>
           <div class="paragraaf-tekst-content">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto veniam incidunt modi sit a alias minima.
-              Ut expedita sint consectetur corrupti totam, eos fuga reiciendis earum dolore, impedit nihil ab quod illo
-              distinctio commodi asperiores. Quidem at aliquid, temporibus sunt explicabo pariatur iure obcaecati,
-              dolorem quas incidunt illum, asperiores deserunt. Exercitationem ipsam iure saepe, sunt asperiores ipsum
-              provident cum enim, necessitatibus esse maiores excepturi natus pariatur corrupti ex voluptatum.
-              Reprehenderit sequi sapiente quia delectus! Aliquid eveniet, numquam quia fuga quasi voluptatum magni
-              nostrum vitae impedit cumque tempora qui laboriosam illum iste delectus temporibus? Quos repudiandae
-              reiciendis nesciunt obcaecati molestias. Inventore quae error enim quia velit? Fuga asperiores nisi a
-              ipsam magni doloribus dolore praesentium, eos nobis quod est, possimus illo facilis aliquam harum
-              doloremque architecto at ab rem earum. Atque, eum ex adipisci ea animi recusandae quae iusto dolor
-              deserunt, nemo ducimus eos cum! Officiis repellat eum ipsam, facere possimus totam amet quisquam assumenda
-              ab harum blanditiis in reprehenderit optio eveniet expedita tempore neque minus eius aut similique
-              architecto distinctio iste nam? A cum error alias sint, aperiam reiciendis at nemo est quod corporis ex
-              illum. Odit rem voluptas, alias corporis facere facilis impedit saepe. Repellat, odit esse! Neque quod,
-              quo fugit animi ipsum quas fuga molestias autem ipsa numquam minima cum illum in eligendi eum voluptatem
-              quasi veritatis vero pariatur debitis quis consequuntur dolor? Illo, vel est! Saepe exercitationem
-              voluptates amet totam illum dolore a voluptas consequatur, nostrum nesciunt eum delectus, quis vero
-              dolorem sint tempore iusto consequuntur velit.</p>
+            <p>
+              Ervaar de vrijheid van de weg met Rijschool Vierkante Wielen! Bij
+              Rijschool Vierkante Wielen geloven we dat rijden niet alleen een
+              vaardigheid is, maar een bron van empowerment en vrijheid voor
+              iedereen, ongeacht de uitdagingen waarmee ze geconfronteerd
+              worden. Daarom bieden we GRATIS proeflessen aan voor mensen met
+              een handicap. Onze ervaren instructeurs zijn getraind om
+              individuele behoeften te begrijpen en aan te passen, zodat jij je
+              comfortabel en zelfverzekerd voelt achter het stuur. Of je nu
+              fysieke, visuele of cognitieve uitdagingen hebt, wij zijn er om je
+              te helpen jouw rijdoelen te bereiken. Meld je vandaag nog aan voor
+              een GRATIS proefles en ontdek de opwinding en onafhankelijkheid
+              van autorijden met Rijschool Vierkante Wielen. Neem de eerste stap
+              naar jouw rijavontuur!
+            </p>
           </div>
           <!-- knop voor paragraaf -->
           <div class="paragraaf-knop knop-container">
             <a class="knop knop-default" href="#">
-              <span class="knop-tekst"> Klik op mij!</span>
+              <span class="knop-tekst"> Insschrijven</span>
             </a>
           </div>
         </div>
         <div class="paragraaf-afbeelding">
-          <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
+          <img
+            src="../../../../../storage/img/proefles.jpg"
+            alt="placeholder"
+          />
         </div>
       </div>
     </div>
   </div>
-
 </template>
 
 <style scoped>
@@ -88,19 +84,20 @@ export default {
   width: 50%;
   justify-content: center;
   display: flex;
+  max-height: 350px;
 }
 
 .paragraaf-afbeelding img {
   object-fit: contain;
+  border-radius: 10px;
+
 }
 
 .paragraaf-tekst {
   width: 50%;
 }
 
-
-@media (max-width:992px) {
-
+@media (max-width: 992px) {
   /* styling paragraaf met afbeelding */
   .afbeelding-ja .paragraaf-tekst {
     width: 90%;
@@ -133,6 +130,5 @@ export default {
     width: 650px;
     margin: auto;
   }
-
 }
 </style>

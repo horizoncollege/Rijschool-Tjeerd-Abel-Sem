@@ -76,10 +76,12 @@ export default {
   justify-content: center;
   display: flex;
   max-height: 350px;
+  
 }
 
 .paragraaf-afbeelding img {
   object-fit: contain;
+  border-radius: 10px;
 }
 
 .paragraaf-tekst {

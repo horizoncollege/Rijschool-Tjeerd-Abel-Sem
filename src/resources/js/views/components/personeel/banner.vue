@@ -27,8 +27,8 @@ export default {
 
 <style scoped>
 .slide-1 {
-    background-image: url("../../../../../storage/img/banner-placeholder.png");
-    background-position-y: 30%;
+    background-image: url("../../../../../storage/img/lineup.jpg");
+    background-position-y: 80%;
 }
 
 /* paragraaf styling */
@@ -48,7 +48,6 @@ export default {
 .banner-slide {
     height: 500px;
     width: 100%;
-    background-position-y: center;
     background-position-x: center;
     background-repeat: no-repeat;
     background-size: cover;

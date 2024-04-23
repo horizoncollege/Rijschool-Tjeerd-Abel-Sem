@@ -9,10 +9,10 @@ export default {
         <div class="content-blok">
             <div class="multicolumn-heading">
                 <div class="paragraaf-subheader multicolumn">
-                    <h2>subheader</h2>
+                    <h2></h2>
                 </div>
                 <div class="paragraaf-header multicolumn">
-                    <h2>header</h2>
+                    <h2>Bekijk onze pakketen</h2>
                 </div>
             </div>
             <swiper-container class="mySwiper pakketen-slider" loop="false" space-between="100" centered-slides="false"

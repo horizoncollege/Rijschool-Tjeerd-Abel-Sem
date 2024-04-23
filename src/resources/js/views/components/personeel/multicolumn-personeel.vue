@@ -95,6 +95,7 @@ export default {
 
 .multicolumn-afbeelding img {
     width: 100%;
+    border-radius: 10px;
 }
 
 /* multicolumn header  boven de blokken*/

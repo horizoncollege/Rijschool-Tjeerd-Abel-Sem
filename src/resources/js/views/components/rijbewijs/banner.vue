@@ -28,7 +28,7 @@ export default {
 
 <style scoped>
 .slide-1 {
-    background-image: url("../../../../../storage/img/banner-placeholder.png");
+    background-image: url("../../../../../storage/img/rijbewijs-banner.jpg");
     background-position-y: 30%;
 }
 
