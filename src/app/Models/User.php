@@ -48,4 +48,9 @@ class User extends Authenticatable
         return $this->belongsToMany(Role::class, 'user_role', 'role_id', 'user_id');
     }
 
+    public function lessons()
+    {
+        return $this->belongsToMany(Lesson::class, 'user_lesson', 'lesson_id', 'user_id');
+    }
+
 }

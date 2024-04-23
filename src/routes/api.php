@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LessonController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
@@ -20,7 +21,7 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-Route::middleware('auth:sanctum')->get('/user', [ProfileController::class, 'show']);
+Route::middleware('auth:sanctum')->get('/user', [UserController::class, 'show']);
 Route::prefix('user')->group(function () {
     Route::post('/register', [RegisteredUserController::class, 'store'])
         ->middleware('guest')
@@ -47,6 +48,25 @@ Route::prefix('user')->group(function () {
         ->name('verification.send');
 
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
-        ->middleware('auth')
         ->name('logout');
+});
+
+Route::prefix('lesson')->group(function () {
+    Route::get('/', [LessonController::class, 'index'])
+        ->name('lesson');
+
+    Route::get('/show/{id}', [LessonController::class, 'show'])
+        ->name('lesson.show');
+
+    Route::post('/store', [LessonController::class, 'store'])
+        ->name('lesson.store');
+
+    Route::delete('/destroy/{id}', [LessonController::class, 'destroy'])
+        ->name('lesson.destroy');
+
+    Route::post('/update/{id}', [LessonController::class, 'update'])
+        ->name('lesson.update');
+
+    Route::get('/edit/{id}', [LessonController::class, 'edit'])
+        ->name('lesson.edit');
 });
