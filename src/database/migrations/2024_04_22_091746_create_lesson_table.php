@@ -19,7 +19,7 @@ return new class extends Migration
             $table->date('start_date');
             $table->date('day_of_month');
             $table->date('end_date');
-            $table->foreignId('teacher_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('teacher_id');
             $table->string('address');
         });
     }

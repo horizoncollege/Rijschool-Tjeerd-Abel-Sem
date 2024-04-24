@@ -20,6 +20,7 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
 Route::middleware('auth:sanctum')->get('/user', [ProfileController::class, 'show']);
 Route::prefix('user')->group(function () {
     Route::post('/register', [RegisteredUserController::class, 'store'])
@@ -50,3 +51,4 @@ Route::prefix('user')->group(function () {
         ->middleware('auth')
         ->name('logout');
 });
+
