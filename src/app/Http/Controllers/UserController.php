@@ -72,7 +72,7 @@ class UserController extends Controller
         $user->address = $data['address'];
         $user->second_address = $data['second_address'];
         if ($data['password']) {
-            $user->password = $data['password'];
+            $user->password = bcrypt($data['password']);
         }
         $user->roles = $data['roles'];
         $update = $user->save();
