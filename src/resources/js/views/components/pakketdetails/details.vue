@@ -7,7 +7,7 @@
     mounted() {
       // Get the id from the route parameters
       const pakketId = this.$route.params.id;
-  
+
       // Make an API call to retrieve pakket details by id
       axios.get(`/api/pakket/${pakketId}`)
         .then(({ data }) => {

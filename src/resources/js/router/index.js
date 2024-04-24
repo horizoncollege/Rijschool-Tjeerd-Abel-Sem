@@ -64,12 +64,12 @@ const router = createRouter({
             component: Contact
         },
         {
-            path: `/pakketdetails/:id`,
+            path: `/pakket-details/:id`,
             name: 'pakketdetails',
             component: PakketDetails,
             props: true
         },
-        
+
 
     ],
 });

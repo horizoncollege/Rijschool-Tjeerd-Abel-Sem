@@ -65,7 +65,7 @@ export default {
             </div>
             <!-- multicolumn knop -->
             <div class="multicolumn-knop knop-container">
-              <router-link class="knop knop-default">
+              <router-link class="knop knop-default" :to="{path: '/pakket-details/' + pakket.id}">
                 <span class="knop-tekst">Bekijken</span>
               </router-link>
             </div>

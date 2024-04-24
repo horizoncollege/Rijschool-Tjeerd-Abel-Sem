@@ -7,6 +7,24 @@ import details from "./components/pakketdetails/details.vue";
 
 
 export default {
+    data() {
+        return {
+            id: '',
+            pakket: [{}]
+        };
+    },
+    mounted() {
+        this.id = this.$route.params.id;
+        // Make an API call to retrieve pakket details by id
+        axios.get(`/api/pakket/show/${this.id}`)
+            .then(({data}) => {
+                this.pakket = data;
+            })
+            .catch((error) => {
+                console.error('Error fetching pakket details:', error);
+            });
+
+    },
     components: {
         headerdesktop,
         headermobile,
@@ -21,8 +39,13 @@ export default {
     <headerdesktop></headerdesktop>
     <headermobile></headermobile>
     <banner></banner>
-    <details></details>
-
+    <div>
+        <h2>{{pakket.title}}</h2>
+        <h2>{{pakket.aantal_lessen}}</h2>
+        <h2>{{pakket.auto}}</h2>
+        <h2>{{pakket.prijs}}</h2>
+        <h2>{{pakket.prijs_los}}</h2>
+    </div>
     <footerdesktop></footerdesktop>
 </template>
 
