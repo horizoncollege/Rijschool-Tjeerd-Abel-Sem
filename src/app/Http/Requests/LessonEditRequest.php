@@ -16,7 +16,7 @@ class LessonEditRequest extends FormRequest
 
         foreach ($user->roles as $role) {
             foreach ($role->permissions as $permission) {
-                if ($permission->name == 'can_lesson_edit') {
+                if ($permission->name == 'can_edit_lesson') {
                     return true;
                 }
             }

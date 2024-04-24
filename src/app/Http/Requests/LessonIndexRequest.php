@@ -16,7 +16,7 @@ class LessonIndexRequest extends FormRequest
 
         foreach ($user->roles as $role) {
             foreach ($role->permissions as $permission) {
-                if ($permission->name == 'can_lesson_index') {
+                if ($permission->name == 'can_index_lesson') {
                     return true;
                 }
             }

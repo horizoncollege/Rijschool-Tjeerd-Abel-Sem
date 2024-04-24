@@ -23,6 +23,15 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 */
 Route::middleware('auth:sanctum')->get('/user', [UserController::class, 'show']);
 Route::prefix('user')->group(function () {
+    Route::post('/update/{id}', [UserController::class, 'update'])
+        ->name('update');
+
+    Route::post('/edit/{id}', [UserController::class, 'edit'])
+        ->name('edit');
+
+    Route::post('/destroy/{id}', [UserController::class, 'destroy'])
+        ->name('destroy');
+
     Route::post('/register', [RegisteredUserController::class, 'store'])
         ->middleware('guest')
         ->name('register');
