@@ -17,8 +17,6 @@ class PakketController extends Controller
     public function show(Request $request, $id)
     {
         $pakket = Pakket::findOrFail($id);
-
-
         // Format the pakket's data
         $pakketData = [
             'title' => $pakket->title,
@@ -84,6 +82,25 @@ class PakketController extends Controller
             return response()->json(['message' => 'pakket deleted successfully', 200]);
         } else {
             return response()->json(['error' => 'pakket not deleted', 500]);
+        }
+    }
+
+    public function store(Request $request)
+    {
+        $data = $request->all();
+
+        $pakket = new Pakket();
+        $pakket->title = $data['title'];
+        $pakket->prijs = $data['prijs'];
+        $pakket->prijs_los = $data['prijs_los'];
+        $pakket->aantal_lessen = $data['aantal_lessen'];
+        $pakket->auto = $data['auto'];
+        $save = $pakket->save();
+
+        if ($save) {
+            return response()->json(['message' => 'Pakket created successfully', 200]);
+        } else {
+            return response()->json(['error' => 'Pakket not created', 500]);
         }
     }
 }

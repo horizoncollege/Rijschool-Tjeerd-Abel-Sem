@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PakketController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
@@ -10,6 +11,7 @@ use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -83,4 +85,25 @@ Route::prefix('lesson')->group(function () {
 
     Route::get('/edit/{id}', [LessonController::class, 'edit'])
         ->name('lesson.edit');
+});
+
+
+Route::prefix('pakket')->group(function () {
+    Route::get('/', [PakketController::class, 'index'])
+        ->name('pakket');
+
+    Route::get('/show/{id}', [PakketController::class, 'show'])
+        ->name('pakket.show');
+
+    Route::post('/store', [PakketController::class, 'store'])
+        ->name('pakket.store');
+
+    Route::delete('/destroy/{id}', [PakketController::class, 'destroy'])
+        ->name('pakket.destroy');
+
+    Route::post('/update/{id}', [PakketController::class, 'update'])
+        ->name('pakket.update');
+
+    Route::get('/edit/{id}', [PakketController::class, 'edit'])
+        ->name('pakket.edit');
 });
