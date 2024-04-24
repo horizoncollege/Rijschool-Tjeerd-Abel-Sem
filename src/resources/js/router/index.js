@@ -8,7 +8,6 @@ import Proefles from "../views/Proefles.vue";
 import Rijbewijs from "../views/Rijbewijs.vue";
 import Personeel from "../views/personeel.vue";
 import Register from "../views/Register.vue";
-import Contact from "../views/Contact.vue"
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),

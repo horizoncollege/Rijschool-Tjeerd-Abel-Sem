@@ -2,22 +2,18 @@
 export default {
   data() {
     return {
-      pakkets: [],
+      pakketen: [{}],
     };
   },
   mounted() {
-    this.pakketenOphalen();
-  },
-  methods: {
-    pakketenOphalen() {
-      axios
-        .get("/api/pakkets")
+    axios
+        .get("/api/pakket")
         .then(({ data }) => {
-          //console.log(data)
-          this.pakkets = data;
+          console.log(data)
+          this.pakketen = data.data;
+          console.log(this.pakketen)
         })
         .catch((err) => console.error(err));
-    },
   },
 };
 </script>
@@ -41,149 +37,22 @@ export default {
         autoplay-delay="5000000"
         autoplay-disable-on-interaction="false"
       >
-        <swiper-slide>
+        <swiper-slide v-for="pakket in pakketen" :key="pakket.id">
           <div class="multicolumn-rij">
             <!-- multicolumn afbeelding -->
             <div class="multicolumn-afbeelding">
-              <img
-                src="../../../../storage/img/placeholder.png"
+              <!-- <img
+                src="../../../../storage/img/{{ pakket.auto }}.jpg"
                 alt="placeholder"
-              />
+              /> -->
             </div>
             <!-- multicolumn tekst -->
             <div class="multicolumn-tekst">
-              <h2>{{ pakkets.title }}</h2>
-              <li>Voordeel 1</li>
-              <li>Voordeel 2</li>
-              <li>Voordeel 3</li>
-              <li>Voordeel 4</li>
-              <li>Voordeel 5</li>
+              <h2>{{ pakket.title }}</h2>
+              <li>{{ pakket.aantal_lessen }}</li>
               <p>
-                <span class="oudeprijs">oude prijs</span>
-                <span class="nieuweprijs">nieuwe prijs</span>
-              </p>
-            </div>
-            <!-- multicolumn knop -->
-            <div class="multicolumn-knop knop-container">
-              <a class="knop knop-default" href="#">
-                <span class="knop-tekst"> Klik op mij!</span>
-              </a>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="multicolumn-rij">
-            <!-- multicolumn afbeelding -->
-            <div class="multicolumn-afbeelding">
-              <img
-                src="../../../../storage/img/placeholder.png"
-                alt="placeholder"
-              />
-            </div>
-            <!-- multicolumn tekst -->
-            <div class="multicolumn-tekst">
-              <h2>Pakket 1</h2>
-              <li>Voordeel 1</li>
-              <li>Voordeel 2</li>
-              <li>Voordeel 3</li>
-              <li>Voordeel 4</li>
-              <li>Voordeel 5</li>
-              <p>
-                <span class="oudeprijs">oude prijs</span>
-                <span class="nieuweprijs">nieuwe prijs</span>
-              </p>
-            </div>
-            <!-- multicolumn knop -->
-            <div class="multicolumn-knop knop-container">
-              <a class="knop knop-default" href="#">
-                <span class="knop-tekst">Meer informatie</span>
-              </a>
-            </div>
-          </div>
-        </swiper-slide>
-
-        <swiper-slide>
-          <div class="multicolumn-rij">
-            <!-- multicolumn afbeelding -->
-            <div class="multicolumn-afbeelding">
-              <img
-                src="../../../../storage/img/placeholder.png"
-                alt="placeholder"
-              />
-            </div>
-            <!-- multicolumn tekst -->
-            <div class="multicolumn-tekst">
-              <h2>Pakket 1</h2>
-              <li>Voordeel 1</li>
-              <li>Voordeel 2</li>
-              <li>Voordeel 3</li>
-              <li>Voordeel 4</li>
-              <li>Voordeel 5</li>
-              <p>
-                <span class="oudeprijs">oude prijs</span>
-                <span class="nieuweprijs">nieuwe prijs</span>
-              </p>
-            </div>
-            <!-- multicolumn knop -->
-            <div class="multicolumn-knop knop-container">
-              <a class="knop knop-default" href="#">
-                <span class="knop-tekst"> Klik op mij!</span>
-              </a>
-            </div>
-          </div>
-        </swiper-slide>
-
-        <swiper-slide>
-          <div class="multicolumn-rij">
-            <!-- multicolumn afbeelding -->
-            <div class="multicolumn-afbeelding">
-              <img
-                src="../../../../storage/img/placeholder.png"
-                alt="placeholder"
-              />
-            </div>
-            <!-- multicolumn tekst -->
-            <div class="multicolumn-tekst">
-              <h2>Pakket 1</h2>
-              <li>Voordeel 1</li>
-              <li>Voordeel 2</li>
-              <li>Voordeel 3</li>
-              <li>Voordeel 4</li>
-              <li>Voordeel 5</li>
-              <p>
-                <span class="oudeprijs">oude prijs</span>
-                <span class="nieuweprijs">nieuwe prijs</span>
-              </p>
-            </div>
-            <!-- multicolumn knop -->
-            <div class="multicolumn-knop knop-container">
-              <a class="knop knop-default" href="#">
-                <span class="knop-tekst"> Klik op mij!</span>
-              </a>
-            </div>
-          </div>
-        </swiper-slide>
-
-        <swiper-slide>
-          <div class="multicolumn-rij">
-            <!-- multicolumn afbeelding -->
-            <div class="multicolumn-afbeelding">
-              <img
-                src="../../../../storage/img/placeholder.png"
-                alt="placeholder"
-              />
-            </div>
-            <!-- multicolumn tekst -->
-            <div class="multicolumn-tekst">
-              <h2>Pakket 1</h2>
-              <li>Voordeel 1</li>
-              <li>Voordeel 2</li>
-              <li>Voordeel 3</li>
-              <li>Voordeel 4</li>
-              <li>Voordeel 5</li>
-              <p>
-                <span class="oudeprijs">oude prijs</span>
-                <span class="nieuweprijs">nieuwe prijs</span>
+                <span class="oudeprijs">{{ pakket.prijs_los }}</span>
+                <span class="nieuweprijs">{{ pakket.prijs }}</span>
               </p>
             </div>
             <!-- multicolumn knop -->
