@@ -78,10 +78,11 @@ export default {
     background-color: var(--background-grey);
     position: absolute;
     height: 25%;
-    width: 200vw;
+    width: 100%;
     z-index: -1;
-    left: -100vw;
+    left: 0; 
 }
+
 
 
 .footer-logo img {

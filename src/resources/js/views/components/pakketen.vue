@@ -65,10 +65,7 @@ export default {
             </div>
             <!-- multicolumn knop -->
             <div class="multicolumn-knop knop-container">
-              <router-link
-                :to="{ name: 'pakketdetails', params: { id: pakket.id } }"
-                class="knop knop-default"
-              >
+              <router-link class="knop knop-default">
                 <span class="knop-tekst">Bekijken</span>
               </router-link>
             </div>
