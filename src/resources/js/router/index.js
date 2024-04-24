@@ -8,6 +8,7 @@ import Proefles from "../views/Proefles.vue";
 import Rijbewijs from "../views/Rijbewijs.vue";
 import Personeel from "../views/personeel.vue";
 import Register from "../views/Register.vue";
+import Contact from "../views/Contact.vue"
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,12 +31,12 @@ const router = createRouter({
         {
             path: "/contact",
             name: "contact",
-            component: Contact 
+            component: Contact
         },
         {
             path: "/pakketen",
             name: "pakketen",
-            component: Pakketen 
+            component: Pakketen
         },
         {
             path: "/proefles",
@@ -45,19 +46,23 @@ const router = createRouter({
         {
             path: "/rijbewijs",
             name: "rijbewijs",
-            component: Rijbewijs 
+            component: Rijbewijs
         },
         {
             path: "/personeel",
             name: "personeel",
-            component: Personeel 
+            component: Personeel
         },
       {
             path: `/register`,
             name: 'register',
             component: Register
         },
-
+        {
+            path: `/contact`,
+            name: 'contact',
+            component: Contact
+        },
     ],
 });
 

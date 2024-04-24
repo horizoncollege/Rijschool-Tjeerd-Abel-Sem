@@ -109,9 +109,7 @@ export default {
     z-index: 2;
     user-select: none;
     display: block;
-    /* background-image: linear-gradient(var(--rood-licht), transparent); */
-    background-color: var(--rood-licht);
-    /* position: absolute; */
+    background-image: linear-gradient(var(--rood-licht), transparent);
     width: 100%;
 }
 
