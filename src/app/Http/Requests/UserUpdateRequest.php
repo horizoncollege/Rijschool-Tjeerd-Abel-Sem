@@ -2,10 +2,12 @@
 
 namespace App\Http\Requests;
 
+use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
-class LessonStoreRequest extends FormRequest
+class UserUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -16,7 +18,7 @@ class LessonStoreRequest extends FormRequest
 
         foreach ($user->roles as $role) {
             foreach ($role->permissions as $permission) {
-                if ($permission->name == 'can_store_lesson') {
+                if ($permission->name == 'can_update_user') {
                     return true;
                 }
             }
@@ -33,12 +35,11 @@ class LessonStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'goal' => ['required', 'string', 'max:255'],
-            'status' => ['required', 'string', 'max:255'],
-            'start_date' => ['required', 'date'],
-            'end_date' => ['required', 'date'],
-            'day_of_month' => ['required', 'date'],
-            'address' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
+            'password' => ['nullable', 'string', 'min:8', 'confirmed'],
+            'address' => ['nullable', 'string', 'max:255'],
+            'second_address' => ['nullable', 'string', 'max:255'],
         ];
     }
 }

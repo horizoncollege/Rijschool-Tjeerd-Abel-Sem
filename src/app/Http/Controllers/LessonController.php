@@ -15,7 +15,7 @@ class LessonController extends Controller
 {
     public function show(LessonShowRequest $request, $id)
     {
-        $lesson = Lesson::find($id);
+        $lesson = Lesson::findOrFail($id);
 
         return response()->json($lesson);
     }
@@ -43,7 +43,7 @@ class LessonController extends Controller
 
     public function destroy(LessonDestroyRequest $request, $id)
     {
-        $lesson = Lesson::find($id);
+        $lesson = Lesson::findOrFail($id);
 
         $delete = $lesson->delete();
 
@@ -59,7 +59,7 @@ class LessonController extends Controller
     {
         $data = $request->all();
 
-        $lesson = Lesson::find($id);
+        $lesson = Lesson::findOrFail($id);
         $lesson->goal = $data['goal'];
         $lesson->status = $data['status'];
         $lesson->start_date = $data['start_date'];
@@ -78,7 +78,7 @@ class LessonController extends Controller
 
     public function edit(LessonEditRequest $request, $id)
     {
-        $lesson = Lesson::find($id);
+        $lesson = Lesson::findOrFail($id);
 
         return response()->json($lesson);
     }

@@ -16,7 +16,7 @@ class LessonDestroyRequest extends FormRequest
 
         foreach ($user->roles as $role) {
             foreach ($role->permissions as $permission) {
-                if ($permission->name == 'can_lesson_destroy') {
+                if ($permission->name == 'can_destroy_lesson') {
                     return true;
                 }
             }

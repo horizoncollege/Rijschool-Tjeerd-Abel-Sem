@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\Lesson;
+use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -23,6 +25,9 @@ class UserController extends Controller
         $userData = [
             'name' => $user->name,
             'email' => $user->email,
+            'address' => $user->address,
+            'second_address' => $user->second_address,
+            'roles' => $user->roles->pluck('name'),
             'permissions' => $user->roles->map(function ($role) {
                 return $role->permissions->pluck('permissions');
             })->collapse()->unique(),
@@ -33,47 +38,65 @@ class UserController extends Controller
     /**
      * Display the user's profile form.
      */
-    public function edit(Request $request): View
+    public function edit(Request $request, $id)
     {
-        return view('profile.edit', [
-            'user' => $request->user(),
-        ]);
+        $user = User::findOrFail($id);
+
+        $user->load('roles.permissions');
+
+        // Format the user's data
+        $userData = [
+            'name' => $user->name,
+            'email' => $user->email,
+            'address' => $user->address,
+            'second_address' => $user->second_address,
+            'roles' => $user->roles->pluck('name'),
+            'permissions' => $user->roles->map(function ($role) {
+                return $role->permissions->pluck('permissions');
+            })->collapse()->unique(),
+        ];
+
+        return response()->json($userData);
     }
 
     /**
      * Update the user's profile information.
      */
-    public function update(ProfileUpdateRequest $request)
+    public function update(Request $request, $id)
     {
-        $request->user()->fill($request->validated());
+        $data = $request->all();
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+        $user = User::findOrFail($id);
+        $user->name = $data['name'];
+        $user->email = $data['email'];
+        $user->address = $data['address'];
+        $user->second_address = $data['second_address'];
+        if ($data['password']) {
+            $user->password = $data['password'];
         }
+        $user->roles = $data['roles'];
+        $update = $user->save();
 
-        $request->user()->save();
-
-        return response()->json(['message' => 'Profile updated successfully']);
+        if ($update) {
+            return response()->json(['message' => 'User updated successfully', 200]);
+        } else {
+            return response()->json(['error' => 'User not updated', 500]);
+        }
     }
 
     /**
      * Delete the user's account.
      */
-    public function destroy(Request $request)
+    public function destroy(Request $request, $id)
     {
-        $request->validateWithBag('userDeletion', [
-            'password' => ['required', 'current_password'],
-        ]);
+        $user = User::findOrFail($id);
 
-        $user = $request->user();
+        $delete = $user->delete();
 
-        Auth::logout();
-
-        $user->delete();
-
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-
-        return response()->json(['message' => 'Account deleted successfully']);
+        if ($delete) {
+            return response()->json(['message' => 'User deleted successfully', 200]);
+        } else {
+            return response()->json(['error' => 'User not deleted', 500]);
+        }
     }
 }
