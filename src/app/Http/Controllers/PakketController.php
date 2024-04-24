@@ -9,29 +9,15 @@ class PakketController extends Controller
 {
     public function index(Request $request)
     {
-        $pakket = $request->pakket();
+        $pakket = Pakket::all();
 
-        // Load the user's roles and permissions
-        // $pakket->load('roles.permissions');
-
-        // Format the pakket's data
-        $pakketData = [
-            'title' => $pakket->title,
-            'prijs' => $pakket->prijs,
-            'prijs_los' => $pakket->prijs_los,
-            'aantal_lessen' => $pakket->aantal_lessen,
-            'auto' => $pakket->auto,
-        ];
-
-        return response()->json($pakketData);
+        return response()->json($pakket);
     }
 
     public function show(Request $request, $id)
     {
         $pakket = Pakket::findOrFail($id);
 
-        // Load the user's roles and permissions
-        // $pakket->load('roles.permissions');
 
         // Format the pakket's data
         $pakketData = [
@@ -51,7 +37,6 @@ class PakketController extends Controller
     public function edit(Request $request, $id)
     {
         $pakket = Pakket::findOrFail($id);
-        $pakket->load('roles.permissions');
 
         // Format the pakket's data
         $pakketData = [
@@ -75,7 +60,7 @@ class PakketController extends Controller
         $pakket = Pakket::findOrFail($id);
         $pakket->title = $data['title'];
         $pakket->prijs = $data['prijs'];
-        $pakket->Prijs_los = $data['Prijs_los'];
+        $pakket->prijs_los = $data['prijs_los'];
         $pakket->aantal_lessen = $data['aantal_lessen'];
         $pakket->auto = $data['auto'];
         $update = $pakket->save();
