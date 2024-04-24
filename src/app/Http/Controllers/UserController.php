@@ -14,7 +14,7 @@ use Illuminate\View\View;
 class UserController extends Controller
 {
 
-    public function show(Request $request)
+    public function index(Request $request)
     {
         $user = $request->user();
 
@@ -35,6 +35,26 @@ class UserController extends Controller
 
         return response()->json($userData);
     }
+
+    public function show(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+
+        // Load the user's roles and permissions
+        $user->load('roles.permissions');
+
+        // Format the user's data
+        $userData = [
+            'name' => $user->name,
+            'email' => $user->email,
+            'address' => $user->address,
+            'second_address' => $user->second_address,
+            'roles' => $user->roles->pluck('name'),
+        ];
+
+        return response()->json($userData);
+    }
+
     /**
      * Display the user's profile form.
      */
@@ -51,9 +71,6 @@ class UserController extends Controller
             'address' => $user->address,
             'second_address' => $user->second_address,
             'roles' => $user->roles->pluck('name'),
-            'permissions' => $user->roles->map(function ($role) {
-                return $role->permissions->pluck('permissions');
-            })->collapse()->unique(),
         ];
 
         return response()->json($userData);

@@ -31,12 +31,12 @@ const router = createRouter({
         {
             path: "/contact",
             name: "contact",
-            component: Contact 
+            component: Contact
         },
         {
             path: "/pakketen",
             name: "pakketen",
-            component: Pakketen 
+            component: Pakketen
         },
         {
             path: "/proefles",
@@ -46,27 +46,23 @@ const router = createRouter({
         {
             path: "/rijbewijs",
             name: "rijbewijs",
-            component: Rijbewijs 
+            component: Rijbewijs
         },
         {
             path: "/personeel",
             name: "personeel",
-            component: Personeel 
+            component: Personeel
         },
       {
             path: `/register`,
             name: 'register',
             component: Register
         },
-<<<<<<< HEAD
         {
             path: `/contact`,
             name: 'contact',
             component: Contact
         },
-=======
-
->>>>>>> 45e166c3665edf96c2d8b8e9f2c4008412809a1a
     ],
 });
 

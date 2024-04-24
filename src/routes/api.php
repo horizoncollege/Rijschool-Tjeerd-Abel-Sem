@@ -21,8 +21,13 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-Route::middleware('auth:sanctum')->get('/user', [UserController::class, 'show']);
+
 Route::prefix('user')->group(function () {
+    Route::middleware('auth:sanctum')->get('/', [UserController::class, 'index']);
+
+    Route::get('/show/{id}', [UserController::class, 'show'])
+        ->name('show');
+
     Route::post('/update/{id}', [UserController::class, 'update'])
         ->name('update');
 
