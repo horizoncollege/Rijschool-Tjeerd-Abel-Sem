@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
 use App\Models\Lesson;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -91,7 +92,17 @@ class UserController extends Controller
         if ($data['password']) {
             $user->password = bcrypt($data['password']);
         }
-        $user->roles = $data['roles'];
+        $user->roles()->detach();
+
+        // Attach new roles
+        if (isset($data['roles'])) {
+            foreach ($data['roles'] as $role) {
+                $roleModel = Role::where('name', $role)->first();
+                if ($roleModel) {
+                    $user->roles()->attach($roleModel);
+                }
+            }
+        }
         $update = $user->save();
 
         if ($update) {
