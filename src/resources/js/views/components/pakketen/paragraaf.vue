@@ -12,32 +12,31 @@ export default {
       <div class="paragraaf afbeelding-ja afbeelding-rechts">
         <div class="paragraaf-tekst">
           <div class="paragraaf-headers">
-            <h2 class="paragraaf-subheader">Ontdek de Vrijheid van Rijden</h2>
-            <h2 class="paragraaf-header"></h2>
+            <h2 class="paragraaf-subheader"></h2>
+            <h2 class="paragraaf-header">Ontdek Het Perfecte Pakket voor Jouw Rijbehoeften</h2>
           </div>
           <div class="paragraaf-tekst-content">
-            <p>
-              Bij Rijschool Vierkante Wielen begrijpen we dat de weg naar het behalen van je rijbewijs niet altijd
-              rechtlijnig is, vooral niet als je te maken hebt met fysieke beperkingen of andere uitdagingen die rijden
-              moeilijk maken. Daarom bieden we een unieke benadering van rijlessen die volledig is aangepast aan jouw
-              behoeften en mogelijkheden.</p>
-            <h2 class="content-subheader">Voor Iedereen, Ongeacht de Uitdaging</h2>
-            <p>Of je nu worstelt met mobiliteitsproblemen, fysieke beperkingen, of gewoon wat extra ondersteuning nodig
-              hebt, bij Rijschool Vierkante Wielen verwelkomen we iedereen. Onze instructeurs zijn speciaal getraind om
-              te werken met diverse uitdagingen, van rolstoelgebruikers tot mensen met autisme of andere cognitieve
-              verschillen.</p>
-
-
+            <p>Bij Rijschool Vierkante Wielen begrijpen we dat geen twee studenten hetzelfde zijn, en daarom bieden we
+              een scala aan pakketten die zijn ontworpen om te voldoen aan verschillende behoeften en budgetten. Of je
+              nu op zoek bent naar een uitgebreid lespakket met extra ondersteuning, of liever een meer flexibele optie
+              wilt, wij hebben iets voor jou.</p>
+            <p>Onze pakketten variëren in duur, intensiteit en inbegrepen diensten, zodat je kunt kiezen wat het beste
+              bij jou past. Of je nu op zoek bent naar een basispakket met een standaard aantal lessen, of liever een
+              uitgebreider pakket met extra training en begeleiding wilt, we hebben opties voor elk niveau van
+              rijervaring en comfort.</p>
+            <p>Bekijk onze pakketten op onze website of neem contact met ons op voor meer informatie. Onze vriendelijke
+              en deskundige medewerkers staan klaar om je te helpen het perfecte pakket te vinden dat past bij jouw
+              unieke behoeften en doelen.</p>
           </div>
           <!-- knop voor paragraaf -->
           <div class="paragraaf-knop knop-container">
-            <router-link to="/rijschool" class="knop knop-default" href="#">
-              <span class="knop-tekst"> Meer over de rijschool</span>
-            </router-link>
+            <a class="knop knop-default" href="#">
+              <span class="knop-tekst"> Klik op mij!</span>
+            </a>
           </div>
         </div>
         <div class="paragraaf-afbeelding">
-          <img src="../../../../storage/img/placeholder.png" alt="placeholder">
+          <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
         </div>
       </div>
     </div>
@@ -45,7 +44,7 @@ export default {
 
 </template>
 
-<style>
+<style scoped>
 /* paragraaf generic styling */
 
 .paragraaf-header {
@@ -57,12 +56,6 @@ export default {
 
 .paragraaf-subheader {
   font-size: 1.5rem;
-  line-height: 1rem;
-  font-weight: 600;
-}
-
-.content-subheader {
-  font-size: 1.25rem;
   line-height: 1rem;
   font-weight: 600;
 }

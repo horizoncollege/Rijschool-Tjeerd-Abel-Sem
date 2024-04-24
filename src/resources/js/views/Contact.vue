@@ -1,6 +1,7 @@
 <script>
 import headerdesktop from "./components/header.vue";
 import headermobile from "./components/header-mobile.vue";
+<<<<<<< HEAD
 import banner from "./components/banner.vue";
 import paragraaf from "./components/paragraaf.vue";
 import review from "./components/review.vue";
@@ -15,12 +16,23 @@ export default {
     banner,
     footerdesktop
   }
+=======
+import footerdesktop from "./components/footer.vue";
+
+export default {
+    components: {
+        headerdesktop,
+        headermobile,
+        footerdesktop
+    }
+>>>>>>> 45e166c3665edf96c2d8b8e9f2c4008412809a1a
 }
 </script>
 
 <template>
     <headerdesktop></headerdesktop>
     <headermobile></headermobile>
+<<<<<<< HEAD
     <div class="main">
         <div class="main_inner">
             <h2>U kunt op verschillende manieren contact met ons op nemen:</h2>
@@ -33,10 +45,13 @@ export default {
             </a>
         </div>
     </div>
+=======
+>>>>>>> 45e166c3665edf96c2d8b8e9f2c4008412809a1a
     <footerdesktop></footerdesktop>
 </template>
 
 <style>
+<<<<<<< HEAD
 .main {
     width: 450px; 
     height:600px; 
@@ -57,4 +72,7 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+=======
+
+>>>>>>> 45e166c3665edf96c2d8b8e9f2c4008412809a1a
 </style>

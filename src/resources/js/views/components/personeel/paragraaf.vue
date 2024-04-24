@@ -9,35 +9,28 @@ export default {
   <div class="content-row">
     <div class="content-blok">
       <!-- paragraaf met afbeelding -->
-      <div class="paragraaf afbeelding-ja afbeelding-rechts">
+      <div class="paragraaf afbeelding-ja afbeelding-links">
         <div class="paragraaf-tekst">
           <div class="paragraaf-headers">
-            <h2 class="paragraaf-subheader">Ontdek de Vrijheid van Rijden</h2>
-            <h2 class="paragraaf-header"></h2>
+            <h2 class="paragraaf-subheader">Eigenaar</h2>
+            <h2 class="paragraaf-header">Mischa</h2>
           </div>
           <div class="paragraaf-tekst-content">
-            <p>
-              Bij Rijschool Vierkante Wielen begrijpen we dat de weg naar het behalen van je rijbewijs niet altijd
-              rechtlijnig is, vooral niet als je te maken hebt met fysieke beperkingen of andere uitdagingen die rijden
-              moeilijk maken. Daarom bieden we een unieke benadering van rijlessen die volledig is aangepast aan jouw
-              behoeften en mogelijkheden.</p>
-            <h2 class="content-subheader">Voor Iedereen, Ongeacht de Uitdaging</h2>
-            <p>Of je nu worstelt met mobiliteitsproblemen, fysieke beperkingen, of gewoon wat extra ondersteuning nodig
-              hebt, bij Rijschool Vierkante Wielen verwelkomen we iedereen. Onze instructeurs zijn speciaal getraind om
-              te werken met diverse uitdagingen, van rolstoelgebruikers tot mensen met autisme of andere cognitieve
-              verschillen.</p>
-
-
+            <p>Als de drijvende kracht achter Rijschool Vierkante Wielen, is Mischa een gepassioneerde
+              voorvechter van inclusiviteit en toegankelijkheid op de weg. Met een achtergrond in rijonderwijs en een
+              diepgaand begrip van de uitdagingen waarmee mensen met fysieke beperkingen worden geconfronteerd, heeft
+              Mischa zijn missie gemaakt om een rijopleiding aan te bieden die voor iedereen
+              toegankelijk is.</p>
           </div>
           <!-- knop voor paragraaf -->
           <div class="paragraaf-knop knop-container">
-            <router-link to="/rijschool" class="knop knop-default" href="#">
-              <span class="knop-tekst"> Meer over de rijschool</span>
-            </router-link>
+            <a class="knop knop-default" href="#">
+              <span class="knop-tekst"> Klik op mij!</span>
+            </a>
           </div>
         </div>
         <div class="paragraaf-afbeelding">
-          <img src="../../../../storage/img/placeholder.png" alt="placeholder">
+          <img src="../../../../../storage/img/placeholder.png" alt="placeholder">
         </div>
       </div>
     </div>
@@ -45,7 +38,7 @@ export default {
 
 </template>
 
-<style>
+<style scoped>
 /* paragraaf generic styling */
 
 .paragraaf-header {
@@ -57,12 +50,6 @@ export default {
 
 .paragraaf-subheader {
   font-size: 1.5rem;
-  line-height: 1rem;
-  font-weight: 600;
-}
-
-.content-subheader {
-  font-size: 1.25rem;
   line-height: 1rem;
   font-weight: 600;
 }

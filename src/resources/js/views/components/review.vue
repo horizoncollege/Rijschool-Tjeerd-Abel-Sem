@@ -32,8 +32,6 @@ export default {
             </div>
         </div>
     </div>
-
-
     <div class="content-row">
         <div class="content-blok">
             <!-- multicolumn content -->
@@ -54,18 +52,18 @@ export default {
                     </div>
                     <!-- multicolumn tekst -->
                     <div class="multicolumn-tekst">
-                        <h2>Saul Goodman</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora impedit
-                            voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur, fugiat
-                            temporibus
-                            quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
+                        <h2>Kimi</h2>
+                        <p>Fantastische ervaring! De instructeurs bij Rijschool Vierkante Wielen zijn ongelooflijk
+                            geduldig en begripvol. Ik had moeite om mijn zelfvertrouwen achter het stuur op te bouwen
+                            vanwege mijn fysieke beperking, maar ze hebben me echt geholpen om mijn angst te overwinnen.
+                            Dankzij hen heb ik nu mijn rijbewijs en voel ik me vol vertrouwen op de weg!</p>
                     </div>
                     <!-- multicolumn knop -->
-                    <div class="multicolumn-knop knop-container">
+                    <!-- <div class="multicolumn-knop knop-container">
                         <a class="knop knop-default" href="#">
                             <span class="knop-tekst"> Klik op mij!</span>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="multicolumn-rij">
                     <!-- multicolumn afbeelding -->
@@ -74,18 +72,19 @@ export default {
                     </div>
                     <!-- multicolumn tekst -->
                     <div class="multicolumn-tekst">
-                        <h2>Gus Fring</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora impedit
-                            voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur, fugiat
-                            temporibus
-                            quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
+                        <h2>Niek</h2>
+                        <p>Uitstekende service! Ik ben zo dankbaar voor de flexibiliteit en aanpassingen die Rijschool
+                            Vierkante Wielen bood tijdens mijn rijlessen. Als rolstoelgebruiker had ik me zorgen gemaakt
+                            over hoe ik achter het stuur zou kunnen zitten, maar ze hebben alles perfect geregeld. Hun
+                            toewijding aan inclusiviteit is bewonderenswaardig en maakte mijn rijervaring echt geweldig.
+                        </p>
                     </div>
                     <!-- multicolumn knop -->
-                    <div class="multicolumn-knop knop-container">
+                    <!-- <div class="multicolumn-knop knop-container">
                         <a class="knop knop-default" href="#">
                             <span class="knop-tekst"> Klik op mij!</span>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="multicolumn-rij">
                     <!-- multicolumn afbeelding -->
@@ -94,18 +93,19 @@ export default {
                     </div>
                     <!-- multicolumn tekst -->
                     <div class="multicolumn-tekst">
-                        <h2>Walter White</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi natus tempora impedit
-                            voluptatum ullam nostrum laborum quod ipsa sunt numquam nemo minus aspernatur, fugiat
-                            temporibus
-                            quis atque excepturi qui corrupti corporis quia eum consequatur!</p>
+                        <h2>Storm</h2>
+                        <p>Geweldige rijschool! De instructeurs zijn niet alleen professioneel, maar ook buitengewoon
+                            ondersteunend. Ik had moeite met bepaalde aspecten van het autorijden vanwege mijn autisme,
+                            maar ze namen de tijd om mijn behoeften te begrijpen en pasten de lessen daarop aan. Ik raad
+                            Rijschool Vierkante Wielen ten zeerste aan aan iedereen die wat extra hulp en begrip nodig
+                            heeft tijdens hun rijopleiding.</p>
                     </div>
                     <!-- multicolumn knop -->
-                    <div class="multicolumn-knop knop-container">
+                    <!-- <div class="multicolumn-knop knop-container">
                         <a class="knop knop-default" href="#">
                             <span class="knop-tekst"> Klik op mij!</span>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- eind multicolumn content -->
             </div>
