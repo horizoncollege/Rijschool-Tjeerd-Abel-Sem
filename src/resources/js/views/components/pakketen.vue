@@ -7,13 +7,13 @@ export default {
   },
   mounted() {
     axios
-        .get("/api/pakket")
-        .then(({ data }) => {
-          console.log(data)
-          this.pakketen = data.data;
-          console.log(this.pakketen)
-        })
-        .catch((err) => console.error(err));
+      .get("/api/pakket")
+      .then(({ data }) => {
+        console.log(data);
+        this.pakketen = data;
+        console.log(this.pakketen);
+      })
+      .catch((err) => console.error(err));
   },
 };
 </script>
@@ -49,17 +49,28 @@ export default {
             <!-- multicolumn tekst -->
             <div class="multicolumn-tekst">
               <h2>{{ pakket.title }}</h2>
-              <li>{{ pakket.aantal_lessen }}</li>
-              <p>
+              <li>Aantal lessen {{ pakket.aantal_lessen }}</li>
+              <li>De losse prijs</li>
+              <li>
+                <span class="oudeprijs">{{ pakket.prijs_los }}</span>
+              </li>
+              <li>De pakket prijs</li>
+              <li>
+                <span class="nieuweprijs">{{ pakket.prijs }}</span>
+              </li>
+              <!-- <p>
                 <span class="oudeprijs">{{ pakket.prijs_los }}</span>
                 <span class="nieuweprijs">{{ pakket.prijs }}</span>
-              </p>
+              </p> -->
             </div>
             <!-- multicolumn knop -->
             <div class="multicolumn-knop knop-container">
-              <a class="knop knop-default" href="#">
-                <span class="knop-tekst"> Klik op mij!</span>
-              </a>
+              <router-link
+                :to="{ name: 'pakketdetails', params: { id: pakket.id } }"
+                class="knop knop-default"
+              >
+                <span class="knop-tekst">Bekijken</span>
+              </router-link>
             </div>
           </div>
         </swiper-slide>

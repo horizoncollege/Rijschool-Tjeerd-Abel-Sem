@@ -8,6 +8,7 @@ import Proefles from "../views/Proefles.vue";
 import Rijbewijs from "../views/Rijbewijs.vue";
 import Personeel from "../views/personeel.vue";
 import Register from "../views/Register.vue";
+import PakketDetails from "../views/PakketDetails.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -62,6 +63,14 @@ const router = createRouter({
             name: 'contact',
             component: Contact
         },
+        {
+            path: `/pakketdetails/:id`,
+            name: 'pakketdetails',
+            component: PakketDetails,
+            props: true
+        },
+        
+
     ],
 });
 
