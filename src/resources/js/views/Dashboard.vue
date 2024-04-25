@@ -3,6 +3,7 @@
 import headermobile from "./components/header-mobile.vue";
 import footerdesktop from "./components/footer.vue";
 import headerdesktop from "./components/header.vue";
+import axios from "axios";
 
 export default {
     components: {
@@ -14,6 +15,17 @@ export default {
         return {
             user: [],
             lessen: [],
+            les_data_insert: {
+                leerling_id: '',
+                start_date: '',
+                end_date: '',
+                day_of_month: '',
+                address: '',
+                goal: '',
+                status: '',
+                leerling: '',
+            },
+            leerlingen: [],
         };
     },
     mounted() {
@@ -35,6 +47,21 @@ export default {
             })
             .catch((err) => console.error(err));
     },
+    methods: {
+        async add_lesson() {
+            const response = axios.post("/api/lesson/store", this.les_data_insert);
+        },
+
+        async fill_leerling_array() {
+            const response = axios.get("/api/user/students").then(response => { response.json().then(data => {
+                this.leerlingen = data.data
+            })
+            }).catch(error => {
+
+            });
+        },
+    },
+
 }
 </script>
 
@@ -43,6 +70,20 @@ export default {
     <headermobile></headermobile>
     <div class="main">
         <div class="main_inner_adm">
+            <div class="admin_edit" v-if="user.roles['admin'] != null">
+                <datalist id="leerlingen">
+                    <option v-for="leerling in leerlingen" :value="leerling.name" v-bind="les_data_insert.leerling"></option>
+                </datalist>
+                <form @submit.prevent="add_lesson()"></form>
+                    <input placeholder="Kies leerling..." autoComplete="on" list="leerlingen" @click="fill_leerling_array()"/>
+                    <input type="time" id="field_dash" name="start_tijd" v-bind="les_data_insert.start_date">
+                    <input type="time" id="field_dash" name="eind_tijd" v-bind="les_data_insert.end_date">
+                    <input type="date" id="field_dash" name="datum" v-bind="les_data_insert.day_of_month">
+                    <input type="text" id="field_dash" name="adres" v-bind="les_data_insert.address">
+                    <input type="text" id="field_dash" name="doel" v-bind="les_data_insert.goal">
+                    <input type="text" id="field_dash" name="les_status" v-bind="les_data_insert.status">
+            </div>
+            <br>
             <table>
                 <tr>
                     <th>Les ID</th>&nbsp;
