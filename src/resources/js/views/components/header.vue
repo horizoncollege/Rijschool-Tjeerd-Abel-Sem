@@ -63,19 +63,17 @@ export default {
                     <router-link to="/contact" class="menu-item no-mega">
                         <p>Contact</p>
                     </router-link>
-                    <router-link to="/proefles" class="menu-item no-mega proefles">
+                    <router-link v-if="!user" to="/proefles" class="menu-item no-mega proefles">
                         <p>Gratis proefles</p>
                     </router-link>
-
-                    <!-- Conditional rendering based on logged_in -->
-                    <a v-if="!this.user" href="#" class="menu-item no-mega proefles">
-                        <p>Gratis proefles</p>
-                    </a>
+                    <router-link v-if="user" to="/dashboard" class="menu-item no-mega proefles">
+                        <p>Dashboard</p>
+                    </router-link>
                     <!-- Conditionally show or hide login.png -->
-                    <a v-if="!this.user" href="/login" class="menu-item no-mega">
+                    <a v-if="!user" href="/login" class="menu-item no-mega">
                         <img src="../../../../storage/img/login.png" class="login" alt="">
                     </a>
-                    <a v-if="this.user" href="#" v-on:click="on_logout()" class="menu-item no-mega">
+                    <a v-if="user" href="#" v-on:click="on_logout()" class="menu-item no-mega">
                         <img src="../../../../storage/img/logout.png" class="login" alt="">
                     </a>
 

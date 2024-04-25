@@ -14,4 +14,7 @@ sudo docker-compose run --rm php php artisan db:seed RoleSeeder
 sudo docker-compose run --rm php php artisan db:seed RolePermissionSeeder
 sudo docker-compose run --rm php php artisan db:seed PakketsTableSeeder
 
+
 sudo docker-compose run --rm php php artisan admin:create
+
+sudo docker-compose run --rm php php artisan db:seed LessonSeeder

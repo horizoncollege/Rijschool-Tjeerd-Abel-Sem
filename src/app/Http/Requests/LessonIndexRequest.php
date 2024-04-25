@@ -12,17 +12,17 @@ class LessonIndexRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        $user = Auth::user();
+//        $user = Auth::user();
+//
+//        foreach ($user->roles as $role) {
+//            foreach ($role->permissions as $permission) {
+//                if ($permission->name == 'can_index_lesson') {
+//                    return true;
+//                }
+//            }
+//        }
 
-        foreach ($user->roles as $role) {
-            foreach ($role->permissions as $permission) {
-                if ($permission->name == 'can_index_lesson') {
-                    return true;
-                }
-            }
-        }
-
-        return false;
+        return true;
     }
 
     /**

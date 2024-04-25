@@ -28,7 +28,7 @@ class UserController extends Controller
             'email' => $user->email,
             'address' => $user->address,
             'second_address' => $user->second_address,
-            'roles' => $user->roles->pluck('name'),
+            'roles' => $user->roles->pluck('role'),
             'permissions' => $user->roles->map(function ($role) {
                 return $role->permissions->pluck('permissions');
             })->collapse()->unique(),

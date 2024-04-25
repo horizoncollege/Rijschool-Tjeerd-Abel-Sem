@@ -9,6 +9,7 @@ import Rijbewijs from "../views/Rijbewijs.vue";
 import Personeel from "../views/personeel.vue";
 import Register from "../views/Register.vue";
 import PakketDetails from "../views/PakketDetails.vue";
+import Dashboard from "../views/Dashboard.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -62,6 +63,11 @@ const router = createRouter({
             path: `/contact`,
             name: 'contact',
             component: Contact
+        },
+        {
+            path: `/dashboard`,
+            name: 'dashboard',
+            component: Dashboard
         },
         {
             path: `/pakket-details/:id`,
