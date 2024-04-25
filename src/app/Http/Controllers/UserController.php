@@ -112,6 +112,31 @@ class UserController extends Controller
         }
     }
 
+    public function store(Request $request)
+    {
+        $data = $request->all();
+
+        $user = new User();
+        $user->name = $data['name'];
+        $user->email = $data['email'];
+        $user->address = $data['address'];
+        $user->second_address = $data['second_address'];
+        if ($data['password']) {
+            $user->password = bcrypt($data['password']);
+        }
+        $user->roles()->attach(Role::where('name', 'leerling')->id);
+
+        $save = $user->save();
+
+        Auth::login($user);
+
+        if ($save) {
+            return response()->json(['message' => 'User create successfully', 200]);
+        } else {
+            return response()->json(['error' => 'User not created', 500]);
+        }
+    }
+
     /**
      * Delete the user's account.
      */
@@ -131,7 +156,7 @@ class UserController extends Controller
     public function getAllStudent()
     {
         $users = User::whereHas('roles', function ($query) {
-            $query->where('name', 'student');
+            $query->where('name', 'leerling');
         })->get();
 
         return response()->json($users);

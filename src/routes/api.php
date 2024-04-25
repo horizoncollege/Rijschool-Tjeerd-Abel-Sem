@@ -42,7 +42,7 @@ Route::prefix('user')->group(function () {
     Route::post('/destroy/{id}', [UserController::class, 'destroy'])
         ->name('destroy');
 
-    Route::post('/register', [RegisteredUserController::class, 'store'])
+    Route::post('/register', [UserController::class, 'store'])
         ->middleware('guest')
         ->name('register');
 
