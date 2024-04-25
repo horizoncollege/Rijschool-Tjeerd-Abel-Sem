@@ -71,7 +71,7 @@ export default {
     <div class="main">
         <div class="main_inner_adm">
             <br><br><br><br>
-            <div class="admin_edit">
+            <div class="admin_edit" v-if="user.roles == 'admin'">
                 <h2>Maak een les aan</h2>
                 <br>
                 <datalist id="leerlingen">
