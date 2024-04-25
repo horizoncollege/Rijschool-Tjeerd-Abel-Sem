@@ -21,6 +21,7 @@ export default {
 <template>
     <headerdesktop></headerdesktop>
     <headermobile></headermobile>
+    <div class="bgimglol">
     <div class="main">
         <div class="main_inner">
             <h2>U kunt op verschillende manieren contact met ons op nemen:</h2>
@@ -33,10 +34,19 @@ export default {
             </a>
         </div>
     </div>
+    </div>
     <footerdesktop></footerdesktop>
 </template>
 
 <style>
+
+.bgimglol {
+    margin: 0;
+    background-image: url("https://i.redd.it/31pfpt4wkahb1.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
 .main {
     width: 450px; 
     height:600px; 
@@ -47,6 +57,7 @@ export default {
     align-items: center;
 }
 .main_inner {
+    background: white;
     font-size: larger;
     width: 800px;
     padding: 10px;
