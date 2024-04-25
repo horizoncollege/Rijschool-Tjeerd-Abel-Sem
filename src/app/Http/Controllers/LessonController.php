@@ -92,4 +92,10 @@ class LessonController extends Controller
         return response()->json($lessons);
     }
 
+    public function all()
+    {
+        $lessons = Lesson::all();
+        return response()->json($lessons);
+    }
+
 }
