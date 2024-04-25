@@ -26,10 +26,10 @@ export default {
             <h2>U kunt op verschillende manieren contact met ons op nemen:</h2>
             <br>
             <a href="tel:0612345678">
-                telefoon
+                Klik hier om telefonisch contact op te nemen.
             </a><br>
             <a href="mailto:support@rijschool.nl">
-                email
+                Klik hier om via email contact op te nemen.
             </a>
         </div>
     </div>
@@ -47,6 +47,8 @@ export default {
     align-items: center;
 }
 .main_inner {
+    font-size: larger;
+    width: 800px;
     padding: 10px;
     border: solid;
     border-color: black;
@@ -54,7 +56,7 @@ export default {
     border-radius: 8px;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 200%;
     transform: translate(-50%, -50%);
 }
 </style>
