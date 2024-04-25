@@ -3,7 +3,7 @@ import headerdesktop from "./components/header.vue";
 import headermobile from "./components/header-mobile.vue";
 import footerdesktop from "./components/footer.vue";
 import banner from "./components/pakketdetails/banner.vue";
-import details from "./components/pakketdetails/details.vue";
+import detailspakket from "./components/pakketdetails/details.vue";
 
 
 export default {
@@ -30,7 +30,7 @@ export default {
         headermobile,
         footerdesktop,
         banner,
-        details
+        detailspakket
     }
 }
 </script>
@@ -39,13 +39,15 @@ export default {
     <headerdesktop></headerdesktop>
     <headermobile></headermobile>
     <banner></banner>
-    <div>
+   <detailspakket></detailspakket>
+   
+    <!-- <div>
         <h2>{{pakket.title}}</h2>
         <h2>{{pakket.aantal_lessen}}</h2>
         <h2>{{pakket.auto}}</h2>
         <h2>{{pakket.prijs}}</h2>
         <h2>{{pakket.prijs_los}}</h2>
-    </div>
+    </div> -->
     <footerdesktop></footerdesktop>
 </template>
 

@@ -4,6 +4,7 @@ import headermobile from "./components/header-mobile.vue";
 import footerdesktop from "./components/footer.vue";
 import banner from "./components/pakketen/banner.vue";
 import paragraaf from "./components/rijbewijs/paragraaf.vue";
+import allepakketen from "./components/pakketen/allepakketen.vue"
 
 
 export default {
@@ -12,7 +13,8 @@ export default {
         headermobile,
         footerdesktop,
         banner,
-        paragraaf
+        paragraaf,
+        allepakketen
     }
 }
 </script>
@@ -22,7 +24,7 @@ export default {
     <headermobile></headermobile>
     <banner></banner>
     <paragraaf></paragraaf>
-
+<allepakketen></allepakketen>
     <footerdesktop></footerdesktop>
 </template>
 
