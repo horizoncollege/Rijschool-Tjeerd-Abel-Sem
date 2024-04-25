@@ -34,7 +34,7 @@ export default {
             .then(({data}) => {
                 console.log(data);
                 this.user = data;
-                console.log(this.user);
+                console.log(this.user.roles);
             })
             .catch((err) => console.error(err));
 
@@ -70,20 +70,24 @@ export default {
     <headermobile></headermobile>
     <div class="main">
         <div class="main_inner_adm">
-            <div class="admin_edit" v-if="user.roles['admin'] != null">
+            <br><br><br><br>
+            <div class="admin_edit">
+                <h2>Maak een les aan</h2>
+                <br>
                 <datalist id="leerlingen">
                     <option v-for="leerling in leerlingen" :value="leerling.name" v-bind="les_data_insert.leerling"></option>
                 </datalist>
                 <form @submit.prevent="add_lesson()"></form>
-                    <input placeholder="Kies leerling..." autoComplete="on" list="leerlingen" @click="fill_leerling_array()"/>
-                    <input type="time" id="field_dash" name="start_tijd" v-bind="les_data_insert.start_date">
-                    <input type="time" id="field_dash" name="eind_tijd" v-bind="les_data_insert.end_date">
-                    <input type="date" id="field_dash" name="datum" v-bind="les_data_insert.day_of_month">
-                    <input type="text" id="field_dash" name="adres" v-bind="les_data_insert.address">
-                    <input type="text" id="field_dash" name="doel" v-bind="les_data_insert.goal">
-                    <input type="text" id="field_dash" name="les_status" v-bind="les_data_insert.status">
+                    <label>Leerling: </label><input placeholder="Kies leerling..." autoComplete="on" list="leerlingen" @click="fill_leerling_array()"/><br>
+                    <label>Begin tijd: </label><input type="time" id="field_dash" name="start_tijd" v-bind="les_data_insert.start_date"><br>
+                    <label>Eind tijd: </label><input type="time" id="field_dash" name="eind_tijd" v-bind="les_data_insert.end_date"><br>
+                    <label>Datum: </label><input type="date" id="field_dash" name="datum" v-bind="les_data_insert.day_of_month"><br>
+                    <label>Plaats: </label><input type="text" id="field_dash" name="adres" v-bind="les_data_insert.address"><br>
+                    <label>Doel: </label><input type="text" id="field_dash" name="doel" v-bind="les_data_insert.goal"><br>
+                    <label>Les status: </label><input type="text" id="field_dash" name="les_status" value="niet afgerond" v-bind="les_data_insert.status"><br><br>
+                    <button type="submit"></button>
             </div>
-            <br>
+            <br><br><h2>Rooster</h2><br>
             <table>
                 <tr>
                     <th>Les ID</th>&nbsp;
@@ -115,7 +119,7 @@ export default {
 .main {
     padding: 25px;
     width: 700px;
-    height: 600px;
+    height: 800px;
 }
 
 .main_inner_adm {
@@ -126,5 +130,9 @@ table, tr,td {
     border: solid;
     border-width: 1px;
     padding: 20px;
+}
+
+.admin_edit {
+    padding: 10px; border: solid; border-color: black; border-width: 2px; border-radius: 4px;
 }
 </style>
