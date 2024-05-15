@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('goal');
             $table->string('status');
             $table->integer('lesson_number')->default(0);
-            $table->date('start_date');
-            $table->string('day_of_month');
-            $table->date('end_date');
+            $table->time('start_date');
+            $table->date('day_of_month');
+            $table->time('end_date');
             $table->foreignId('teacher_id');
             $table->string('address');
             $table->timestamps();

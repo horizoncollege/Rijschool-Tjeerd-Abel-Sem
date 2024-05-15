@@ -114,19 +114,20 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
+        $role = Role::where('role', 'leerling')->first();
         $data = $request->all();
 
         $user = new User();
         $user->name = $data['name'];
         $user->email = $data['email'];
-        $user->address = $data['address'];
-        $user->second_address = $data['second_address'];
         if ($data['password']) {
             $user->password = bcrypt($data['password']);
         }
-        $user->roles()->attach(Role::where('name', 'leerling')->id);
+
 
         $save = $user->save();
+
+        $user->roles()->attach(2);
 
         Auth::login($user);
 
@@ -156,7 +157,7 @@ class UserController extends Controller
     public function getAllStudent()
     {
         $users = User::whereHas('roles', function ($query) {
-            $query->where('name', 'leerling');
+            $query->where('role', 'leerling');
         })->get();
 
         return response()->json($users);
