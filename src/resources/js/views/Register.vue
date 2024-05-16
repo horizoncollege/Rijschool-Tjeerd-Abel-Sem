@@ -1,40 +1,10 @@
-<template>
-  <headerdesktop></headerdesktop>
-  <headermobile></headermobile>
-
-  <div class="login-container">
-    <div class="login-form">
-      <h1>Registreer</h1><br>
-      <form @submit.prevent="post_data()">
-        <div class="form-group">
-          <label for="name">Name</label><br>
-          <input type="text" id="name" v-model="posts.name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label><br>
-          <input type="text" id="email" v-model="posts.email" required>
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label><br>
-          <input type="password" id="password" v-model="posts.password" required>
-        </div>
-        <div class="form-group">
-          <label for="password">Confirm password</label><br>
-          <input type="password" id="password" v-model="posts.password_confirmation" required>
-        </div>
-        <button type="submit">Registreer</button><br><br>
-        <p style='color: red;' id="error-msg-login"></p><br>
-      </form>
-    </div>
-  </div>
-
-  <footerdesktop></footerdesktop>
-</template>
 
 <script>
 import headerdesktop from "./components/header.vue";
 import headermobile from "./components/header-mobile.vue";
 import footerdesktop from "./components/footer.vue";
+import banner from "./components/inschrijven/banner.vue";
+
 
 import axios from 'axios';
 
@@ -46,7 +16,8 @@ export default {
   components: {
     headerdesktop,
     headermobile,
-    footerdesktop
+    footerdesktop,
+    banner
   },
   data() {
     return {
@@ -54,7 +25,9 @@ export default {
         email: "",
         password: "",
         name: "",
-        password_confirmation: ""
+        password_confirmation: "",
+        address: "",
+        second_address: "",
       },
       login_redirect: {
         email: "",
@@ -92,20 +65,72 @@ export default {
 }
 
 </script>
+<template>
+  <headerdesktop></headerdesktop>
+  <headermobile></headermobile>
+  <banner></banner>
+<div class="content-row">
+  <div class="content-blok">
+    <div class="login-container">
+    <div class="login-form">
+      <h1>Registreer</h1><br>
+      <form @submit.prevent="post_data()">
+
+
+        <div class="form-group">
+          <label for="name">Naam*</label>
+          <input type="text" id="name" v-model="posts.name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email*</label>
+          <input type="text" id="email" v-model="posts.email" required>
+        </div>
+        <div class="form-group">
+          <label for="address">Address*</label>
+          <input type="text" id="address" v-model="posts.address" required>
+        </div>
+
+        <div class="form-group">
+          <label for="second_address">Tweede address</label>
+          <input type="text" id="second_address" v-model="posts.second_address">
+        </div>
+
+
+        <div class="form-group">
+          <label for="password">Wachtwoord*</label>
+          <input type="password" id="password" v-model="posts.password" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Herhaal Wachtwoord*</label>
+          <input type="password" id="password" v-model="posts.password_confirmation" required>
+        </div>
+        <button class="knop registreer-knop" type="submit">Registreer</button>
+        <p style='color: red;' id="error-msg-login"></p>
+      </form>
+    </div>
+  </div>
+  </div>
+</div>
+ 
+
+  <footerdesktop></footerdesktop>
+</template>
+
 
 <style>
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: unset;
+
 }
 
 .login-form {
   background-color: #f0f0f0;
   padding: 30px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: unset;
   width: 500px;
 }
 
@@ -130,16 +155,15 @@ input[type="password"] {
   border-radius: 3px;
 }
 
-button {
-  background-color: red;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 3px;
-  cursor: pointer;
+.registreer-knop{
+  background-color: var(--rood-licht);
+  transition: 0.2s;
+  border: 1px var(--background-black) solid;
+  border-radius: 0;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: var(--rood-donker);
+  transition: 0.2s;
 }
 </style>
