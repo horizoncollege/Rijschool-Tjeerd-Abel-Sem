@@ -127,7 +127,7 @@ class UserController extends Controller
 
         $save = $user->save();
 
-        $user->roles()->attach(2);
+        $user->roles()->attach($role['id']);
 
         Auth::login($user);
 
