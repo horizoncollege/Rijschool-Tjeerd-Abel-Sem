@@ -1,4 +1,55 @@
 
+<template>
+  <headerdesktop></headerdesktop>
+  <headermobile></headermobile>
+
+  <div class="login-container">
+    <div class="login-form">
+      <h1>Registreer</h1>
+      <form @submit.prevent="post_data()">
+        <div class="form-group">
+          <label for="name">Naam*</label>
+          <input type="text" id="name" v-model="posts.name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail*</label>
+          <input type="text" id="email" v-model="posts.email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Telefoonnummer*</label>
+          <input type="text" id="phone" v-model="posts.phone" required>
+        </div>
+        <div class="form-group">
+          <label for="birthday">Geboortedatum*</label>
+          <input type="date" id="birthday" v-model="posts.birthday">
+        </div>
+        <div class="form-group">
+          <label for="address">address*</label>
+          <input type="text" id="address" v-model="posts.address" required>
+        </div>
+        <div class="form-group">
+          <label for="second_address">Tweede address</label>
+          <input type="text" id="second_address" v-model="posts.second_address" >
+        </div>
+
+        <div class="form-group">
+          <label for="password">Wachtwoord*</label><br>
+          <input type="password" id="password" v-model="posts.password" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Herhaal wachtwoord*</label><br>
+          <input type="password" id="password" v-model="posts.password_confirmation" required>
+        </div>
+        <button type="submit">Registreer</button><br><br>
+        <p style='color: red;' id="error-msg-login"></p><br>
+      </form>
+    </div>
+  </div>
+
+  <footerdesktop></footerdesktop>
+</template>
+
 <script>
 import headerdesktop from "./components/header.vue";
 import headermobile from "./components/header-mobile.vue";
@@ -26,8 +77,10 @@ export default {
         password: "",
         name: "",
         password_confirmation: "",
+        phone: "",
+        birthday: "",
         address: "",
-        second_address: "",
+        second_address: ""
       },
       login_redirect: {
         email: "",
@@ -65,56 +118,6 @@ export default {
 }
 
 </script>
-<template>
-  <headerdesktop></headerdesktop>
-  <headermobile></headermobile>
-  <banner></banner>
-<div class="content-row">
-  <div class="content-blok">
-    <div class="login-container">
-    <div class="login-form">
-      <h1>Registreer</h1><br>
-      <form @submit.prevent="post_data()">
-
-
-        <div class="form-group">
-          <label for="name">Naam*</label>
-          <input type="text" id="name" v-model="posts.name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email*</label>
-          <input type="text" id="email" v-model="posts.email" required>
-        </div>
-        <div class="form-group">
-          <label for="address">Address*</label>
-          <input type="text" id="address" v-model="posts.address" required>
-        </div>
-
-        <div class="form-group">
-          <label for="second_address">Tweede address</label>
-          <input type="text" id="second_address" v-model="posts.second_address">
-        </div>
-
-
-        <div class="form-group">
-          <label for="password">Wachtwoord*</label>
-          <input type="password" id="password" v-model="posts.password" required>
-        </div>
-        <div class="form-group">
-          <label for="password">Herhaal Wachtwoord*</label>
-          <input type="password" id="password" v-model="posts.password_confirmation" required>
-        </div>
-        <button class="knop registreer-knop" type="submit">Registreer</button>
-        <p style='color: red;' id="error-msg-login"></p>
-      </form>
-    </div>
-  </div>
-  </div>
-</div>
- 
-
-  <footerdesktop></footerdesktop>
-</template>
 
 
 <style>
@@ -123,7 +126,6 @@ export default {
   justify-content: center;
   align-items: center;
   height: unset;
-
 }
 
 .login-form {
