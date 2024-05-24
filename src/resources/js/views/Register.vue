@@ -15,7 +15,6 @@
           <label for="email">E-mail*</label>
           <input type="text" id="email" v-model="posts.email" required>
         </div>
-
         <div class="form-group">
           <label for="phone">Telefoonnummer*</label>
           <input type="text" id="phone" v-model="posts.phone" required>
@@ -32,7 +31,6 @@
           <label for="second_address">Tweede address</label>
           <input type="text" id="second_address" v-model="posts.second_address" >
         </div>
-
         <div class="form-group">
           <label for="password">Wachtwoord*</label><br>
           <input type="password" id="password" v-model="posts.password" required>
@@ -120,7 +118,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .login-container {
   display: flex;
   justify-content: center;
