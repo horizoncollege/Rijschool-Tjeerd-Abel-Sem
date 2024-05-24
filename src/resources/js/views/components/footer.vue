@@ -27,7 +27,7 @@ export default {
                         <h2>vragen?</h2>
                         <h2> neem contact op!</h2>
                         <div class="knop-container">
-                            <router-link to="/contact" class="knop knop-default" href="#">
+                            <router-link to="/contact" class="knop knop-default" href="/contact">
                                 <span class="knop-tekst"> Contact</span>
                             </router-link>
                         </div>

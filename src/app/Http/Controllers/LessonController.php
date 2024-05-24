@@ -87,7 +87,11 @@ class LessonController extends Controller
     {
         $user = Auth::user();
 
-        $lessons = $user->lessons()->get();
+        if ($user->roles()->pluck('role') == 'admin') {
+            $lessons = Lesson::all();
+        } else {
+            $lessons = $user->lessons()->get();
+        }
 
         return response()->json($lessons);
     }

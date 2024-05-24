@@ -27,6 +27,9 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 Route::prefix('user')->group(function () {
     Route::middleware('auth:sanctum')->get('/', [UserController::class, 'index']);
 
+    Route::get('/students', [UserController::class, 'getAllStudent'])
+        ->name('students');
+
     Route::get('/show/{id}', [UserController::class, 'show'])
         ->name('show');
 
@@ -39,7 +42,7 @@ Route::prefix('user')->group(function () {
     Route::post('/destroy/{id}', [UserController::class, 'destroy'])
         ->name('destroy');
 
-    Route::post('/register', [RegisteredUserController::class, 'store'])
+    Route::post('/register', [UserController::class, 'store'])
         ->middleware('guest')
         ->name('register');
 

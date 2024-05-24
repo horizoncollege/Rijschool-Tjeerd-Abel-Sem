@@ -1,6 +1,6 @@
 <script>
 import axios from 'axios';
-
+import { useRouter, useRoute } from 'vue-router'
 export default {
     data() {
         return {
@@ -14,12 +14,15 @@ export default {
                 response.json().then(data => {
                     this.user = data.data
                     this.logged_in = true;
-                    console.log(this.data);
+                    router.push('/')
                 })
 
             })
             .catch(error => {
-                this.logged_in = false;
+                if (error.response.status === 401) {
+                    this.logged_in = false;
+                    this.user = null
+                }
             });
     },
     methods: {
@@ -40,7 +43,7 @@ export default {
                 <div class="logo-container">
                     <div class="logo">
                         <router-link to="/">
-            <img src="../../../../storage/img/logo.png" alt="">
+                            <img src="../../../../storage/img/logo.png" alt="">
                         </router-link>
                     </div>
                 </div>
@@ -60,19 +63,17 @@ export default {
                     <router-link to="/contact" class="menu-item no-mega">
                         <p>Contact</p>
                     </router-link>
-                    <router-link to="/proefles" class="menu-item no-mega proefles">
+                    <router-link v-if="!user" to="/proefles" class="menu-item no-mega proefles">
                         <p>Gratis proefles</p>
                     </router-link>
-                   
-                    <!-- Conditional rendering based on logged_in -->
-                    <a v-if="!this.user" href="#" class="menu-item no-mega proefles">
-                        <p>Gratis proefles</p>
-                    </a>
+                    <router-link v-if="user" to="/dashboard" class="menu-item no-mega proefles">
+                        <p>Dashboard</p>
+                    </router-link>
                     <!-- Conditionally show or hide login.png -->
-                    <a v-if="!this.user" href="/login" class="menu-item no-mega">
+                    <a v-if="!user" href="/login" class="menu-item no-mega">
                         <img src="../../../../storage/img/login.png" class="login" alt="">
                     </a>
-                    <a v-if="this.user" href="#" v-on:click="on_logout()" class="menu-item no-mega">
+                    <a v-if="user" href="#" v-on:click="on_logout()" class="menu-item no-mega">
                         <img src="../../../../storage/img/logout.png" class="login" alt="">
                     </a>
 
@@ -286,8 +287,6 @@ export default {
         display: none;
     }
 }
-
-
 
 
 /* base knop styling */

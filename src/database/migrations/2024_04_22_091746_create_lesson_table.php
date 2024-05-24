@@ -11,16 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('lesson', function (Blueprint $table) {
+        Schema::create('lessons', function (Blueprint $table) {
             $table->id();
             $table->string('goal');
             $table->string('status');
-            $table->integer('lesson_number');
-            $table->date('start_date');
+            $table->integer('lesson_number')->default(0);
+            $table->time('start_date');
             $table->date('day_of_month');
-            $table->date('end_date');
+            $table->time('end_date');
             $table->foreignId('teacher_id');
             $table->string('address');
+            $table->timestamps();
         });
     }
 
