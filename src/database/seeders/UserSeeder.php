@@ -31,12 +31,5 @@ class UserSeeder extends Seeder
 //            ]);
 //        }
 
-        $role = Role::where('role', 'leerling')->first();
-
-        $user = User::factory()->count(5)->create();
-
-        $user->each(function ($user, $key) use ($role){
-            $user->roles()->attach($role['id']);
-        });
     }
 }

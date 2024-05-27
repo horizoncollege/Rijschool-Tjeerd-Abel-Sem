@@ -4,16 +4,16 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      user: [{}],
+      students: [{}],
     };
   },
   mounted() {
     axios
-      .get("/api/user")
+      .get("/api/user/students")
       .then(({ data }) => {
         console.log(data);
-        this.user = data;
-        console.log(this.user);
+        this.students = data;
+        console.log(this.students);
       })
       .catch((err) => console.error(err));
   },
@@ -24,15 +24,17 @@ export default {
 <template>
   <div class="content-row">
     <div class="content-blok">
-      <h1>users</h1>
+      <h1>Studenten</h1>
       <div class="multicolumn-blok">
-        <div class="multicolumn-rij" v-for="user in users" :key="user.id">
+        <div class="multicolumn-rij" v-for="student in students" :key="student.id">
           <div class="user-details">
-            <h2>{{ user.name }}</h2>
-            <!-- <p><strong>E-mail</strong> {{ user.email }}</p>
-            <p><strong></strong> {{ user.phone }}</p>
-            <p><strong></strong> {{ user.birthday }}</p>
-            <p><strong></strong> {{ user.address }}</p> -->
+            <h2>{{ student.name }}</h2>
+            <p><strong>E-mail</strong> {{ student.email }}</p>
+            <p><strong>Telefoonnummer</strong> {{ student.phone }}</p>
+            <p><strong>Verjaardag</strong> {{ student.birthday }}</p>
+            <p><strong>Adres</strong> {{ student.address }}</p>
+            <p><strong>2de adres</strong> {{ student.second_address }}</p>
+
             <!-- <div class="multicolumn-knop knop-container">
             <router-link
               class="knop knop-default"
