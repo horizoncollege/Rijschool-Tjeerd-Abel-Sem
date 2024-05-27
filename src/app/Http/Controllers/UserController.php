@@ -127,4 +127,13 @@ class UserController extends Controller
             return response()->json(['error' => 'User not deleted', 500]);
         }
     }
+
+    public function GetAllStudents()
+    {
+        $students = User::whereHas('roles', function ($query) {
+            $query->where('role', 'leerling');
+        })->get();
+
+        return response()->json($students);
+    }
 }
