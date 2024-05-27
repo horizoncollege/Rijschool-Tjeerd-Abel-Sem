@@ -72,63 +72,67 @@ export default {
     <div class="main">
         <div class="main_inner_adm">
             <br><br><br><br>
-            <div class="admin_edit" v-if="user.roles == 'admin'">
-                <h2>Maak een les aan</h2>
-                <br>
-                <datalist id="leerlingen">
-                    <option v-for="leerling in leerlingen" :value="leerling.name" v-bind="les_data_insert.leerling">
-                    </option>
-                </datalist>
-                <form @submit.prevent="add_lesson()"></form>
-                <label>Leerling: </label><input placeholder="Kies leerling..." autoComplete="on" list="leerlingen"
-                    @click="fill_leerling_array()" /><br>
-                <label>Begin tijd: </label><input type="time" id="field_dash" name="start_tijd"
-                    v-bind="les_data_insert.start_date"><br>
-                <label>Eind tijd: </label><input type="time" id="field_dash" name="eind_tijd"
-                    v-bind="les_data_insert.end_date"><br>
-                <label>Datum: </label><input type="date" id="field_dash" name="datum"
-                    v-bind="les_data_insert.day_of_month"><br>
-                <label>Plaats: </label><input type="text" id="field_dash" name="adres"
-                    v-bind="les_data_insert.address"><br>
-                <label>Doel: </label><input type="text" id="field_dash" name="doel" v-bind="les_data_insert.goal"><br>
-                <label>Les status: </label><input type="text" id="field_dash" name="les_status" value="niet afgerond"
-                    v-bind="les_data_insert.status"><br><br>
-                <button type="submit"></button>
-            </div>
-            <div class="nogger">
-                <br><br>
-                <h2>Rooster</h2><br>
-                <table>
-                    <tr>
-                        <th>Les ID</th>&nbsp;
-                        <th>Begin tijd</th>&nbsp;
-                        <th>Eind tijd</th>&nbsp;
-                        <th>Datum</th>&nbsp;
-                        <th>Instructeur</th>&nbsp;
-                        <th>Locatie</th>&nbsp;
-                        <th>Doel</th>&nbsp;
-                        <th>Afgerond</th>&nbsp;
-                    </tr>
-                    <tr v-for="les in lessen" :key="les.id">
-                        <td>{{ les.id }}</td>&nbsp;
-                        <td>{{ les.start_date }}</td>&nbsp;
-                        <td>{{ les.end_date }}</td>&nbsp;
-                        <td>{{ les.day_of_month }}</td>&nbsp;
-                        <td>{{ les.teacher_id }}</td>&nbsp;
-                        <td>{{ les.address }}</td>&nbsp;
-                        <td>{{ les.goal }}</td>&nbsp;
-                        <td>{{ les.status }}</td>&nbsp;
-                    </tr>
-                </table>
+            <div class="admin_stuff">
+                <div class="admin_edit" v-if="user.roles == 'admin'">
+                    <h2>Maak een les aan</h2>
+                    <br>
+                    <datalist id="leerlingen">
+                        <option v-for="leerling in leerlingen" :value="leerling.name" v-bind="les_data_insert.leerling">
+                        </option>
+                    </datalist>
+                    <form @submit.prevent="add_lesson()"></form>
+                    <label>Leerling: </label><input placeholder="Kies leerling..." autoComplete="on" list="leerlingen"
+                        @click="fill_leerling_array()" /><br>
+                    <label>Begin tijd: </label><input type="time" id="field_dash" name="start_tijd"
+                        v-bind="les_data_insert.start_date"><br>
+                    <label>Eind tijd: </label><input type="time" id="field_dash" name="eind_tijd"
+                        v-bind="les_data_insert.end_date"><br>
+                    <label>Datum: </label><input type="date" id="field_dash" name="datum"
+                        v-bind="les_data_insert.day_of_month"><br>
+                    <label>Plaats: </label><input type="text" id="field_dash" name="adres"
+                        v-bind="les_data_insert.address"><br>
+                    <label>Doel: </label><input type="text" id="field_dash" name="doel"
+                        v-bind="les_data_insert.goal"><br>
+                    <label>Les status: </label><input type="text" id="field_dash" name="les_status"
+                        value="niet afgerond" v-bind="les_data_insert.status"><br><br>
+                    <button type="submit"></button>
+                </div>
+                <div class="nogger">
+                    <br><br>
+                    <h2>Rooster</h2><br>
+                    <table>
+                        <tr>
+                            <th>Les ID</th>&nbsp;
+                            <th>Begin tijd</th>&nbsp;
+                            <th>Eind tijd</th>&nbsp;
+                            <th>Datum</th>&nbsp;
+                            <th>Instructeur</th>&nbsp;
+                            <th>Locatie</th>&nbsp;
+                            <th>Doel</th>&nbsp;
+                            <th>Afgerond</th>&nbsp;
+                        </tr>
+                        <tr v-for="les in lessen" :key="les.id">
+                            <td>{{ les.id }}</td>&nbsp;
+                            <td>{{ les.start_date }}</td>&nbsp;
+                            <td>{{ les.end_date }}</td>&nbsp;
+                            <td>{{ les.day_of_month }}</td>&nbsp;
+                            <td>{{ les.teacher_id }}</td>&nbsp;
+                            <td>{{ les.address }}</td>&nbsp;
+                            <td>{{ les.goal }}</td>&nbsp;
+                            <td>{{ les.status }}</td>&nbsp;
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-    <footerdesktop></footerdesktop>
 </template>
 
 <style scoped>
 .nogger {
-    position: absolute;
+    width: 500px;
+    height: 500px;
+    overflow-y: auto;
 }
 
 .main {
@@ -141,6 +145,10 @@ export default {
     padding: 10px;
 }
 
+.nogger {
+    overflow-y: 1000px;
+}
+
 table,
 tr,
 td {
@@ -148,7 +156,13 @@ td {
     border-width: 1px;
     padding: 20px;
 }
-
+.admin_stuff {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 50%;
+    margin-right: 50%;
+}
 .admin_edit {
     padding: 10px;
     border: solid;
