@@ -28,6 +28,7 @@ export default {
     methods: {
         async on_logout() {
             const response = await axios.post('/api/user/logout').then(
+                this.$router.push('/'),
                 await window.location.reload()
             )
         }

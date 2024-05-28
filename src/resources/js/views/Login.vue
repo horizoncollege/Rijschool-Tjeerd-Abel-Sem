@@ -58,9 +58,8 @@ export default {
     axios.get("/api/user")
       .then(response => {
         response.json().then(data => {
-            this.user = data.data
+            this.user = data.data;
             this.logged_in = true;
-            this.$router.push('/');
             console.log(this.data);
         })
         
@@ -72,7 +71,7 @@ export default {
   methods: {
     async post_data() {
       try {
-        const response = await axios.post('/api/user/login', this.posts);
+        const response = await axios.post('/api/user/login', this.posts).then(this.$router.push('/dashboard'));
         console.log(response.data);
       } catch (error) {
         console.error(error);
