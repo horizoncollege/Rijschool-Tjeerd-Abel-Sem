@@ -136,4 +136,32 @@ class UserController extends Controller
 
         return response()->json($students);
     }
+
+    public function store(Request $request)
+    {
+        $role = Role::where('role', 'leerling')->first();
+        $data = $request->all();
+        $user = new User();
+        $user->name = $data['name'];
+        $user->email = $data['email'];
+        $user->phone = $data['phone'];
+        $user->birthday = $data['birthday'];
+        $user->address = $data['address'];
+        $user->second_address = $data['second_address'];
+
+
+
+        if ($data['password']) {
+            $user->password = bcrypt($data['password']);
+        }
+        $save = $user->save();
+        $user->roles()->attach($role['id']);
+        Auth::login($user);
+
+        if ($save) {
+            return response()->json(['message' => 'User create successfully', 200]);
+        } else {
+            return response()->json(['error' => 'User not created', 500]);
+        }
+    }
 }
