@@ -60,7 +60,7 @@ export default {
         response.json().then(data => {
             this.user = data.data
             this.logged_in = true;
-            this.$router.push('/');
+            this.$router.push('/dashboard');
             console.log(this.data);
         })
         
