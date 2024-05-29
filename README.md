@@ -16,7 +16,7 @@ U kunt het projectbord en issues vinden op de Github projectpagina:
 
 ## Vereisten
 
-Om het project lokaal te draaien, hebt u de volgende software nodig:
+Om het project lokaal te draaien, heeft u de volgende software nodig:
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
