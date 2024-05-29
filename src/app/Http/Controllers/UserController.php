@@ -46,10 +46,14 @@ class UserController extends Controller
 
         // Format the user's data
         $userData = [
+            'id' => $user->id,
             'name' => $user->name,
             'email' => $user->email,
+            'phone' => $user->phone,
+            'birthday' => $user->birthday,
             'address' => $user->address,
             'second_address' => $user->second_address,
+        
             'roles' => $user->roles->pluck('name'),
         ];
 

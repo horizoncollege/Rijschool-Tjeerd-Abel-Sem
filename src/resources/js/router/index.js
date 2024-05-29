@@ -10,6 +10,7 @@ import Personeel from "../views/personeel.vue";
 import Register from "../views/Register.vue";
 import PakketDetails from "../views/PakketDetails.vue";
 import Dashboard from "../views/Dashboard.vue";
+import StudentDetails from "../views/StudentDetails.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -75,6 +76,12 @@ const router = createRouter({
             component: PakketDetails,
             props: true
         },
+        {
+            path: `/student-details/:id`,
+            name: 'studentdetails',
+            component: StudentDetails,
+            props: true
+        }
 
 
 
