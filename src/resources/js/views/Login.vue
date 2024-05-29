@@ -60,7 +60,6 @@ export default {
         response.json().then(data => {
             this.user = data.data
             this.logged_in = true;
-            this.$router.push('/dashboard');
             console.log(this.data);
         })
         
@@ -74,6 +73,7 @@ export default {
       try {
         const response = await axios.post('/api/user/login', this.posts);
         console.log(response.data);
+        this.$router.push('/dashboard');
       } catch (error) {
         console.error(error);
         document.getElementById("error-msg-login").style.color = "red";
