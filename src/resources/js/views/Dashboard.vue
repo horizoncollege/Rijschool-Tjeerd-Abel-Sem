@@ -14,7 +14,7 @@ export default {
     data() {
         return {
             user: [],
-            lessen: [],
+            lesson: [],
             les_data_insert: {
                 leerling_id: '',
                 start_date: '',
@@ -43,8 +43,8 @@ export default {
             .get("/api/lesson")
             .then(({ data }) => {
                 console.log(data);
-                this.lessen = data;
-                console.log(this.lessen);
+                this.lesson = data;
+                console.log(this.lesson);
             })
             .catch((err) => console.error(err));
     },
@@ -115,7 +115,7 @@ export default {
                 <div class="tabel_weergave">
                     <br><br>
                     <h2>Rooster</h2><br>
-                    <table v-if="lessen.length > 0">
+                    <table v-if="lesson">
                         <thead>
                             <tr>
                                 <th>Les ID</th>
@@ -131,7 +131,7 @@ export default {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-for="les in lessen" :key="les.id">
+                            <tr v-for="les in lesson" :key="les.id">
                                 <td>{{ les.id }}</td>&nbsp;
                                 <td>{{ les.start_date }}</td>&nbsp;
                                 <td>{{ les.end_date }}</td>&nbsp;
@@ -141,13 +141,13 @@ export default {
                                 <td>{{ les.goal }}</td>&nbsp;
                                 <td>{{ les.status }}</td>&nbsp;
                                 <td>
-                                    <button style="width: 50px;" @click="edit_les(les.id);">
-                                        <i class="fa fa-pencil"></i>
+                                    <button style="color: black; width: 125px; height: 50px; background: white; border: solid; border-color: black; border-width: 2px; border-radius: 4px;" @click="edit_les(les.id);">
+                                        <center><i class="fa fa-pencil">Aanpassen</i></center>
                                     </button>
                                 </td>
                                 <td>
-                                    <button style="width: 50px;" @click="remove_les(les.id);">
-                                        <i class="fa fa-trash"></i>
+                                    <button style="color: black; width: 125px; height: 50px;  background: white; border:solid; border-color: black; border-width: 2px; border-radius: 4px;" @click="remove_les(les.id);">
+                                        <center><i class="fa fa-trash">Verwijderen</i></center>
                                     </button>
                                 </td>
                             </tr>
@@ -157,11 +157,13 @@ export default {
             </div>
         </div>
     </div>
+    <footerdesktop></footerdesktop>
 </template>
 
 <style>
 .tabel_weergave {
-    width: 500px;
+    display: block;
+    width: calc(100vw * 0.85);
     height: 500px;
     overflow-y: auto;
 }
@@ -176,19 +178,6 @@ export default {
     padding: 10px;
 }
 
-.tabel_weergave {
-    color: black;
-    background: black;
-    display: block;
-    grid-row: auto;
-}
-
-.tabel_weergave>table,
-td,
-tr,
-th {
-    color: black;
-}
 
 table {
     overflow-y: 50%;
@@ -206,7 +195,7 @@ td {
 .admin_stuff {
     padding: 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-left: 50%;
     margin-right: 50%;
 }

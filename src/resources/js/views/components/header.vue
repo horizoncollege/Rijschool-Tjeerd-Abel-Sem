@@ -19,7 +19,7 @@ export default {
 
             })
             .catch(error => {
-                if (error.response.status === 401) {
+                if (error.response.status == 401 || error.reponse.status == 500 || error.response.status == 403) {
                     this.logged_in = false;
                     this.user = null
                 }
@@ -28,7 +28,7 @@ export default {
     methods: {
         async on_logout() {
             const response = await axios.post('/api/user/logout').then(
-                await window.location.reload()
+                window.location.reload()
             )
         }
     }
@@ -105,7 +105,7 @@ export default {
 }
 
 .header {
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 2;
     user-select: none;
@@ -228,7 +228,7 @@ export default {
 /* Dropdown Menu laat zien op klik plus maakt de achtergrond donker*/
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: relative;
     left: 0;
     z-index: 1;
     margin-top: 20px;
