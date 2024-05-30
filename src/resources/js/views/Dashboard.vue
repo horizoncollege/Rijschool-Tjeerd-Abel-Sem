@@ -3,6 +3,8 @@
 import headermobile from "./components/header-mobile.vue";
 import footerdesktop from "./components/footer.vue";
 import headerdesktop from "./components/header.vue";
+import userinfo from "./components/dashboard/gebruikers.vue"
+import rooster from "./components/dashboard/rooster.vue"
 import axios from "axios";
 
 export default {
@@ -10,6 +12,8 @@ export default {
         headerdesktop,
         headermobile,
         footerdesktop,
+        userinfo,
+        rooster
     },
     data() {
         return {
@@ -83,80 +87,8 @@ export default {
 <template>
     <headerdesktop></headerdesktop>
     <headermobile></headermobile>
-    <div class="main">
-        <div class="main_inner_adm">
-            <br><br><br><br>
-            <div class="admin_stuff">
-                <div class="admin_edit" v-if="user.roles == 'admin'">
-                    <h2>Maak een les aan</h2>
-                    <br>
-                    <datalist id="leerlingen">
-                        <option v-for="leerling in leerlingen" :value="leerling.name" v-bind="les_data_insert.leerling">
-                        </option>
-                    </datalist>
-                    <form @submit.prevent="add_lesson()">
-                    <label>Leerling: </label><input placeholder="Kies leerling..." autoComplete="on" list="leerlingen"
-                        @click="fill_leerling_array();" /><br>
-                    <label>Begin tijd: </label><input type="time" id="field_dash" name="start_tijd"
-                        v-bind="les_data_insert.start_date"><br>
-                    <label>Eind tijd: </label><input type="time" id="field_dash" name="eind_tijd"
-                        v-bind="les_data_insert.end_date"><br>
-                    <label>Datum: </label><input type="date" id="field_dash" name="datum"
-                        v-bind="les_data_insert.day_of_month"><br>
-                    <label>Plaats: </label><input type="text" id="field_dash" name="adres"
-                        v-bind="les_data_insert.address"><br>
-                    <label>Doel: </label><input type="text" id="field_dash" name="doel"
-                        v-bind="les_data_insert.goal"><br>
-                    <label>Les status: </label><input type="text" id="field_dash" name="les_status"
-                        value="niet afgerond" v-bind="les_data_insert.status"><br><br>
-                    <button type="submit">Toevoegen</button>
-                    </form>
-                </div>
-                <div class="tabel_weergave">
-                    <br><br>
-                    <h2>Rooster</h2><br>
-                    <table v-if="lesson">
-                        <thead>
-                            <tr>
-                                <th>Les ID</th>
-                                <th>Begin tijd</th>
-                                <th>Eind tijd</th>
-                                <th>Datum</th>
-                                <th>Instructeur</th>
-                                <th>Locatie</th>
-                                <th>Doel</th>
-                                <th>Afgerond</th>
-                                <th>Aanpassen</th>
-                                <th>Verwijderen</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="les in lesson" :key="les.id">
-                                <td>{{ les.id }}</td>&nbsp;
-                                <td>{{ les.start_date }}</td>&nbsp;
-                                <td>{{ les.end_date }}</td>&nbsp;
-                                <td>{{ les.day_of_month }}</td>&nbsp;
-                                <td>{{ les.teacher_id }}</td>&nbsp;
-                                <td>{{ les.address }}</td>&nbsp;
-                                <td>{{ les.goal }}</td>&nbsp;
-                                <td>{{ les.status }}</td>&nbsp;
-                                <td>
-                                    <button style="color: black; width: 125px; height: 50px; background: white; border: solid; border-color: black; border-width: 2px; border-radius: 4px;" @click="edit_les(les.id);">
-                                        <center><i class="fa fa-pencil">Aanpassen</i></center>
-                                    </button>
-                                </td>
-                                <td>
-                                    <button style="color: black; width: 125px; height: 50px;  background: white; border:solid; border-color: black; border-width: 2px; border-radius: 4px;" @click="remove_les(les.id);">
-                                        <center><i class="fa fa-trash">Verwijderen</i></center>
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+    <userinfo></userinfo>
+    <rooster></rooster>
     <footerdesktop></footerdesktop>
 </template>
 
