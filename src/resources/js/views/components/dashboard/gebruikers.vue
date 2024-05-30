@@ -46,37 +46,14 @@ export default {
           <td> {{ student.address }}</td>
           <td>{{ student.second_address }}</td>
           <td>
-            <!-- <div class="multicolumn-knop knop-container">
-              <router-link class="knop knop-default" :to="{ path: '/pakket-details/' + pakket.id }">
+            <div class="multicolumn-knop knop-container">
+              <router-link class="knop knop-default" :to="{ path: '/student-details/' + student.id }">
                 <span class="knop-tekst">Bekijken</span>
               </router-link>
-            </div> -->
+            </div>
           </td>
         </tr>
       </table>
-
-
-      <!-- <div class="multicolumn-blok">
-        <div class="multicolumn-rij" v-for="student in students" :key="student.id">
-          <div class="user-details">
-            <h2>{{ student.name }}</h2>
-            <p><strong>E-mail</strong> {{ student.email }}</p>
-            <p><strong>Telefoonnummer</strong> {{ student.phone }}</p>
-            <p><strong>Verjaardag</strong> {{ student.birthday }}</p>
-            <p><strong>Adres</strong> {{ student.address }}</p>
-            <p><strong>2de adres</strong> {{ student.second_address }}</p>
-
-             <div class="multicolumn-knop knop-container">
-            <router-link
-              class="knop knop-default"
-              :to="{ path: '/pakket-details/' + pakket.id }"
-            >
-              <span class="knop-tekst">Bekijken</span>
-            </router-link>
-        </div> 
-          </div>
-        </div>
-      </div> -->
     </div>
   </div>
 </template>
