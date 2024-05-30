@@ -38,8 +38,15 @@ export default {
             .catch((err) => console.error(err));
     },
     methods: {
-        async add_lesson() {
+        add_lesson() {
             const response = axios.post("/api/lesson/store", this.les_data_insert);
+
+            axios.post("/api/lesson/store", this.les_data_insert).then(response => {
+                console.log(response);
+                window.location.href.reload();
+            }).catch(error => {
+                console.error(error);
+            });
         },
 
         fill_leerling_array() {
@@ -67,10 +74,10 @@ export default {
             <div class="admin_edit" v-if="user.roles == 'admin'">
                 <h2>Maak een les aan</h2>
                 <br>
-                <datalist id="leerlingen">
-                    <option v-for="leerling in leerlingen" :key="leerling.id" :value="leerling.name"></option>
-                </datalist>
-                <form @submit.prevent="add_lesson()"></form>
+                <form @submit.prevent="add_lesson()">
+                    <datalist id="leerlingen">
+                        <option v-for="leerling in leerlingen" :key="leerling.id" :value="leerling.name"></option>
+                    </datalist>
                 <label>Leerling: </label><input placeholder="Kies leerling..." autoComplete="on" list="leerlingen"
                     @click="fill_leerling_array()" /><br>
                 <label>Begin tijd: </label><input type="time" id="field_dash" name="start_tijd"
@@ -84,7 +91,8 @@ export default {
                 <label>Doel: </label><input type="text" id="field_dash" name="doel" v-bind="les_data_insert.goal"><br>
                 <label>Les status: </label><input type="text" id="field_dash" name="les_status" value="niet afgerond"
                     v-bind="les_data_insert.status"><br><br>
-                <button type="submit"></button>
+                <button @submit="add_lesson()" type="submit"></button>
+            </form>
             </div>
         </div>
     </div>
