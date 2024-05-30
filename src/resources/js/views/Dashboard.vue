@@ -41,7 +41,11 @@ export default {
                 this.user = data;
                 console.log(this.user.roles);
             })
-            .catch((err) => console.error(err));
+            .catch((err) => {
+                console.error(err);
+                window.location.href = "/login";
+                alert("Gebruiker niet ingelogd")
+            });
 
         axios
             .get("/api/lesson")
