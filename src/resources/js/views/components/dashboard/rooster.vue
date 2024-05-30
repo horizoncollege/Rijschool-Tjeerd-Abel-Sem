@@ -42,13 +42,11 @@ export default {
             const response = axios.post("/api/lesson/store", this.les_data_insert);
         },
 
-        async fill_leerling_array() {
-            const response = axios.get("/api/user/students").then(response => {
-                response.json().then(data => {
-                    this.leerlingen = data.data
-                })
+        fill_leerling_array() {
+            axios.get("/api/user/students").then(response => {
+                this.leerlingen = response.data;
             }).catch(error => {
-
+                console.error(error);
             });
         },
 
