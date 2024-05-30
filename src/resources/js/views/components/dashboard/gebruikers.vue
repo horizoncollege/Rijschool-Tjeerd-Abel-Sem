@@ -5,6 +5,7 @@ export default {
   data() {
     return {
       students: [{}],
+      user: [],
     };
   },
   mounted() {
@@ -16,6 +17,19 @@ export default {
         console.log(this.students);
       })
       .catch((err) => console.error(err));
+
+      axios
+            .get("/api/user")
+            .then(({ data }) => {
+                console.log(data);
+                this.user = data;
+                console.log(this.user.roles);
+            })
+            .catch((err) => {
+                console.error(err);
+                window.location.href = "/login";
+                alert("Gebruiker niet ingelogd")
+            });
   },
 
 };
@@ -23,7 +37,7 @@ export default {
 
 <template>
   <div class="content-row">
-    <div class="content-blok">
+    <div class="content-blok" v-if="user.roles == 'admin'">
       <h1>Studenten</h1>
       <table>
         <tr>
