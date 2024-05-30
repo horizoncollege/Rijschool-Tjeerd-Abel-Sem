@@ -90,7 +90,7 @@ export default {
     display: block;
     width: calc(100vw * 0.85);
     height: calc(100vw * 0.60);
-    overflow-y: auto;
+    overflow-y: 50%;
 }
 
 .main {
