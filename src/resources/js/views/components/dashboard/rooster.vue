@@ -19,6 +19,12 @@ export default {
         };
     },
     mounted() {
+        axios.get("/api/user/students").then(response => {
+                this.leerlingen = response.data;
+            }).catch(error => {
+                console.error(error);
+            });
+
         axios
             .get("/api/user")
             .then(({ data }) => {
@@ -47,14 +53,6 @@ export default {
             });
         },
 
-        fill_leerling_array() {
-            axios.get("/api/user/students").then(response => {
-                this.leerlingen = response.data;
-            }).catch(error => {
-                console.error(error);
-            });
-        },
-
         remove_les(id) {
             const response = axios.delete("/lesson/destroy/" + id);
             window.location.reload();
@@ -78,7 +76,7 @@ export default {
                             <option v-for="leerling in leerlingen" :key="leerling.id" :value="leerling.name"></option>
                         </datalist>
                         <label>Leerling: </label><input placeholder="Kies leerling..." autoComplete="on"
-                            list="leerlingen" @click="fill_leerling_array()" /><br>
+                            list="leerlingen" /><br>
                         <label>Begin tijd: </label><input type="time" id="field_dash" name="start_tijd"
                             v-bind="les_data_insert.start_date"><br>
                         <label>Eind tijd: </label><input type="time" id="field_dash" name="eind_tijd"
