@@ -48,6 +48,9 @@ export default {
       </table>
     </div>
   </div>
+  <div class="spacer">
+    <!----spacer---->
+  </div>
 </template>
 
 <style>
@@ -55,5 +58,8 @@ export default {
   width: fit-content;
   margin: auto;
   max-width: 900px;
+}
+.spacer {
+  height: 500px;
 }
 </style>

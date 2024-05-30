@@ -44,6 +44,10 @@ export default {
 </template>
 
 <style>
+
+footer {
+    bottom: 0;
+}
 /* footer styling */
 .footer {
     user-select: none;
