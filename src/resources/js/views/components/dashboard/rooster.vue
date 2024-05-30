@@ -75,21 +75,27 @@ export default {
                         <datalist id="leerlingen">
                             <option v-for="leerling in leerlingen" :key="leerling.id" :value="leerling.name"></option>
                         </datalist>
+                        <datalist id="leerlingen_ids">
+                            <option v-for="leerling in leerlingen" :key="leerling.name" :value="leerling.id"></option>
+                        </datalist>
                         <label>Leerling: </label><input placeholder="Kies leerling..." autoComplete="on"
-                            list="leerlingen" /><br>
+                            list="leerlingen" v-model="les_data_insert.leerling"><br>
+                        <label>Leerling ID:</label>
+                            <input placeholder="Kies leerling ID (Index van gekozen leerling)..." autoComplete="on"
+                            list="leerlingen_ids" v-model="les_data_insert.leerling_id"><br>
                         <label>Begin tijd: </label><input type="time" id="field_dash" name="start_tijd"
-                            v-bind="les_data_insert.start_date"><br>
+                            v-model="les_data_insert.start_date"><br>
                         <label>Eind tijd: </label><input type="time" id="field_dash" name="eind_tijd"
-                            v-bind="les_data_insert.end_date"><br>
+                            v-model="les_data_insert.end_date"><br>
                         <label>Datum: </label><input type="date" id="field_dash" name="datum"
-                            v-bind="les_data_insert.day_of_month"><br>
+                            v-model="les_data_insert.day_of_month"><br>
                         <label>Plaats: </label><input type="text" id="field_dash" name="adres"
-                            v-bind="les_data_insert.address"><br>
+                            v-model="les_data_insert.address"><br>
                         <label>Doel: </label><input type="text" id="field_dash" name="doel"
-                            v-bind="les_data_insert.goal"><br>
+                            v-model="les_data_insert.goal"><br>
                         <label>Les status: </label><input type="text" id="field_dash" name="les_status"
-                            value="niet afgerond" v-bind="les_data_insert.status"><br><br>
-                        <button @submit="add_lesson()" type="submit">toevoegen</button>
+                            value="niet afgerond" v-model="les_data_insert.status"><br><br>
+                        <button @click="add_lesson()" type="button">toevoegen</button>
                     </form>
                 </div>
             </div>
