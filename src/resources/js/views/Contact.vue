@@ -21,9 +21,8 @@ export default {
 <template>
     <headerdesktop></headerdesktop>
     <headermobile></headermobile>
-    <div class="bgimglol">
-    <div class="main">
-        <div class="main_inner">
+    <div class="main_1">
+        <div class="main_inner_1">
             <h2>U kunt op verschillende manieren contact met ons op nemen:</h2>
             <br>
             <a href="tel:0612345678">
@@ -33,7 +32,6 @@ export default {
                 Klik hier om via email contact op te nemen.
             </a>
         </div>
-    </div>
     </div>
     <footerdesktop></footerdesktop>
 </template>
@@ -47,7 +45,7 @@ export default {
     background-position: center center;
 }
 
-.main {
+.main_1 {
     width: 450px; 
     height:600px; 
     position:relative;
@@ -56,7 +54,7 @@ export default {
     justify-content: center;
     align-items: center;
 }
-.main_inner {
+.main_inner_1 {
     background: white;
     font-size: larger;
     width: 800px;
