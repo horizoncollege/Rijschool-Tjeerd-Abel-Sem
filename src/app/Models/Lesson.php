@@ -12,8 +12,6 @@ class Lesson extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'lesson_user', 'user_id', 'lesson_id');
+        return $this->belongsToMany(User::class, 'lesson_user', 'lesson_id', 'user_id');
     }
-
-
 }
