@@ -39,8 +39,6 @@ export default {
     },
     methods: {
         add_lesson() {
-            const response = axios.post("/api/lesson/store", this.les_data_insert);
-
             axios.post("/api/lesson/store", this.les_data_insert).then(response => {
                 console.log(response);
                 window.location.href.reload();
