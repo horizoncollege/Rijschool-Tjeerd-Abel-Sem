@@ -93,7 +93,7 @@ export default {
                             v-bind="les_data_insert.goal"><br>
                         <label>Les status: </label><input type="text" id="field_dash" name="les_status"
                             value="niet afgerond" v-bind="les_data_insert.status"><br><br>
-                        <button @submit="add_lesson()" type="submit"></button>
+                        <button @submit="add_lesson()" type="submit">toevoegen</button>
                     </form>
                 </div>
             </div>
