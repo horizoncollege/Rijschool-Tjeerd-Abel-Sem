@@ -109,7 +109,6 @@ export default {
                     <th>Begin tijd</th>&nbsp;
                     <th>Eind tijd</th>&nbsp;
                     <th>Datum</th>&nbsp;
-                    <th>Instructeur</th>&nbsp;
                     <th>Locatie</th>&nbsp;
                     <th>Doel</th>&nbsp;
                     <th>Afgerond</th>&nbsp;
@@ -120,7 +119,6 @@ export default {
                     <td>{{ les.start_date }}</td>&nbsp;
                     <td>{{ les.end_date }}</td>&nbsp;
                     <td>{{ les.day_of_month }}</td>&nbsp;
-                    <td>{{ les.instructor_id }}</td>&nbsp;
                     <td>{{ les.address }}</td>&nbsp;
                     <td>{{ les.goal }}</td>&nbsp;
                     <td>{{ les.status }}</td>&nbsp;
