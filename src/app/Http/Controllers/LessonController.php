@@ -9,6 +9,7 @@ use App\Http\Requests\LessonShowRequest;
 use App\Http\Requests\LessonStoreRequest;
 use App\Http\Requests\LessonUpdateRequest;
 use App\Models\Lesson;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class LessonController extends Controller
@@ -33,6 +34,9 @@ class LessonController extends Controller
         $lesson->teacher_id = Auth::user()->id;
         $lesson->address = $data['address'];
         $save = $lesson->save();
+
+        $leerling = User::where('name', $data['leerling'])->first();
+        $leerling->lessons()->attach($lesson);
 
         if ($save) {
             return response()->json(['message' => 'Lesson created successfully', 200]);
@@ -68,6 +72,9 @@ class LessonController extends Controller
         $lesson->teacher_id = Auth::user()->id;
         $lesson->address = $data['address'];
         $update = $lesson->save();
+
+        $leerling = User::where('name', $data['leerling'])->first();
+        $leerling->lessons()->attach($lesson);
 
         if ($update) {
             return response()->json(['message' => 'Lesson updated successfully', 200]);
