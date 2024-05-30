@@ -72,17 +72,6 @@ export default {
                 console.error(error);
             });
         },
-
-        remove_les(id) {
-            const response = axios.delete("/lesson/destroy/" + id);
-            alert(response);
-            // should be enough
-        },
-
-        edit_les(id) {
-            const response = axios.post("/lesson/update/" + id);
-            // more shit coming
-        },
     },
 
 }
@@ -100,14 +89,15 @@ export default {
 .tabel_weergave {
     display: block;
     width: calc(100vw * 0.85);
-    height: 500px;
+    height: calc(100vw * 0.60);
     overflow-y: auto;
 }
 
 .main {
+    display: block;
     padding: 25px;
-    width: 700px;
-    height: 800px;
+    width: calc(100vw * 0.50);
+    height: calc(100vw * 0.80);
 }
 
 .main_inner_adm {

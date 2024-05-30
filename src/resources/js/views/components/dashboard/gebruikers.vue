@@ -68,6 +68,11 @@ export default {
   text-align: center;
 }
 
+.content-blok {
+  height: calc(100vw * 0.20);
+  overflow: auto;
+}
+
 .multicolumn-blok {
   gap: 1.5rem;
 }
