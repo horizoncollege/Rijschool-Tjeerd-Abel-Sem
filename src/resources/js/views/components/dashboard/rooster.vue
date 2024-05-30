@@ -80,9 +80,6 @@ export default {
                         </datalist>
                         <label>Leerling: </label><input placeholder="Kies leerling..." autoComplete="on"
                             list="leerlingen" v-model="les_data_insert.leerling"><br>
-                        <label>Leerling ID:</label>
-                            <input placeholder="Kies leerling ID (Index van gekozen leerling)..." autoComplete="on"
-                            list="leerlingen_ids" v-model="les_data_insert.leerling_id"><br>
                         <label>Begin tijd: </label><input type="time" id="field_dash" name="start_tijd"
                             v-model="les_data_insert.start_date"><br>
                         <label>Eind tijd: </label><input type="time" id="field_dash" name="eind_tijd"
