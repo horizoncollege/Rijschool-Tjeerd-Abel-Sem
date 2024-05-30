@@ -15,7 +15,7 @@ class LessonSeeder extends Seeder
      */
     public function run()
     {
-        $user = User::find(1);
+        $user = User::where('name', 'admin')->first();
 
         $lessons = Lesson::factory()
             ->count(10)

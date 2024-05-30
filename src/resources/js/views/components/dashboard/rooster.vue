@@ -32,7 +32,7 @@ export default {
             .get("/api/lesson")
             .then(({data}) => {
                 console.log(data);
-                this.lesson = data;
+                this.lessen = data;
                 console.log(this.lesson);
             })
             .catch((err) => console.error(err));
@@ -87,7 +87,7 @@ export default {
                     <th>Doel</th>&nbsp;
                     <th>Afgerond</th>&nbsp;
                 </tr>
-                <tr v-for="les in lessons" :key="les.id">
+                <tr v-for="les in lessen" :key="les.id">
                     <td>{{les.id}}</td>&nbsp;
                     <td>{{les.start_date}}</td>&nbsp;
                     <td>{{les.end_date}}</td>&nbsp;
@@ -120,9 +120,9 @@ table, tr,td {
 }
 
 .admin_edit {
-    padding: 10px; border: solid; 
-    border-color: black; 
-    border-width: 2px; 
+    padding: 10px; border: solid;
+    border-color: black;
+    border-width: 2px;
     border-radius: 4px;
 }
 </style>

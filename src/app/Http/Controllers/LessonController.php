@@ -85,6 +85,7 @@ class LessonController extends Controller
 
     public function index(LessonIndexRequest $request)
     {
+
         $user = Auth::user();
 
         if ($user->roles()->pluck('role') == 'admin') {
